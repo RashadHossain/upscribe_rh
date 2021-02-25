@@ -1,0 +1,183 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Text Block" id="e-1580772632152" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580772632152"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>There’s a lot of discussion around morning routines and their importance for mind and body health. But let’s not forget about the value of a bedtime routine! Everything you do before you sleep at night has an enormous effect on how your next day will go, and can affect everything from your subconscious while you’re sleeping, to your mental state the next day. Some studies have even shown that doing mentally demanding tasks before bed that involve memorization, like studying for example, can significantly improve your ability to recall that information.</p><p><br></p><p>However, establishing a bedtime routine that works for you is easier said than done, especially if you are anxious or stressed. But nothing is more important than finding a simple ritual that can help you fall asleep, sleep easy, and wake up the next day feeling refreshed and rejuvenated. Ending each day with a reflection of the day’s events, remembering small moments, can not only calm you in the moments before you close your eyes but can also set you up for success in the future.&nbsp; &nbsp;<br></p><p><br></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580772651690" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580772651690"><div class="elm text-edit gf-elm-center gf-elm-left-md gf-elm-left-sm gf-elm-left-xs gf-elm-left-lg" data-gemlang="en" data-exc=""><h4>Try these 10 simple things before bed to help you find a good nights sleep, as well as mental peace and clarity for the days ahead!</h4><div><br></div></div></div><!--gfsplit--><div data-label="Heading" id="e-1580772678438" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580772678438"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><b>1.&nbsp;Write down 3 good things and 3 bad things from your day</b></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580772716160" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580772716160"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Simple acknowledgement is a powerful thing. It can make us both more grateful and more honest. We find it helpful to briefly observe the positive things from each day. It fosters appreciation and gratitude, and turns attention away from the negative. That being said, objective acknowledgement of things that went wrong can help us make huge strides towards improvement, understanding, or acceptance. There’s never too little time to acknowledge and observe. The beneficial effects of this simple task can be monumental.</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580772727094" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580772727094"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><b><br></b></h3><h3><b>2.&nbsp;Set intentions for tomorrow, tonight&nbsp;</b></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580772764262" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580772764262"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>We’re not necessarily advocating a list, but some way to organize and recognize what the new day will bring can be an immense help more than anything, tomorrow. Starting each day with a goal is one of the best ways to go to bed with ease yet determination for what the new day holds. It’s not going anywhere until you do it (!), but the fact that you thought about it and gave intention gives your subconscious mind time to process and set you up to hit the ground running on crushing your goals the following day. That brings us to our next bedtime ritual.&nbsp;</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580772775501" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580772775501"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><b>3. Tell yourself what you will need for the morning</b><br></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580772792907" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580772792907" style=""><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Maybe that’s breakfast prepared, your clothes set out, lunch packed for the day. There’s safety and calm in developing a few rituals like this to prepare for the day ahead of you.&nbsp;These become even more valuable if you have limited time in the morning and will assure that you’re not rushed and starting your day off in a frantic way.</p><p><br></p><p>It’s all about clearing mental space and time for the important stuff, what you actually want to spend your day doing and thinking about. Time is money and these simple bedtime rituals can give you more time than you know the following day.&nbsp;&nbsp;</p><p><br></p><p><b>Recommended Reading<i>: <a href="https://www.ryzesuperfoods.com/blogs/essential-reading/5-amazing-morning-rituals" class="" target="_blank">5 Morning Rituals to Make You More Productive (and Happier!)&nbsp;</a></i></b></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580772817726" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580772817726"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><b>4. Take a hot shower or bath</b></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580772838862" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580772838862" style=""><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Sometimes after a stressful day, when you’re unable to get the events that keep replaying in your head to quiet down, a hot shower or bath may be just what you need. There’s no wonder that many people consider their best ideas and thinking to come from time in the tub. Water immersion can be therapeutic and help us detach from our phones and laptops in these crucial hours before we sleep. The flow, yet stillness, of water has a surprisingly soothing effect and can help our thoughts be fluid and easy. You never know! You may just have all the epiphanies in the world while you’re soaking in the bubble bath.</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580772846037" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580772846037"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><b>5. Take a long walk outside to clear your mind</b></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580772873014" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580772873014"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Yes, we always hear about how beneficial it can be to go outside for a walk and some exercise in the morning hours. But sometimes a longer, relaxed walk at night is just what some need to settle your mind and wind your body down.</p><p><br></p><p>Again, it’s a way to disconnect from technology before bedtime and can enable your mind to think creatively, before you consolidate those ideas during sleep. Adding this into our nighttime routine has been one of the most precious and beneficial additions.&nbsp; &nbsp;</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580772902414" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580772902414"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><b>6. Enjoy some stretching</b></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580772920957" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580772920957"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Stretching before bed? Only think that was reserved for before or after a workout? Thank again! Stretching is an excellent way to check in with your body at any time of the day and see how it’s moving, lo0sen joints and muscles, and get you limbered up before falling sleep. Especially if you’re more sedentary throughout the day, some simple stretching before bed can do wonders for your shoulders, back, and legs, and help prevent injury during exercise the following day. Stretching is truly the OG stress-buster and tension relief.</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580772928381" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580772928381"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><span style="font-family: &quot;Sofia Pro&quot;, &quot;MS Sans Serif&quot;, Geneva, sans-serif; font-size: 20px; font-style: normal; font-weight: 400; text-align: inherit;"><br></span></h3><h3><b>7. Share the events of your day with someone else&nbsp;</b><br></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580772965026" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580772965026"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Sharing your feelings and thoughts, and events of your day with someone you’re close to can be one of the most beneficial ways to de-stress, let go of any lingering heavy thoughts from the day, and recharge for the next one. Creating a bond by sharing details of your day with someone that matters to you is key to establishing a nurturing relationship not only towards others, but to ourselves.</p><p><br></p><p>Prefer to be alone at the end of a long day, and just with your furry friends? Did you know that even just playing or petting a pet can help reduce stress and lower blood pressure.&nbsp;&nbsp;</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580772982200" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580772982200"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><b>8. Practice deep breathing and meditation</b></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580773012717" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580773012717"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Nighttime rituals are all about creating space and time for our thoughts to calm down and not take away a precious nights sleep. There is no better way to help us with this than some meditation practice.</p><p><br></p><p>Of course, mastering this art takes time, patience, and dedication. However, just the consistency of attempting to focus your mind and breathing towards the calm, away from the hectic, is one of the most beneficial things you can do right before you turn the lights out on your day.&nbsp;&nbsp;<br></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580773027779" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580773027779"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><b>9. Visualize your aim</b></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580773051210" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580773051210"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Many successful people have been studied for this shared ability - to picture success. Having this goal, your aim, in your mind before you go to sleep can help tremendously, as it solidifies and consolidates during the night. There’s no bigger purpose than to find and help this aim come to life. Daily and nightly practice visualizing this aim will help you realize its outcome and bring you huge strides towards actualizing goals and making your dreams come true.</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580773060774" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580773060774" style=""><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><b>10. Leave yourself plenty of time to...you guessed it, <i>sleep</i></b></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580773079309" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580773079309"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Sleep is the number one health secret that too many of us miss out on. To be successful and the best version of ourselves, we must ensure we get enough, and peaceful rest. There’s no glory in 4-5 hour nights. Sleep deprivation is related to increased risk of heart disease, high blood pressure, and stroke.&nbsp;</p><p><br></p><p>The recommended number of hours, courtesy of The National Sleep Foundation, puts us between 7-8 hours per night for adults, of deep and restful sleep. Work this into your schedule and prioritize giving your body and mind this essential time. Let your body develop a pattern and it will naturally adjust. Perhaps even falling asleep at night will become easier as you practice these nightly bedtime rituals.&nbsp;</p><p><br></p><p><br></p><p>Speaking of which, we’re feeling kind of sleepy ourselves now. Good Night.</p><p><br></p><p><br></p><p><br></p></div></div><!--gfsplit--><div data-label="Product" id="m-1584761257197" class="module-wrap" data-icon="gpicon-product" data-ver="1.0" data-id="1584761257197" style="min-height: auto;"><div class="module" data-variant="auto" style="" data-current-variant="28783146762345"><form action="/cart/add" method="post" enctype="multipart/form-data" id="" class="AddToCartForm " data-productid="{{product.id}}">{% assign product = all_products['mushroom-coffee'] %}<input name="id" type="hidden" value="{{product.selected_or_first_available_variant.id}}" data-productid="{{product.id}}"><div data-index="1" class="item-content"><div class="module-wrap" id="m-1584761257197-0" data-id="1584761257197-0" data-label="(P) Image" data-icon="gpicon-product-image" data-ver="1"><div class="module gf_module-center gf_module-center-lg gf_module--md gf_module--sm gf_module--xs " data-effect="default" data-pid="{{product.id}}" data-image-type="variant" data-default-variant="{{defaultVariant}}" data-select-text="{{selectText}}" data-zoomstyle="{{zoomStyle}}" data-ori-size="1024x1024">{% if 'variant' == 'first' %}{% assign current_variant = product.selected %}{% else %}{% assign current_variant = product.selected_or_first_available_variant %}{% endif %}{% assign featured_image = current_variant.featured_image | default: product.featured_image %}{% if featured_image %}{% assign altTag = featured_image.alt %}{% unless altTag %}{% assign altTag = product.title %}{% endunless %}{% if '1' == '1' %}<a href="/products/{{ product.handle }}">{% endif %}<img class="gf_product-image gf_featured-image" src="{{ featured_image | img_url: '1024x1024' }}" data-zoom="{{ featured_image | img_url: '2048x2048' }}" alt="{{ altTag }}" style="width: 60%; height: auto">{% if 'default' == 'hover' %}{% if 'last' != 'last' %}{% assign nth = last | minus: 1 %}{% assign limit = product.images | size | minus: 1  %}{% assign nth = nth | at_most: limit %}{% assign hoverImage = product.images[nth] %}{% else %}{% assign hoverImage = product.images | last %}{% endif %}{% assign hoverImgAltTag = hoverImage.alt %}{% unless hoverImgAltTag %}{% assign hoverImgAltTag = product.title %}{% endunless %}<img class="gf_product-image gf_product-image-hover" src="{{ hoverImage.src | img_url: '1024x1024' }}" alt="{{ hoverImgAltTag }}" style="width: 60%; height: auto">{% endif %}{% if '1' == '1' %}</a>{% endif %}{% else %}{% if '1' == '1' %}<a href="/products/{{ product.handle }}">{% endif %}<img class="gf_product-image gf_featured-image" data-zoom="https://cdn.shopify.com/s/images/admin/no-image-2048x2048.gif" src="https://cdn.shopify.com/s/images/admin/no-image-2048x2048.gif" alt="{{ product.title }}" style="width: 60%; height: auto">{% if 'default' == 'hover' %}{% if 'last' != 'last' %}{% assign nth = last | minus: 1 %}{% assign limit = product.images | size | minus: 1  %}{% assign nth = nth | at_most: limit %}{% assign hoverImage = product.images[nth] %}{% else %}{% assign hoverImage = product.images | last %}{% endif %}{% assign hoverImgAltTag = hoverImage.alt %}{% unless hoverImgAltTag %}{% assign hoverImgAltTag = product.title %}{% endunless %}<img class="gf_product-image gf_product-image-hover" src="{{ hoverImage.src | img_url: '1024x1024' }}" alt="{{ hoverImgAltTag }}" style="width: 60%; height: auto">{% endif %}{% if '1' == '1' %}</a>{% endif %}{% endif %}</div></div><div class="module-wrap" id="m-1584761257197-1" data-id="1584761257197-1" data-label="(P) Title" data-icon="gpicon-product-title" data-ver="1.0" style=""><div class="module gf_module-center gf_module-center-lg gf_module--md gf_module--sm gf_module--xs " data-pid="{{product.id}}"><h3 itemprop="name" class="product-single__title">{% if '1' == '1' %}<a href="/products/{{ product.handle }}" class="gf_product-title">{% else %}<span class="gf_product-title">{% endif %}{{ product.title }}{% if '1' == '1' %}</span></a>{% else %}{% endif %}</h3></div></div></div><div class="gf_clearfix"></div>{% unless product == empty %}{% for variant in product.variants %}<input type="hidden" id="gf-hidden-variant{{variant.id}}" value="{{variant.id}}" data-compare-price="{{ variant.compare_at_price | money | strip_html }}" data-price="{{ variant.price | money | strip_html }}">{% endfor %}<script type="text/plain" class="product-json" id="product-json{{product.id}}">{{ product | json }}</script>{% endunless %}</form></div></div><!--gfsplit--><div data-label="Text Block" id="e-1584761279251" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1584761279251" style=""><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p><b>Ingredients</b>: ORGANIC RYZE Mushroom Blend (Cordyceps, Reishi, Lion's Mane, Shiitake, King Trumpet, Turkey Tail), Spray-Dried Arabica Coffee, MCT Oil Powder&nbsp;</p><p><br></p><p>&nbsp;<b>Vegan | 100% Natural | Keto-friendly | Non-GMO&nbsp;</b></p><p><br></p></div></div><!--gfsplit--><div data-label="Button" id="e-1584761314739" class="element-wrap" data-icon="gpicon-gpicon-button" data-ver="1.0" data-id="1584761314739" style=""><div class="elm gf-elm-center gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg"><a class="button btn gf_button" href="/products/mushroom-coffee" target="" data-exc=""><span>LEARN MORE</span></a></div></div><!--gfsplit-->
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

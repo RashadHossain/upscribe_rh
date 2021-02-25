@@ -1,0 +1,183 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Text Block" id="e-1580099870829" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580099870829"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><br></p><p>At some point (especially if you’re a frequent reader of this site), you’ve probably heard a food referred to as anti-inflammatory. If you couldn’t guess by the name, for something to be considered as such it must fight or “oppose” inflammation.</p><p><br></p><p>Maybe you don’t think you have to worry about inflammation, but you could be wrong. According to studies [1], it’s one of the leading causes of chronic health conditions. People can have it for years before debilitating problems arise. If you’ve dealt with bloating for no reason or joint problems with no apparent cause, inflammation could be at the center of your issues.&nbsp;&nbsp;<br></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580099908790" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580099908790"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h1><br></h1><h1><b>What is Inflammation?</b></h1></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580099929796" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580099929796"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Inflammation is the body’s natural response to infection and injury. Whether we bang our knee or are deadlifting a new weight, our immune system responds the same. Damaged tissue releases cytokines, a chemical which triggers hormones, nutrients, and white blood cells to repair the injured area. The throbbing pain you may feel after an intense workout session is an indicator that all of this is taking place.</p><p><br></p><p>The process is relatively short and necessary. However, if it goes on too long, problems arise. Some things, such as chronic stress, can make the body believe its hurt when it’s not, causing inflammation to kick in.&nbsp;</p><p><br></p><p><b>Recommended Reading: <i><a href="https://www.ryzesuperfoods.com/blogs/essential-reading/why-exercise-is-the-best-medicine-for-stress" class="" target="_blank">Why Exercise is the Best Medicine for Stress</a></i></b></p><p><br></p><p>With nothing to repair or fight the body begins to attack itself. <a href="https://www.livescience.com/52344-inflammation.html" class="" target="_blank">Chronic inflammation</a> has been connected to joint pain and arthritis,  heart disease, premature aging, auto-immune disease, digestive problems, Alzheimer’s, and even cancer.&nbsp; &nbsp;<br></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580100060485" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580100060485"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h1><br></h1><h1><b>Inflammation and Diet</b></h1></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580100083574" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580100083574"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Doctors don’t really know why some experience inflammation more than others, but lifestyle choices such as alcohol consumption, stress and smoking can be a precursor to the health issues listed above. Also, certain <a href="https://www.thehealthy.com/nutrition/foods-cause-inflammation/" class="" target="_blank">dietary habits have been shown to cause an inflammatory response.</a></p><p><span style="color: inherit; font-size: inherit; text-align: inherit;"><br></span></p><p><span style="color: inherit; font-size: inherit; text-align: inherit;">Processed meats, sugar, dairy, refined carbohydrates and cooking with oils like corn are inflammation producers.&nbsp;&nbsp;</span><br></p><p><br></p><p>While you may think you’re not eating that type of stuff, it’s easy for these items to slip onto your plate. Even a veggie burger with cheese (processed, dairy) on squashy bun (refined, simple carbohydrate) with a side of sweet potato fries and ketchup (oil and sugar) can have its consequences if routinely made part of your diet.&nbsp;&nbsp;<br></p><p><br></p><p>Adopting an anti-inflammatory eating plan may be the best (and easiest) way to stop inflammation in its tracks. It involves building meals around foods proven to promote healing by bringing the body into a balanced state of health so it doesn’t overproduce the stress hormones that signal to the system that it’s under attack.&nbsp;&nbsp;<br></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580100162595" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580100162595"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h1><br></h1><h1><b>What Does An Anti-Inflammatory Diet Look Like</b></h1></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580100179696" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580100179696"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Believe it or not, an anti-inflammatory diet isn’t about committing yourself to a life of boring chicken breast and asparagus. In fact, this type of eating style is one of the more inclusive meal plans around.</p><p><br></p><p>Unlike low carb diets, fruits and starches like sweet potato are not off limits. Actually, they’re strongly encouraged. An anti-inflammatory diet is not about counting calories or macros, but about loading up on real, unprocessed foods that are high in nutrients. Think color, like leafy greens, berries, avocados, brown rice, quinoa, beans, nuts and foods rich in omega-3 fatty acids like salmon, sardines, and flaxseed.&nbsp;&nbsp;<br></p><p><br></p><p>The reason why the diet centers around whole foods are because they’ve been proven to be the most beneficial to health. Fruits and vegetables in particular are loaded with antioxidants and phytochemicals which fight and repair cells-including those damaged by inflammation. They’re also full of the vitamins and minerals that keep the immune systems strong enough to efficiently fight stress.&nbsp;&nbsp;<br></p><p><br></p><p>And you don’t even have to give up sweets. Cacao and cocoa (dark chocolate) are encouraged on this diet, which means you literally can have your cake and eat it too-provided that it’s made with whole, anti-inflammation ingredients. Including spices, like turmeric, with anti-inflammatory properties can also be an easy way to start incorporating elements of the diet into your routine.&nbsp;&nbsp;</p><p><br></p><p><b style="color: inherit; font-size: inherit; text-align: inherit;">Recommended Reading: <i><a href="https://www.ryzesuperfoods.com/blogs/essential-reading/7-energizing-foods" class="" target="_blank">7 Energizing Foods to Start Eating Now</a></i></b></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580100285648" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580100285648"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h1><br></h1><h1><b>Benefits of An Anti-Inflammatory Diet</b></h1></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580100305758" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580100305758"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Still think there’s no reason to consider enjoying more anti-inflammatory foods? Check out the other benefits of adopting the diet.</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580100320410" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580100320410"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><i>Better for Digestive System</i></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580100340118" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580100340118"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Most foods included in an anti-inflammatory diet are high in fiber, both soluble and insoluble. Items like greens, beans, grains, and mushrooms not only help push waste through the digestive track but provide food to the good gut bacteria. You want them to remain healthy and thriving, so that they can help you break down and fully utilize nutrients.&nbsp;</p><p><b>Recommended Reading: <i><a href="https://www.ryzesuperfoods.com/blogs/essential-reading/medicinal-mushrooms-not-magic-but-amazing" class="" target="_blank">No, Medicinal Mushrooms Are Not Magic, But They’re Still Amazing</a></i></b></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580100473378" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580100473378"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><i>More Affordable</i></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580100494203" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580100494203"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>With the diet focusing more on plant-based protein you’ll save a bundle when you go grocery shopping. Meat and dairy tend to be some of the most expensive items in the store. Eating <a href="https://www.theatlantic.com/business/archive/2016/03/the-economic-case-for-worldwide-vegetarianism/475524/" class="" target="_blank">vegetarian is not only good for your health but economically smarter</a>. In spite of the purveying myth that it’s more costly to eat healthy, according to a study posted in <a href="https://www.sciencedirect.com/science/article/abs/pii/S0921800915301488" class="" target="_blank">Science Direct,</a> vegetarians tend to spend less on food then their carnivore counterparts.</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580100503669" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580100503669"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><i>Less Wasteful</i></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580100515930" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580100515930"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>One of the reasons eating fresh food can be pricier than convenient items is becomes we’re paying for the packaging materials. An easy and affordable way around this is to do all the washing and chopping yourself.</p><p>While you may find it a hassle, buying fruits and vegetables that are not cut and washed will not only be more cost effective, but better for the planet. Less packaging equals less plastic.&nbsp;&nbsp;<br></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580100537385" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580100537385"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><i>Green Living Made Easier</i></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580100557319" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580100557319"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Once again, this perk comes down to the impact of eating less animal products. As established in an article published by CNN, a <a href="https://www.cnn.com/2018/10/18/health/plant-based-diet-climate-change-food-drayer/index.html" class="" target="_blank">plant-based diet</a> has been recently shown to have more positive environmental implications than a traditional western diet. The meat and dairy industry are responsible for 60 percent of agriculture’s greenhouse emissions [2]. At the risk of being a complete downer, if there’s a single reason to trade in steak for tempeh, that’s it.</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580100580305" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580100580305"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><i>It's More Intuitive</i></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580100600210" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580100600210"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Most of us hate diets because they require giving up foods we love. But with an anti-inflammatory diet, it’s less about deprivation and more about filling up on healthier fare.</p><p><br></p><p>Unlike other diets where you’ll throw yourself out of a special zone by eating in the wrong timeframe or not sticking to the “right” foods, an anti-inflammatory is more flexible. You can eat what and when  you want, provided most of your meals are comprised of whole or “real” food instead of the processed stuff.&nbsp;&nbsp;<br></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580100626408" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580100626408"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><i>Less Cravings for Junk</i></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580100645911" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580100645911"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Don’t be surprised if your sweet tooth is less sharp after making the switch to more natural foods.&nbsp;</p><p><br></p><p>Because processed items are often refined and have less nutritional substance, they can illicit an overeating response. In contrast, items like fibrous grains and satiating nuts are naturally filling and won’t trigger the chemicals in your brain that tell you to keep eating.</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580100688412" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580100688412"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><i>More Exciting Meals</i></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580100704575" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580100704575"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Some of the world’s most flavorful cuisines have anti-inflammatory elements, such as Mediterranean, Indian, and Japanese. By moving away from traditional western meals (peace out pizza and subs) you’ll probably be more likely to try culinary delights you never considered before.</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580100710194" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580100710194"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><i>You May Lose Weight</i></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580100728424" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580100728424"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>While dropping the pounds may not be your goal, don’t be surprised if you weigh less on an <a href="https://www.delish.com/food/a55110/anti-inflammatory-diet/" class="" target="_blank">anti-inflammatory diet</a>. Whole foods tend to have less calories than their processed counterparts. You can also eat more of them. And since the diet can help realign your gut health, you might find yourself <a href="https://kriscarr.com/blog/how-to-stop-food-cravings/" class="" target="_blank">less prone to cravings</a> which could result in weight loss.</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580100736720" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580100736720"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><i>Better Skin</i></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580100751876" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580100751876"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>You can thank all the omega-3 fatty acids and antioxidants for this one. They both play a crucial role in your skin’s health. Along with helping to ward off signs of premature aging, foods with these properties have been shown to boost cell turnover, skin buoyancy and blood flow circulation [3].</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580100885598" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580100885598"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h2><br></h2><h2><br></h2><h2><b>A Sample Anti-Inflammatory Meal Plan&nbsp;</b><br></h2></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580100915996" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580100915996"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><b><br></b></p><p><b>Breakfast</b>&nbsp;</p><p><span style="color: inherit; font-size: inherit; text-align: inherit;">A bowl of oatmeal with crushed walnuts, blueberries, bananas mixed with a pinch of cinnamon.&nbsp;</span><br></p><p><br></p><p><b>Morning Snack&nbsp;</b></p><p>An apple with natural almond butter&nbsp;</p><p><br></p><p><b>Lunch</b>&nbsp;</p><p>Kale salad with carrots, sprouts, pumpkin seeds, edamame, a can of mackerel, and half a sweet potato&nbsp;</p><p><br></p><p><b>Afternoon Snack&nbsp;</b></p><p>Bell pepper strips and celery with hummus (with turmeric powder mixed in), along with a pinch of pink Himalayan salt and pepper.&nbsp;</p><p><br></p><p><b>Dinner&nbsp;</b></p><p>Nourish Bowl made of quinoa, baby spinach, cauliflower, tomato, shredded purple cabbage, a salmon fillet, and avocado&nbsp;</p><p><br></p><p><span style="color: inherit; font-size: inherit; text-align: inherit;"><b>Something Sweet</b></span></p><p><span style="color: inherit; font-size: inherit; text-align: inherit;">Cacao Milkshake made with nut milk, a frozen banana, a scoop of <a href="https://www.ryzesuperfoods.com/products/mushroom-coffee" class="" target="_blank">RYZE: Mushroom Keto Coffee</a>,  cacao nibs, and ice.</span><br></p></div></div><!--gfsplit--><div data-label="Product" id="m-1584795954074" class="module-wrap" data-icon="gpicon-product" data-ver="1.0" data-id="1584795954074" style="min-height: auto;"><div class="module" data-variant="auto" style="" data-current-variant="28783146762345"><form action="/cart/add" method="post" enctype="multipart/form-data" id="" class="AddToCartForm " data-productid="{{product.id}}">{% assign product = all_products['mushroom-coffee'] %}<input name="id" type="hidden" value="{{product.selected_or_first_available_variant.id}}" data-productid="{{product.id}}"><div data-index="1" class="item-content"><div class="module-wrap" id="m-1584795954074-0" data-id="1584795954074-0" data-label="(P) Image" data-icon="gpicon-product-image" data-ver="1"><div class="module gf_module-center gf_module-center-lg gf_module--md gf_module--sm gf_module--xs " data-effect="default" data-pid="{{product.id}}" data-image-type="variant" data-default-variant="{{defaultVariant}}" data-select-text="{{selectText}}" data-zoomstyle="{{zoomStyle}}" data-ori-size="1024x1024">{% if 'variant' == 'first' %}{% assign current_variant = product.selected %}{% else %}{% assign current_variant = product.selected_or_first_available_variant %}{% endif %}{% assign featured_image = current_variant.featured_image | default: product.featured_image %}{% if featured_image %}{% assign altTag = featured_image.alt %}{% unless altTag %}{% assign altTag = product.title %}{% endunless %}{% if '1' == '1' %}<a href="/products/{{ product.handle }}">{% endif %}<img class="gf_product-image gf_featured-image" src="{{ featured_image | img_url: '1024x1024' }}" data-zoom="{{ featured_image | img_url: '2048x2048' }}" alt="{{ altTag }}" style="width: 60%; height: auto">{% if 'default' == 'hover' %}{% if 'last' != 'last' %}{% assign nth = last | minus: 1 %}{% assign limit = product.images | size | minus: 1  %}{% assign nth = nth | at_most: limit %}{% assign hoverImage = product.images[nth] %}{% else %}{% assign hoverImage = product.images | last %}{% endif %}{% assign hoverImgAltTag = hoverImage.alt %}{% unless hoverImgAltTag %}{% assign hoverImgAltTag = product.title %}{% endunless %}<img class="gf_product-image gf_product-image-hover" src="{{ hoverImage.src | img_url: '1024x1024' }}" alt="{{ hoverImgAltTag }}" style="width: 60%; height: auto">{% endif %}{% if '1' == '1' %}</a>{% endif %}{% else %}{% if '1' == '1' %}<a href="/products/{{ product.handle }}">{% endif %}<img class="gf_product-image gf_featured-image" data-zoom="https://cdn.shopify.com/s/images/admin/no-image-2048x2048.gif" src="https://cdn.shopify.com/s/images/admin/no-image-2048x2048.gif" alt="{{ product.title }}" style="width: 60%; height: auto">{% if 'default' == 'hover' %}{% if 'last' != 'last' %}{% assign nth = last | minus: 1 %}{% assign limit = product.images | size | minus: 1  %}{% assign nth = nth | at_most: limit %}{% assign hoverImage = product.images[nth] %}{% else %}{% assign hoverImage = product.images | last %}{% endif %}{% assign hoverImgAltTag = hoverImage.alt %}{% unless hoverImgAltTag %}{% assign hoverImgAltTag = product.title %}{% endunless %}<img class="gf_product-image gf_product-image-hover" src="{{ hoverImage.src | img_url: '1024x1024' }}" alt="{{ hoverImgAltTag }}" style="width: 60%; height: auto">{% endif %}{% if '1' == '1' %}</a>{% endif %}{% endif %}</div></div><div class="module-wrap" id="m-1584795954074-1" data-id="1584795954074-1" data-label="(P) Title" data-icon="gpicon-product-title" data-ver="1.0" style=""><div class="module gf_module-center gf_module-center-lg gf_module--md gf_module--sm gf_module--xs " data-pid="{{product.id}}"><h3 itemprop="name" class="product-single__title">{% if '1' == '1' %}<a href="/products/{{ product.handle }}" class="gf_product-title">{% else %}<span class="gf_product-title">{% endif %}{{ product.title }}{% if '1' == '1' %}</span></a>{% else %}{% endif %}</h3></div></div><div data-label="Text Block" id="e-1584795987255" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1584795987255" style=""><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p><b><br></b></p><p><b>Ingredients</b>: ORGANIC RYZE Mushroom Blend (Cordyceps, Reishi, Lion's Mane, Shiitake, King Trumpet, Turkey Tail), Spray-Dried Arabica Coffee, MCT Oil Powder&nbsp;</p><p><br></p><p>&nbsp;<b>Vegan | 100% Natural | Keto-friendly | Non-GMO&nbsp;</b></p><p><br></p></div></div><div data-label="Button" id="e-1584796032978" class="element-wrap" data-icon="gpicon-gpicon-button" data-ver="1.0" data-id="1584796032978" style=""><div class="elm gf-elm-center gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg"><a class="button btn gf_button" href="/products/mushroom-coffee" target="" data-exc=""><span>SHOP NOW</span></a></div></div></div><div class="gf_clearfix"></div>{% unless product == empty %}{% for variant in product.variants %}<input type="hidden" id="gf-hidden-variant{{variant.id}}" value="{{variant.id}}" data-compare-price="{{ variant.compare_at_price | money | strip_html }}" data-price="{{ variant.price | money | strip_html }}">{% endfor %}<script type="text/plain" class="product-json" id="product-json{{product.id}}">{{ product | json }}</script>{% endunless %}</form></div></div><!--gfsplit--><div class="element-wrap" data-label="Text Block" id="e-1580099376206" data-icon="gpicon-textblock" data-ver="1" data-id="1580099376206" style=""><div class="elm text-edit gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-exc=""><p class="p1"><span style="color: inherit; font-size: inherit; text-align: inherit;">&nbsp;</span></p><p class="p2"><span style="color: inherit; font-size: inherit; text-align: inherit;">&nbsp;</span></p><p class="p2"><span style="color: inherit; font-size: inherit; text-align: inherit;"><br></span></p><p class="p2"><span style="color: inherit; font-size: inherit; text-align: inherit;"><br></span></p><p class="p3">&nbsp;</p><p class="p3"><span class="s1">______________________________</span></p><undefined><span class="s1"><a href=" https://www.ncbi.nlm.nih.gov/books/NBK493173/" class="" target="_blank">[1]</a> Pahwa R, Jialal I. Chronic Inflammation. [Updated 2019 Jun 4]. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2019 Jan-. Available from: https://www.ncbi.nlm.nih.gov/books/NBK493173/</span></undefined><div><undefined><span class="s1"><a href="https://science.sciencemag.org/content/360/6392/987" class="" target="_blank">[2] </a>Science&nbsp; 01 Jun 2018: Vol. 360, Issue 6392, pp. 987-992 DOI: 10.1126/science.aaq0216</span></undefined></div><div><undefined><span class="s2"><a href="https://lpi.oregonstate.edu/mic/health-disease/skin-health/essential-fatty-acids" class="" target="_blank">[3]</a> Essential Fatty Acids and Skin Health. (2019, January 02). https://lpi.oregonstate.edu/mic/health-disease/skin-health/essential-fatty-acids</span></undefined><p class="p3">&nbsp;</p><p class="p4">&nbsp;</p></div></div></div><!--gfsplit-->
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

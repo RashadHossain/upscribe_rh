@@ -1,0 +1,183 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Row" id="r-1585544344848" class="gf_row gf_row-fluid gf_row-no-padding" data-icon="gpicon-row" data-id="1585544344848" data-extraclass=""><div class="gf_col-lg-12 gf_column" id="c-1585544344873" data-id="1585544344873" style="min-height: auto;"><div data-label="Text Block" id="e-1585452008607" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1585452008607"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc="">Ingredients to refuel and restore, including superfood mushrooms for whole-body health,&nbsp;<span style="letter-spacing: 0px;">beloved nootropics for mental clarity, and healthy fats to fuel up every morning.</span><div><div><br></div></div></div></div></div></div><!--gfsplit--><div class="element-wrap" data-label="Text Block" id="e-1585451971946" data-icon="gpicon-textblock" data-ver="1" data-id="1585451971946"><div class="elm text-edit"></div></div><!--gfsplit--><div data-label="Button" id="e-1585452071569" class="element-wrap" data-icon="gpicon-gpicon-button" data-ver="1.0" data-id="1585452071569"><div class="elm gf-elm-center gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg"><a class="button btn gf_button" href="/products/mushroom-coffee" target="" data-exc=""><span>SHOP RYZE</span></a></div></div><!--gfsplit--><div data-label="Row" id="r-1585452032526" class="gf_row gf_row-fluid gf_row-no-padding" data-icon="gpicon-row" data-id="1585452032526" data-extraclass=""><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585452032536" data-id="1585452032536" style="min-height: auto;"><div data-label="Image" id="e-1585452140987" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1585452140987"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="/pages/new-cordyceps" target="" class="image-link"><img src="https://ucarecdn.com/cfba3e98-94de-4d97-87ca-c008ebc4a61f/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="cordyceps mushrooms on solid background" class="gf_image" data-gemlang="en"></a></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585452035791" data-id="1585452035791" style="min-height: auto;"><div data-label="Heading" id="e-1585452158223" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585452158223"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h2>1. Cordyceps</h2></div></div><div data-label="Text Block" id="e-1585452184382" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1585452184382"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><br></p><p>Cordyceps was first discovered by Tibetan farmers high on the Himalayan plateaus over 2000 years ago when their livestock exhibited unprecedented energy and good health after ingesting the fungi. They quickly became a favorite for natural, sustainable energy and have been a centerpiece in traditional eastern medicine ever since. Now, we bring them to you in our blend, so you too can feel their power.</p></div></div></div></div><!--gfsplit--><div data-label="Row" id="r-1585452288766" class="gf_row gf_row-fluid gf_row-no-padding" data-icon="gpicon-row" data-id="1585452288766" data-extraclass=""><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585452288768" data-id="1585452288768" style="min-height: auto;"><div data-label="Image" id="e-1585452303332" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1585452303332"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="/pages/new-lions-mane" target="" class="image-link"><img src="https://ucarecdn.com/2b274814-620b-43df-8b8e-a9155ae3b78d/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="lion's mane mushroom on solid background" class="gf_image" data-gemlang="en"></a></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585452298804" data-id="1585452298804" style="min-height: auto;"><div data-label="Heading" id="e-1585452306783" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585452306783"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h2>2. Lion's Mane</h2></div></div><div data-label="Text Block" id="e-1585452346518" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1585452346518"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><br></p><p>Buddhist monks used Lion’s Mane extensively to enhance focus and purpose in their study and meditation. Considered a nootropic food, this mushroom has properties that improve cognitive skills, including memory and concentration. Lion’s mane is notable for its ability to repair and regenerate neurons by helping the body produce nerve growth factor (NGF), and has been found in research studies to improve cognitive function.</p></div></div></div></div><!--gfsplit--><div data-label="Row" id="r-1585452651569" class="gf_row gf_row-fluid gf_row-no-padding" data-icon="gpicon-row" data-id="1585452651569" data-extraclass=""><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585452651548" data-id="1585452651548" style="min-height: auto;"><div data-label="Image" id="e-1585452666301" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1585452666301"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="/pages/new-reishi" target="" class="image-link"><img src="https://ucarecdn.com/7f57e9db-3ea8-411b-9dc1-53d189c4085b/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="reishi mushroom on solid background" class="gf_image" data-gemlang="en"></a></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585452658987" data-id="1585452658987" style="min-height: auto;"><div data-label="Heading" id="e-1585452670065" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585452670065"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h2><span style="letter-spacing: 0px; text-align: inherit;">3. Reishi</span><br></h2></div></div><div data-label="Text Block" id="e-1585452680627" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1585452680627"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"><br></span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">A</span><span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;">&nbsp;mushroom of many names including “the mushroom of immortality,” Reishi is a superfood multi-tasker. Along with containing zinc, iron, dietary fiber, and amino acids, what really makes this mushroom special is its immune-enhancing bioactive components. Reishi works as an antiviral, antimicrobial, and contains antioxidants that pump up the body’s natural defenses to fight disease.</span></p></div></div></div></div><!--gfsplit--><div data-label="Row" id="r-1585452811850" class="gf_row gf_row-fluid gf_row-no-padding" data-icon="gpicon-row" data-id="1585452811850" data-extraclass=""><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585452811781" data-id="1585452811781" style="min-height: auto;"><div data-label="Image" id="e-1585452885119" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1585452885119"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="/pages/new-shiitake" target="" class="image-link"><img src="https://ucarecdn.com/cbfd5317-bedf-4fc9-b122-996178650205/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="shiitake mushroom on solid background" class="gf_image" data-gemlang="en"></a></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585452819638" data-id="1585452819638" style="min-height: auto;"><div data-label="Heading" id="e-1585452839841" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585452839841"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h2>4. Shiitake</h2></div></div><div data-label="Text Block" id="e-1585452823343" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1585452823343"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><br></p><p>Included for its all around immune-boosting properties, Shiitake has the bragging right of having all 8 amino acids. It contains the polysaccharide lentinan which has been shown to heal chromosome damage and reduce cholesterol. Clinical studies have shown that Shiitake lowers inflammation levels and increases overall immunity, making it an incredible immune builder.</p></div></div></div></div><!--gfsplit--><div data-label="Heading" id="e-1585453541933" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585453541933"><div class="elm text-edit gf-elm-center gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-gemlang="en" data-exc=""><h1>Ready to get your superfoods with RYZE?&nbsp;</h1></div></div><!--gfsplit--><div data-label="Button" id="e-1585453446322" class="element-wrap" data-icon="gpicon-gpicon-button" data-ver="1.0" data-id="1585453446322"><div class="elm gf-elm-center gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg"><a class="button btn gf_button" href="/products/mushroom-coffee" target="" data-exc=""><span>SHOP NOW</span></a></div></div><!--gfsplit--><div data-label="Row" id="r-1585452923675" class="gf_row gf_row-fluid gf_row-no-padding" data-icon="gpicon-row" data-id="1585452923675" data-extraclass=""><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585452923756" data-id="1585452923756" style="min-height: auto;"><div data-label="Image" id="e-1585452935305" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1585452935305"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="/pages/new-turkey-tail" target="" class="image-link"><img src="https://ucarecdn.com/eb535641-3bcd-4aa5-ae2c-22ac85e26ebf/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="turkey tail mushroom on solid background" class="gf_image" data-gemlang="en"></a></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585452931768" data-id="1585452931768" style="min-height: auto;"><div data-label="Heading" id="e-1585452938389" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585452938389"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h2>5. Turkey Tail</h2></div></div><div data-label="Text Block" id="e-1585452956194" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1585452956194"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><br></p><p>Without the help of prebiotics, probiotics wouldn’t be able to do their job. Fortunately, this mushroom is loaded with indigestible fibers that the gut microorganisms love and rely on, meaning that Turkey Tail is an incredible gut protector. And with more than half of Americans living with GI issues, including prebiotics like Turkey Tail can be hugely beneficial in aiding healthy digestion.</p></div></div></div></div><!--gfsplit--><div data-label="Row" id="r-1585453012646" class="gf_row gf_row-fluid gf_row-no-padding" data-icon="gpicon-row" data-id="1585453012646" data-extraclass=""><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585453012664" data-id="1585453012664" style="min-height: auto;"><div data-label="Image" id="e-1585453037458" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1585453037458"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="/pages/new-king-trumpet" target="" class="image-link"><img src="https://ucarecdn.com/a048b21a-8187-4a26-a694-c87348e76e21/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="king trumpet mushroom on solid background" class="gf_image" data-gemlang="en"></a></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585453021858" data-id="1585453021858" style="min-height: auto;"><div data-label="Heading" id="e-1585453073007" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585453073007"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h2>6. King Trumpet</h2><div><br></div></div></div><div data-label="Text Block" id="e-1585453025611" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1585453025611"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Sneaky one of our favorites, King Trumpet has it all. A rich source of antioxidants and niacin, a B-vitamin that strengthens memory and overall brain function, this mushroom has also been studied to support cardiovascular function and balance out cholesterol levels. King Trumpet is uniquely equipped to help protect from free radical damage and defend against chronic disease.</p></div></div></div></div><!--gfsplit--><div data-label="Row" id="r-1585453136083" class="gf_row gf_row-fluid gf_row-no-padding" data-icon="gpicon-row" data-id="1585453136083" data-extraclass=""><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585453135995" data-id="1585453135995" style="min-height: auto;"><div data-label="Image" id="e-1585453230536" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1585453230536"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="/pages/new-mct" target="" class="image-link"><img src="https://ucarecdn.com/b25ce41f-342b-40b6-ae5e-6de65beec19a/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="coconut wedges on solid background" class="gf_image" data-gemlang="en"></a></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585453137282" data-id="1585453137282" style="min-height: auto;"><div data-label="Heading" id="e-1585453167961" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585453167961"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h2>7. MCT&nbsp;</h2></div></div><div data-label="Text Block" id="e-1585453146342" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1585453146342"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><br></p><p>MCT stands for Medium-chain Triglycerides. Or as we like to say, fatty goodness. In fact, MCT is derived from the natural oils of palm and coconut. These fats are healthy types called fatty acids and are easily broken down by our bodies as saturated fat. As a natural metabolic fat burner, MCT oil is quickly absorbed and contains vitamin D, for calcium absorption, immune health, and muscle function.</p></div></div></div></div><!--gfsplit--><div data-label="Row" id="r-1585453259668" class="gf_row gf_row-fluid gf_row-no-padding" data-icon="gpicon-row" data-id="1585453259668" data-extraclass=""><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585453259716" data-id="1585453259716" style="min-height: auto;"><div data-label="Image" id="e-1585453343250" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1585453343250"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="/pages/new-coffee" target="" class="image-link"><img src="https://ucarecdn.com/453bb1d1-3021-4042-ba9f-74b4f4f6ccfd/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="coffee beans on solid background" class="gf_image" data-gemlang="en"></a></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585453261146" data-id="1585453261146" style="min-height: auto;"><div data-label="Heading" id="e-1585453282408" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585453282408"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h2>8. Arabica Coffee</h2></div></div><div data-label="Text Block" id="e-1585453267750" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1585453267750"><div class="elm text-edit gf-elm-left gf-elm--lg gf-elm--md gf-elm--sm gf-elm--xs" data-gemlang="en" data-exc=""><p><br></p><p>A whopping 2.25 billion cups of coffee are consumed daily. While coffee sometimes gets a bad rap in the health world, it’s wildly popular and healthy. What some don’t realize is that coffee is in fact the number one way that American adults get antioxidants into their diet. Coffee also decreases type II diabetes risk, and sharpens memory, due to its key nutrients like B vitamins, manganese and potassium.</p></div></div></div></div><!--gfsplit--><div data-label="Separator" id="e-1585543493923" class="element-wrap" data-icon="gpicon-separator" data-ver="1.0" data-id="1585543493923"><div class="elm gf-elm-center gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-align="left" data-exc=""><hr class="gf_separator"></div></div><!--gfsplit--><div data-label="Row" id="r-1585453677845" class="gf_row gf_row-fluid gf_row-no-padding" data-icon="gpicon-row" data-id="1585453677845" data-extraclass=""><div class="gf_col-lg-12 gf_column" id="c-1585453677906" data-id="1585453677906" style="min-height: auto;"><div data-label="Heading" id="e-1585453690775" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585453690775"><div class="elm text-edit gf-elm-center gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-gemlang="en" data-exc=""><h4><br></h4><h4>At RYZE, we meticulously crafted our mushroom coffee blend to harness the power of 6 superfood mushrooms, arabica coffee, and MCT oil to bring you immunity, jitter-free focus, and calm energy. Start to RYZE today and get the superfoods you need all in one cup, delivered to your door each month.</h4><h4><br></h4></div></div><div data-label="Image" id="e-1585528238731" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1585528238731"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/ae82a095-86c7-43d4-970f-01714c795ea5/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Woman sitting on ledge drinking RYZE mushroom coffee out of cup" class="gf_image" data-gemlang="en"></div></div><div data-label="Button" id="e-1585454212562" class="element-wrap" data-icon="gpicon-gpicon-button" data-ver="1.0" data-id="1585454212562"><div class="elm gf-elm-center gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs"><a class="button btn gf_button" href="/products/mushroom-coffee" target="" data-exc=""><span>SHOP NOW</span></a></div></div></div></div><!--gfsplit-->
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

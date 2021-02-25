@@ -1,0 +1,183 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Text Block" id="e-1580743362741" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580743362741"><div class="elm text-edit gf-elm-left gf-elm-left-md gf-elm-left-sm gf-elm-left-xs gf-elm-left-lg" data-gemlang="en" data-exc=""><p>Looking to quit coffee? Or even just cut back? But are you scared that without it, you'll start feeling sluggish in the morning and tired all the time?</p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"><br></span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">Don't worry!&nbsp;</span><span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;">This won't happen. There are a plethora of other options that can serve as your energizing morning ritual but without all the drawbacks of normal coffee. One that's come to my attention is the use of medicinal mushrooms to relieve the anxiety and jitteriness that coffee can cause.</span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"><br></span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">Medicinal mushrooms have been increasing in popularity in western wellness circles over the last few years, including features on popular wellness blogs blogs like </span><a href="https://www.mindbodygreen.com/" class="" target="_blank" style="font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px; background-color: rgb(255, 255, 255);">MindBodyGreen</a><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"> and </span><a href="https://www.wellandgood.com/" class="" target="_blank" style="font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px; background-color: rgb(255, 255, 255);">Well+Good</a><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">, and even specialty mushroom coffee shops like this one in San Francisco (</span><a href="https://dothebay.com/events/2020/1/22/the-chaga-company-cafe-grand-opening-tickets" class="" target="_blank" style="font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px; background-color: rgb(255, 255, 255);">The Chaga Company Cafe</a><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">).  Having been cherished in eastern medicine for thousands of years, medicinal mushrooms are finally getting their moment worldwide.&nbsp;</span></p><p>&nbsp;<br></p><p>Despite what you may be imagining, Mushroom coffee is similar to regular ground coffee, only now with medicinal mushroom infused in the ground coffee. Don’t worry, it doesn’t taste like mushrooms, and the prep is as simple as mixing a spoonful into water and stirring a little, or using a mini-frother for extra foaminess.&nbsp;</p><p><br></p><p>Many brands have only a few functional mushrooms mixed in, but since each and every mushroom offers so much value, it’s best when you can find a blend with as many as possible mixed in! RYZE has 6 medicinal mushrooms: Cordyceps, for energy enhancing properties, Lion’s Mane for brain health and a cognitive boost, Shiitake and King Trumpet for incredible immune-enhancing qualities, Turkey Tail for gut health and good digestion, Reishi for promoting good quality sleep and busting stress.&nbsp;</p><p><br></p><p>With all of these mushrooms, just imagine all the amazing health benefits you could feel from just one cup a day. Drinking it daily, you’ll find that this stuff works wonders. RYZE's mushroom coffee blend is a convenient mix of some of the healthiest functional superfoods around. You can mix it into hot water, or if you’re really hardcore like&nbsp;the <a href="https://www.healthyballerina.com/blog/2020/3/2/elevated-coffee-magical-mushrooms-no-not-that-kind" class="" target="_blank"><font color="#1e73be">Healthy Ballerina</font></a>, you can add it to brewed coffee ;)&nbsp;<span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">It dissolves really nicely in hot or cold beverages, so you can even add it to an iced latte or smoothie for an on-the-go meal.&nbsp;</span></p><p><br></p></div></div><!--gfsplit--><div data-label="Row" id="r-1583789118818" class="gf_row" data-icon="gpicon-row" data-id="1583789118818" data-extraclass=""><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1583789118833" data-id="1583789118833" style="min-height: auto;"><div data-label="Image" id="e-1583789131152" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1583789131152" style=""><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="https://www.healthyballerina.com/blog/2020/3/2/elevated-coffee-magical-mushrooms-no-not-that-kind" target="_blank" class="image-link"><img src="https://ucarecdn.com/e305f3a8-d017-4772-ae3b-519a463d9448/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Bag of RYZE mushroom coffee with glass of iced coffee and sunglass on the table" class="gf_image" data-gemlang="en"></a></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1583789123642" data-id="1583789123642" style="min-height: auto;"><div data-label="Heading" id="e-1583789136531" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1583789136531" style=""><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h6><span style="font-size: 1.8rem; letter-spacing: 0px; text-align: inherit;"><font color="#1e73be"><a href="https://www.healthyballerina.com/" class="" target="_blank">@healthy_ballerina</a></font> with a glass of RYZE Mushroom Coffee over ice!&nbsp;</span><br></h6><h6><span style="font-size: 1.8rem; letter-spacing: 0px; text-align: inherit;"><br></span></h6><h6><span style="font-size: 1.8rem; letter-spacing: 0px; text-align: inherit;">Read her review <font color="#1e73be"><a href="https://www.healthyballerina.com/blog/2020/3/2/elevated-coffee-magical-mushrooms-no-not-that-kind" class="" target="_blank">here</a>.</font>&nbsp;</span></h6></div></div></div></div><!--gfsplit--><div data-label="Heading" id="e-1584913392220" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1584913392220"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3>Focused, but calm. Better sleep too.&nbsp;</h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1583788641056" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1583788641056"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><span style="letter-spacing: 0px; color: inherit; font-family: inherit; font-size: inherit; text-align: inherit;">Here’s a little more about what I’ve been feeling ever since I made the switch from coffee to mushroom coffee.</span><br></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"><br></span></p><p>Usually, when I drank coffee I would  feel alert sure, but would have these sensations of heart racing, restless knee shakes, and wasted energy. With mushroom coffee, I don’t feel anxious or jumpy, but just tuned in. I suppose that’s the best way to describe it. Focused, but calm. I have tons of energy but never find it hard to fall asleep at night, even if I have a cup of mushroom coffee later in the afternoon. With regular coffee, if I had a cup after noon, forget about getting to bed any earlier than the wee hours of the morning. Another HUGE thing I’ve noticed since drinking mushroom coffee? My digestion is totally normalized. Regular coffee would throw off my stomach a lot and always leave this upset feeling, but I liked the other perks too much, so I’d deal with the discomfort. Now I don’t have to. In fact, the functional mushrooms in RYZE mushroom coffee, especially Turkey Tail, are anti-microbials and help keep the digestive system working properly by regulating gut bacteria.&nbsp;&nbsp;<br></p><p><br></p><p>Scientific studies and clinical trials have shown the benefits of these mushrooms as well, especially Reishi, Lion’s Mane Cordyceps, and King Trumpet. Their healing properties include: anti-inflammation, anti-viral, gut health, antioxidant rich (even more than cherished ones like cacao, blueberries, and acai), flush liver toxins, anti-tumor, stimulate neuron growth, and prevent neurodegenerative diseases like Alzheimer's.&nbsp;Check out this <a href="https://www.ryzesuperfoods.com/blogs/essential-reading/medicinal-mushrooms-not-magic-but-amazing" class="" target="_blank">article</a> to learn more about the research and benefits of these functional mushrooms. <br></p><p><br></p><p>Another amazing thing? They’re incredible at calming anxiety and reducing stress.  Many functional mushrooms are adaptogens, meaning they are able to the body “adapt” and heal. As the famous integrative medicine expert Andrew Weil explains, adaptogens support the body’s ability to bring itself back to homeostasis. Some studies confirm they lessen the stress effect by supporting the glands responsible for balancing hormones, and regulating everything from energy levels and metabolism, to brain function, and even our emotional response.&nbsp;</p><p><br></p><p>The last thing I’ll add is that, even though it has less than ½ the caffeine in a normal cup of coffee (which is a very good thing!), you may be worried if it’ll keep you alert like coffee does? YES! In fact, it’s far better at sustaining alertness, not leaving you with those dreaded afternoon slumps.&nbsp;<br></p><p><br></p><p>I can report that mushroom coffee has been the best addition to my daily routine in a long, long time! If you’re someone who loves coffee, but are caffeine-sensitive and don’t like the anxious and jittery feeling that comes with normal coffee, check mushroom coffee out immediately. I don’t think you’ll look back.&nbsp;</p><p>&nbsp;<br></p><p>My two cents? This health trend is here to stay and I only want to see it growing in the next few years.&nbsp;</p><p><br></p><p>Find more out about RYZE mushroom coffee below.</p></div></div><!--gfsplit--><div data-label="Product" id="m-1583776426168" class="module-wrap" data-icon="gpicon-product" data-ver="1.0" data-id="1583776426168" style="min-height: auto;"><div class="module" data-variant="auto" style="" data-current-variant="28783146762345"><form action="/cart/add" method="post" enctype="multipart/form-data" id="" class="AddToCartForm " data-productid="{{product.id}}">{% assign product = all_products['mushroom-coffee'] %}<input name="id" type="hidden" value="{{product.selected_or_first_available_variant.id}}" data-productid="{{product.id}}"><div data-index="1" class="item-content"><div class="module-wrap" id="m-1583776426168-0" data-id="1583776426168-0" data-label="(P) Image" data-icon="gpicon-product-image" data-ver="1" style=""><div class="module gf_module-center gf_module-center-lg gf_module--md gf_module--sm gf_module--xs " data-effect="default" data-pid="{{product.id}}" data-image-type="variant" data-default-variant="{{defaultVariant}}" data-select-text="{{selectText}}" data-zoomstyle="{{zoomStyle}}" data-ori-size="1024x1024">{% if 'variant' == 'first' %}{% assign current_variant = product.selected %}{% else %}{% assign current_variant = product.selected_or_first_available_variant %}{% endif %}{% assign featured_image = current_variant.featured_image | default: product.featured_image %}{% if featured_image %}{% assign altTag = featured_image.alt %}{% unless altTag %}{% assign altTag = product.title %}{% endunless %}{% if '1' == '1' %}<a href="/products/{{ product.handle }}">{% endif %}<img class="gf_product-image gf_featured-image" src="{{ featured_image | img_url: '1024x1024' }}" data-zoom="{{ featured_image | img_url: '2048x2048' }}" alt="{{ altTag }}" style="width: 60%; height: auto">{% if 'default' == 'hover' %}{% if 'last' != 'last' %}{% assign nth = last | minus: 1 %}{% assign limit = product.images | size | minus: 1  %}{% assign nth = nth | at_most: limit %}{% assign hoverImage = product.images[nth] %}{% else %}{% assign hoverImage = product.images | last %}{% endif %}{% assign hoverImgAltTag = hoverImage.alt %}{% unless hoverImgAltTag %}{% assign hoverImgAltTag = product.title %}{% endunless %}<img class="gf_product-image gf_product-image-hover" src="{{ hoverImage.src | img_url: '1024x1024' }}" alt="{{ hoverImgAltTag }}" style="width: 60%; height: auto">{% endif %}{% if '1' == '1' %}</a>{% endif %}{% else %}{% if '1' == '1' %}<a href="/products/{{ product.handle }}">{% endif %}<img class="gf_product-image gf_featured-image" data-zoom="https://cdn.shopify.com/s/images/admin/no-image-2048x2048.gif" src="https://cdn.shopify.com/s/images/admin/no-image-2048x2048.gif" alt="{{ product.title }}" style="width: 60%; height: auto">{% if 'default' == 'hover' %}{% if 'last' != 'last' %}{% assign nth = last | minus: 1 %}{% assign limit = product.images | size | minus: 1  %}{% assign nth = nth | at_most: limit %}{% assign hoverImage = product.images[nth] %}{% else %}{% assign hoverImage = product.images | last %}{% endif %}{% assign hoverImgAltTag = hoverImage.alt %}{% unless hoverImgAltTag %}{% assign hoverImgAltTag = product.title %}{% endunless %}<img class="gf_product-image gf_product-image-hover" src="{{ hoverImage.src | img_url: '1024x1024' }}" alt="{{ hoverImgAltTag }}" style="width: 60%; height: auto">{% endif %}{% if '1' == '1' %}</a>{% endif %}{% endif %}</div></div><div class="module-wrap" id="m-1583776426168-1" data-id="1583776426168-1" data-label="(P) Title" data-icon="gpicon-product-title" data-ver="1.0" style=""><div class="module gf_module-center gf_module-center-lg gf_module--md gf_module--sm gf_module--xs " data-pid="{{product.id}}"><h3 itemprop="name" class="product-single__title">{% if '1' == '1' %}<a href="/products/{{ product.handle }}" class="gf_product-title">{% else %}<span class="gf_product-title">{% endif %}{{ product.title }}{% if '1' == '1' %}</span></a>{% else %}{% endif %}</h3></div></div><div data-label="Text Block" id="e-1584108534947" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1584108534947" style=""><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p><b><br></b></p><p><b>Ingredients</b>: ORGANIC RYZE Mushroom Blend (Cordyceps, Reishi, Lion's Mane, Shiitake, King Trumpet, Turkey Tail), Spray-Dried Arabica Coffee, MCT Oil Powder&nbsp;</p><p><br></p><p><b>&nbsp;Vegan | 100% Natural | Keto-friendly | Non-GMO&nbsp;</b></p></div></div><div data-label="Button" id="e-1583779656422" class="element-wrap" data-icon="gpicon-gpicon-button" data-ver="1.0" data-id="1583779656422" style=""><div class="elm gf-elm-center gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg"><a class="button btn gf_button" href="/products/mushroom-coffee" target="" data-exc=""><span>LEARN MORE</span></a></div></div></div><div class="gf_clearfix"></div>{% unless product == empty %}{% for variant in product.variants %}<input type="hidden" id="gf-hidden-variant{{variant.id}}" value="{{variant.id}}" data-compare-price="{{ variant.compare_at_price | money | strip_html }}" data-price="{{ variant.price | money | strip_html }}">{% endfor %}<script type="text/plain" class="product-json" id="product-json{{product.id}}">{{ product | json }}</script>{% endunless %}</form></div></div><!--gfsplit-->
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

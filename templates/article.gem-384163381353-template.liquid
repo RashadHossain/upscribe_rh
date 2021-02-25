@@ -1,0 +1,183 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div class="element-wrap" data-label="Text Block" id="e-1584499718240" data-icon="gpicon-textblock" data-ver="1" data-id="1584499718240"><div class="elm text-edit"></div></div><!--gfsplit--><div data-label="Text Block" id="e-1584499751400" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1584499751400"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Would you like to be able to enjoy a long and happy life? Who doesn’t. But besides wishing for it, what do you do to get it? Enjoying happiness and health is not something you win with luck, like the lottery, it is the result of putting intentional actions into practice every single day to help you ensure longevity as much as humanly possible.</p><p><br></p><p><br></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1584499756344" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1584499756344" style=""><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h4>Much of your well-being depends on you</h4></div></div><!--gfsplit--><div data-label="Text Block" id="e-1584499808293" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1584499808293"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>You may think that things like genetics, unexpected diseases, or countless other circumstances that are out of your control, are what determine whether or not you have a healthy life. And of course you're right, but only in part. Even genetic predispositions to certain diseases can be mitigated or delayed by practicing healthy living routines.&nbsp;</p><p><br></p><p>The best healthy rituals not only focus on caring for the body, but also the mind. Only if you feel good in these fundamental aspects of your life, will you be able to say that you practice true holistic health. And holistic health is one of the most effective ways to living a long and happy life.</p><p><br></p><p><br></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1584499830241" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1584499830241"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h4>What does it mean to practice holistic health?</h4></div></div><!--gfsplit--><div data-label="Text Block" id="e-1584499851017" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1584499851017"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>In general, when we think of health, we relate it almost exclusively to the absence of disease, but that is only half of the story. Indeed, the lack of physical illness is one of the first signs of good health, but whole-body holistic (sometimes known as integral) health goes much further.&nbsp;</p><p><br></p><p>The World Health Organization (WHO) defines integral health as the state of general well-being of the human being understood as physical, mental, and social health. That is, a set of biological, emotional and spiritual factors that contribute to a state of balance in the person.&nbsp;</p><p><br></p><p>And although you are probably thinking that enjoying integral health in a permanent way is some sort of utopia (and you may be right), the truth is that many of the factors that contribute to it, are in <i>your</i> hands. Adopting healthy habits, physically, mentally, and emotionally, is a personal choice that must be made every day by <i>you</i>. It may not guarantee full health your entire life, but it will certainly help you live better and longer.</p><p><br></p><p><br></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1584499885383" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1584499885383"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h4>Healthy habits for a long and happy life</h4></div></div><!--gfsplit--><div data-label="Text Block" id="e-1584500228860" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1584500228860"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><b><br></b></p><p><b>1. Maintain a healthy diet</b>&nbsp;</p><p>As you have heard countless times, good nutrition is essential to maintaining health, not only for the body but also the mind. Everything you eat affects your internal and external health, from outward appearances to your organ health, so it is important that you take special care in your daily diet.&nbsp;</p><p><br></p><p>Give priority to fruits and vegetables. A good, balanced and nutritious breakfast that includes some fruit will help you start the day with energy. Remember that there are foods that are essential to a healthy and balanced diet, including ones rich in Omega 3 and antioxidants, which prevent cellular aging.&nbsp;</p><p><br></p><p>Avoid processed foods and saturated and trans fats as much as possible (if you can forget them altogether, even better). Reducing sugar is one of the most difficult steps, but as much as is possible, please please do it. Remember that foods high in sugar are especially harmful to brain health. Instead, try to make nutritional choices that help prevent or delay memory loss that occurs naturally over the years.</p><p><a href="https://www.ryzesuperfoods.com/blogs/essential-reading/what-is-an-anti-inflammatory-diet-and-why-you-should-get-on-it" class="" target="_blank"><br></a></p><p><a href="https://www.ryzesuperfoods.com/blogs/essential-reading/what-is-an-anti-inflammatory-diet" class="" target="_blank">Here</a> is a breakdown of the anti-inflammatory diet, one of the healthiest ones around.&nbsp;</p><p><br></p><p><br></p><p><b>2. Take care of the quality of your sleep&nbsp;</b></p><p>Having healthy sleep habits means not only means getting a good quantity of sleep, but exceptional sleep quality as well. Remember that getting good rest guarantees physical and mental health. Chronic sleep deprivation is one of the worst forms of torture that exists.&nbsp;</p><p><br></p><p>During sleep, the body focuses its energy on healing and repairing the system. The brain not only rests but also takes advantage of the time to store the information received during wakefulness and to fix it into memory.&nbsp;</p><p><br></p><p>It is advisable that you maintain a sleep discipline, going to bed at the same time and getting up early to make the most of the daylight hours, which can also give you an extra dose of energy. If you are one of those people who has trouble sleeping, try our <a href="https://www.ryzesuperfoods.com/blogs/essential-reading/10-bedtime-rituals" class="" target="_blank">bedtime rituals</a> to create relaxation before you shut your eyes and ensure more restful sleep through the night.&nbsp;&nbsp;<br></p><p><br></p><p><br></p><p><b>3. Exercise to take care of your body and mind&nbsp;</b></p><p>As you have seen, healthy habits are not only about caring for the body but also for the mind. And there are wonderful exercises you can use to keep both healthy. For the body, physical exercise acts kind of like food. The body is made for movement, so a sedentary lifestyle quickly deteriorates it. Over the years, maintaining strong muscles, bones, and joints is essential to prevent premature aging.&nbsp;<span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">Even if it is only 30 minutes, moving your body daily (preferably outside) is extremely beneficial. Read </span><a href="https://www.ryzesuperfoods.com/blogs/essential-reading/5-ways-exercise-makes-you-smarter" class="" target="_blank" style="font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px; background-color: rgb(255, 255, 255);">here</a><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">&nbsp;about</span><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">&nbsp;why exercise can make you smarter and better at what you do. Exercise increases oxygen to the brain and is crucial for your overall brain health as well.</span></p><p><br></p><p>Moreover, exercises for the mind are another area you should pay special attention to. Mental "gymnastics" keep your brain cells active and functioning. What is not used atrophies and that is especially true for the brain.&nbsp;<span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;">Activities like reading, constantly learning something new, and using logical thinking, keep the mind active and help delay or prevent problems like dementia, memory loss, and neurodegenerative diseases such as Alzheimer's.&nbsp;</span></p><p><br></p><p><b>4. Learn to manage stress properly&nbsp;</b></p><p>There is no denying that all too often stress is part of our daily lives. We live by running around, stretching ourselves as thin as possible to meet all our obligations.&nbsp;</p><p><span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;"><br></span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;">Unfortunately, the passage of time and aging do not seem to free us from stress. If there are no problems at work, then there are problems in the family, with the children, with your partner, with money... In short, the list can end up being very, very long.&nbsp;</span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;"><br></span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;">And, while stress isn't bad in essence since it guarantees us an efficient reaction to imminent danger, chronic stress is extremely detrimental to health. When cortisol and adrenaline permanently invade our bodies, they negatively affect each and every one of our cells.&nbsp;</span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;"><br></span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;">So, if you can't get rid of the problems that cause you stress, then you must learn to manage it. Meditation, mindfulness practice, laughter, or any other relaxation techniques that work for you are healthy habits that will help calm your mind and get rid of the corrosive effect of stress hormones. Some tips on making meditation part of your daily life can be found&nbsp;<a href="https://www.ryzesuperfoods.com/blogs/essential-reading/the-secret-to-succeeding-at-meditation" class="" target="_blank">here</a>.&nbsp;&nbsp;</span><br></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;"><br></span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;"><br></span></p><p><b>5. Cultivate a constructive tribe&nbsp;</b></p><p>We are not made to live alone; we need a community so having a "tribe" is one way to help yourself guarantee mental and emotional health. Remember that having solid and caring relationships is one of the secrets to happiness.&nbsp;</p><p><br></p><p>Family, partners, and friends are the ones who form your tribe, people with whom you share your vision about life, people who give you support, hope and positivity, and to whom you can give affection and support back.&nbsp;</p><p><br></p><p>Choose well those who you let be part of your tribe and those who do not. Keep out of your life those who are toxic, who steal your energy or who only see things in a negative way. Don't allow these people to pollute your life, no matter who they are.&nbsp;<span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;"><br></span></p><p><br></p><p><br></p><p><b>6. Keep a positive outlook &amp; practice gratitude&nbsp;</b></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">Positive thinking has great influence on us, not only on the mind and emotions but also on physical health. Although many people doubt it, there are already a significant number of scientific studies that support this.&nbsp;</span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"><br></span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">One of the healthiest habits you can incorporate into your life is to constantly look on the bright and good side of things. Surely it will not always be easy. In addition to the problems and difficulties of everyday life, there is also the objective bad news that can bombard us daily, and recently there has been more of that than ever. However, if you make an honest effort you will see that, in the world (and in your life), there are always things that you can be grateful for.&nbsp;</span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"><br></span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">Positive thinking will not only help you have a healthy mental balance, but will also take away the danger of falling into depression and chronic sadness. Lift yourself and your health up by practicing gratitude. Radiating positivity can have ripple effects to those around you that can come back and have a wonderful positive feedback cycle on you.&nbsp;&nbsp;</span><br></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"><br></span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"><br></span></p><p><b>7. Enjoy your free time, especially in nature&nbsp;</b></p><p>Not everything in life can be about working and fulfilling your obligations. It is fundamental to practicing holistic health that you give yourself the time to <i>stop</i> and <i>enjoy</i>. Doing so is the equivalent of recharging your batteries and is absolutely necessary if you want to have a full and happy life.&nbsp;</p><p><br></p><p>You can, and should, set aside special moments just to enjoy life. Those moments will be the best gifts you can give yourself. Spend your free time on things that you like and get excited about, even if it seems useless at the time. Be rest assured. It’s not useless. These small things serve to make you happy, clear your mind, and therefore keep you physically and emotionally well.&nbsp;</p><p><br></p><p>And if you can, at least once a month, escape to enjoy nature - to a park, a forest, the sea or the mountains, wherever you can. There is nothing more relaxing and restorative than the fresh air and the sound of the sea or the birds in the middle of the countryside. Nature is&nbsp; real medicine and it is free! Take advantage of it.&nbsp;<span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"><br></span></p><p><br></p><p><br></p><p><b>8. Laugh often&nbsp;</b></p><p>Laughter is simply magic.&nbsp;<span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">It cheers up the soul and heals the physical body, believe it or not. There's probably no easier, faster, and more handy cure than a good laugh.&nbsp;</span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"><br></span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">No matter the reason, take advantage of any opportunity you have to laugh, but to really laugh, out loud and without holding anything back. If you've had a hard day and there doesn't seem to be any reason to laugh then look for it, make it up. Watch a movie or a show that will get you a good laugh and you'll see that afterwards, the bad stuff won't seem so bad anymore.&nbsp;</span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"><br></span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">Cultivate a sense of humor and laugh like when you were a child, when nothing seemed too important. No matter what the reason; sometimes you don't even need one. Laughter drives away the clouds, changes perspective, and strengthens your bonds with others you love.</span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"><br></span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">Become a joyful person, grateful for the opportunity to be alive and remember that at the end of the day, life has been given to us to enjoy. This is your only chance, don't waste it!&nbsp;</span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"><br></span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">Another sneaky healthy habit? Starting out your day with mushroom coffee. Great for an afternoon energy boost too. Check out our focus-fueled, jitter-free mushroom coffee below</span><br></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"><br></span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;"><br></span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit; letter-spacing: 0px;">&nbsp;&nbsp;</span></p></div></div><!--gfsplit--><div data-label="Product" id="m-1584759537707" class="module-wrap" data-icon="gpicon-product" data-ver="1.0" data-id="1584759537707" style="min-height: auto;"><div class="module" data-variant="auto" style="" data-current-variant="28783146762345"><form action="/cart/add" method="post" enctype="multipart/form-data" id="" class="AddToCartForm " data-productid="{{product.id}}">{% assign product = all_products['mushroom-coffee'] %}<input name="id" type="hidden" value="{{product.selected_or_first_available_variant.id}}" data-productid="{{product.id}}"><div data-index="1" class="item-content"><div class="module-wrap" id="m-1584759537707-0" data-id="1584759537707-0" data-label="(P) Image" data-icon="gpicon-product-image" data-ver="1"><div class="module gf_module-center gf_module-center-lg gf_module--md gf_module--sm gf_module--xs " data-effect="default" data-pid="{{product.id}}" data-image-type="variant" data-default-variant="{{defaultVariant}}" data-select-text="{{selectText}}" data-zoomstyle="{{zoomStyle}}" data-ori-size="1024x1024">{% if 'variant' == 'first' %}{% assign current_variant = product.selected %}{% else %}{% assign current_variant = product.selected_or_first_available_variant %}{% endif %}{% assign featured_image = current_variant.featured_image | default: product.featured_image %}{% if featured_image %}{% assign altTag = featured_image.alt %}{% unless altTag %}{% assign altTag = product.title %}{% endunless %}{% if '1' == '1' %}<a href="/products/{{ product.handle }}">{% endif %}<img class="gf_product-image gf_featured-image" src="{{ featured_image | img_url: '1024x1024' }}" data-zoom="{{ featured_image | img_url: '2048x2048' }}" alt="{{ altTag }}" style="width: 60%; height: auto">{% if 'default' == 'hover' %}{% if 'last' != 'last' %}{% assign nth = last | minus: 1 %}{% assign limit = product.images | size | minus: 1  %}{% assign nth = nth | at_most: limit %}{% assign hoverImage = product.images[nth] %}{% else %}{% assign hoverImage = product.images | last %}{% endif %}{% assign hoverImgAltTag = hoverImage.alt %}{% unless hoverImgAltTag %}{% assign hoverImgAltTag = product.title %}{% endunless %}<img class="gf_product-image gf_product-image-hover" src="{{ hoverImage.src | img_url: '1024x1024' }}" alt="{{ hoverImgAltTag }}" style="width: 60%; height: auto">{% endif %}{% if '1' == '1' %}</a>{% endif %}{% else %}{% if '1' == '1' %}<a href="/products/{{ product.handle }}">{% endif %}<img class="gf_product-image gf_featured-image" data-zoom="https://cdn.shopify.com/s/images/admin/no-image-2048x2048.gif" src="https://cdn.shopify.com/s/images/admin/no-image-2048x2048.gif" alt="{{ product.title }}" style="width: 60%; height: auto">{% if 'default' == 'hover' %}{% if 'last' != 'last' %}{% assign nth = last | minus: 1 %}{% assign limit = product.images | size | minus: 1  %}{% assign nth = nth | at_most: limit %}{% assign hoverImage = product.images[nth] %}{% else %}{% assign hoverImage = product.images | last %}{% endif %}{% assign hoverImgAltTag = hoverImage.alt %}{% unless hoverImgAltTag %}{% assign hoverImgAltTag = product.title %}{% endunless %}<img class="gf_product-image gf_product-image-hover" src="{{ hoverImage.src | img_url: '1024x1024' }}" alt="{{ hoverImgAltTag }}" style="width: 60%; height: auto">{% endif %}{% if '1' == '1' %}</a>{% endif %}{% endif %}</div></div><div class="module-wrap" id="m-1584759537707-1" data-id="1584759537707-1" data-label="(P) Title" data-icon="gpicon-product-title" data-ver="1.0" style=""><div class="module gf_module-center gf_module-center-lg gf_module--md gf_module--sm gf_module--xs " data-pid="{{product.id}}"><h3 itemprop="name" class="product-single__title">{% if '1' == '1' %}<a href="/products/{{ product.handle }}" class="gf_product-title">{% else %}<span class="gf_product-title">{% endif %}{{ product.title }}{% if '1' == '1' %}</span></a>{% else %}{% endif %}</h3></div></div><div data-label="Text Block" id="e-1584759602470" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1584759602470" style=""><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p><br></p><p>&nbsp;<b>Ingredients</b>: ORGANIC RYZE Mushroom Blend (Cordyceps, Reishi, Lion's Mane, Shiitake, King Trumpet, Turkey Tail), Spray-Dried Arabica Coffee, MCT Oil Powder&nbsp;</p><p><br></p><p>&nbsp;<b>Vegan | 100% Natural | Keto-friendly | Non-GMO&nbsp;</b></p><p><br></p></div></div><div data-label="Button" id="e-1584759791647" class="element-wrap" data-icon="gpicon-gpicon-button" data-ver="1.0" data-id="1584759791647" style=""><div class="elm gf-elm-center gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg"><a class="button btn gf_button" href="/products/mushroom-coffee" target="" data-exc=""><span>LEARN MORE</span></a></div></div></div><div class="gf_clearfix"></div>{% unless product == empty %}{% for variant in product.variants %}<input type="hidden" id="gf-hidden-variant{{variant.id}}" value="{{variant.id}}" data-compare-price="{{ variant.compare_at_price | money | strip_html }}" data-price="{{ variant.price | money | strip_html }}">{% endfor %}<script type="text/plain" class="product-json" id="product-json{{product.id}}">{{ product | json }}</script>{% endunless %}</form></div></div><!--gfsplit-->
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

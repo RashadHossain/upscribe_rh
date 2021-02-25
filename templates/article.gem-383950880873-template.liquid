@@ -1,0 +1,183 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Text Block" id="e-1581103066460" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1581103066460"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Meditation has been working its way to the top of the wellness pantheon in recent years. People are starting to see its benefits, its power, and trying to incorporate it in their daily routines. </p><p><br></p><p>However, for all the buzz circulating around meditation and mindfulness techniques, it’s actually not all that common to practice it regularly or successfully.&nbsp;</p><p><br></p><p>Why? One of the reasons might be that the simple challenge of it is nearly impossible to overcome. Deceptive in its simplicity- turning attention towards just one one thing, meditation is extremely challenging if you’re not already a seasoned practitioner.&nbsp;</p><p><br></p><p>If you have tried your hand at meditating, you know this all too well. Our attention is too easily pulled elsewhere, away from the focus at hand. There is so much “noise”, both internal and external, that is clamoring for our attention at any given moment.&nbsp;</p><p><br></p><p>The key to success? Unclear. Normally, we’re told to just keep doing it and eventually we’ll get somewhere. Seems feeble and inadequate for the busy lives and constant distractions most of us face. What are some better tips?<br></p><p><br></p><p>&nbsp;Is there a way to somehow bypass or go around this insurmountable beginner’s dilemma? Something simpler and more gradual in how we can attune our focus.&nbsp;&nbsp;<br></p><p><br></p><p><i>Attainability</i> doesn’t mean setting the bar lower. Rather, it is a stepping stone to success. Therefore, instead of focusing on one thing for as long as you can, try to focus for periods of time , anywhere from 3-5 seconds. Until you give your mind a rest again. They’re like small mind pumps that are working it out so it can for longer and longer stretches of concentrated thought.&nbsp;&nbsp;<br></p><p><br></p><p>This is very attainable, by everyone. Repeat it many times. That makes a success.&nbsp;&nbsp;<br></p><p><br></p><p>Small attainable, repeatable actions can actually turn into something you can complete, rather than something you put off (or fail at) because the task is too monumental. A couple deep breaths, focusing for 3 seconds on a thought - these may seem small but they are powerful.<br></p><p><br></p><p>Don’t set yourself up for failure with tasks that are unattainable at first. Just the opposite. Build on small wins.&nbsp;Pick something simple. Give yourself 3-5 seconds to think, feel, focus. Then stop.&nbsp;</p><p><br></p><p>Try it right now.&nbsp;</p><p><br></p><p>I bet you had success? Right?&nbsp;<br></p><p><br></p><p>Praise yourself. That was huge. You will probably feel a wave of relief.&nbsp;</p><p><br></p><p>Over time, you will come to anticipate, appreciate, and enjoy these brief periods of intense focus because you give yourself rest after. It’s <i>attainable</i>.&nbsp;</p><p><br></p><p>In spurts of a few seconds at a time, you’ll find yourself able to focus more and more when you decide to and set your intentions there.&nbsp;</p><p><br></p><p>Keep this up and before you know it, these turn into a continuum of near constant function. It’s an addicting feeling and while you may still feel lapses in your attention, I think you’ll also feel extreme freedom from distraction.&nbsp;</p><p><br></p><p>Turn meditation into a series of attainments, then successes. No more failures. Now that’s a 2020 goal for you!&nbsp; &nbsp;</p><p>&nbsp;<br></p></div></div><!--gfsplit-->
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

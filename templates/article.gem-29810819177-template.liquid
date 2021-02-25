@@ -1,0 +1,183 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Text Block" id="e-1580080868257" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580080868257"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><br></p><p>If you’ve been spending the afternoon on your phone scrolling through Black Tap’s Instagram account, you’ve found us just in time.&nbsp;</p><p><br></p><p>Summer, with its barbecues, county fairs and festivals can be challenging when you have wellness goals to crush. Once upon a time in the land before the internet, people thought eating healthy required sacrificing all the fun and yummy foods they grew up with. But now, thanks to sites like Thug Kitchen, Ketogasm, and Nom Nom Paleo, we know there’s virtually no classic dish that can’t be transformed into something your mouth and body will thank you for.&nbsp;</p><p><br></p><p>Of course, this doesn’t mean eating well is a cake walk. Let’s be real. You still have to make the food, and when you’re living in a world of Uber Eats, it can feel easier to just let your fingers do the heavy lifting instead of figuring things out in the kitchen. That’s why we’ve come in with this super easy turmeric milkshake recipe. Not only will it satisfy your sweet tooth, but it will take you less than a minute to make. Even Uber isn’t that fast.&nbsp;</p><p><br></p><p>Without throwing food shade, milkshakes are one of the worst things out there -nutritionally speaking. According to LiveScience, a single milkshake contains 1000 calories and 80 grams of artery stiffening fat. Still want a sip?If you’re practicing intuitive eating or just like to live dangerously, then go for it. But if you’d rather not sacrifice your fitness goals for your taste buds, then keep reading.&nbsp;</p><p><br></p><p>Along with being keto, vegan and gluten-free friendly, this turmeric milkshake has all the richness of the classic drink without the excess sugar that spikes insulin and sends you crashing within the hour. Unlike the traditional dessert, its ingredients are heart healthy, pro-digestion and are actually so friggin' good for you that you can down this for breakfast or an afternoon pick-me-up snack. And best of all, this recipe is customizable.&nbsp;</p><p><br></p><p>If you’re not keto or watching carbs, try adding a frozen banana get a dose of potassium and thicken the shake. If you don’t like stevia (a recommended optional ingredient), a date or tablespoon of maple syrup can provide a hit of sweetness without making the treat saccharine. You can also toss in a scoop of your favorite protein powder, collagen powder, or any additional supplements you wish. We’ve even gone as far as adding half a cup of pureed pumpkin into this bad boy. Seriously, it was like thanksgiving in the summer!&nbsp;</p><p><br></p><p>Before we go on to the recipe, allow us to introduce some of the key ingredients, because really, eating well is about knowing and owning what you put into your body.<br></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580079963525" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580079963525"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h2><b>The Star Ingredients</b></h2></div></div><!--gfsplit--><div data-label="Heading" id="e-1580079993676" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580079993676"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><b>Turmeric:</b></h3></div></div><!--gfsplit--><div data-label="Row" id="r-1580080162976" class="gf_row" data-icon="gpicon-row" data-id="1580080162976" data-extraclass=""><div class="gf_column gf_col-lg-9 gf_col-md-9 gf_col-sm-9 gf_col-xs-12" id="c-1580080162896" data-id="1580080162896" style="min-height: auto;"><div data-label="Text Block" id="e-1580080018238" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580080018238"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Of all the ingredients, this one may make you pause. But don’t worry. We promise that your milkshake won’t taste like a curry dish.&nbsp;</p><p><br></p><p>&nbsp;Although it’s part of the ginger family, turmeric is a subtle spice with a gentler kick. It has a mild scent profile and is often used in Indian cuisine as a replacement for saffron. It adds a gorgeous golden color to dishes and contains the active ingredient Curcumin. According to a review in the journal Foods, when combined with enhancer agents like pepper (more on this ingredient later), it can reduce inflammation, making it a great functional food to treat arthritis, digestion issues, and even insulin resistance.Turmeric is also filled with antioxidants, making it a star when it comes to skin health and the immune system. Milkshake recipes aside, you really should incorporate it into your life.</p></div></div></div><div class="gf_column gf_col-lg-3 gf_col-md-3 gf_col-sm-3 gf_col-xs-12" id="c-1580080165675" data-id="1580080165675" style="min-height: auto;"><div data-label="Image" id="e-1580081705794" class="element-wrap" data-icon="gpicon-image" data-ver="1" data-id="1580081705794" style=""><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/3872394f-1dde-4da5-b163-f3ec98861d0f/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Turmeric root and powder on wooden table" class="gf_image" data-gemlang="en"></div></div></div></div><!--gfsplit--><div data-label="Heading" id="e-1580080096678" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580080096678"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><b>Black Pepper:</b></h3></div></div><!--gfsplit--><div data-label="Row" id="r-1580080145648" class="gf_row" data-icon="gpicon-row" data-id="1580080145648" data-extraclass=""><div class="gf_column gf_col-lg-9 gf_col-md-9 gf_col-sm-9 gf_col-xs-12" id="c-1580080145616" data-id="1580080145616" style="min-height: auto;"><div data-label="Text Block" id="e-1580081028775" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580081028775"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>As previously mentioned, black pepper is an enhancing agent and increases the bioavailability in turmeric. While many of us think of this common spice as no more than seasoning, it’s been used in Ayurvedic medicine for centuries, often in conjunction with ghee or castor oil for cough therapies and to stimulate appetite.Along with being high in antioxidants, black pepper has antimicrobial compounds. It also contains thiamin, zinc, folic acid and other important minerals which makes it nothing to sneeze at.<br></p></div></div></div><div class="gf_column gf_col-lg-3 gf_col-md-3 gf_col-sm-3 gf_col-xs-12" id="c-1580080154103" data-id="1580080154103" style="min-height: auto;"><div data-label="Image" id="e-1580081722556" class="element-wrap" data-icon="gpicon-image" data-ver="1" data-id="1580081722556"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/f30e63ac-a9e8-4a5b-a692-3af4b8d75cb3/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Chia seeds in bowl" class="gf_image" data-gemlang="en"></div></div></div></div><!--gfsplit--><div data-label="Heading" id="e-1580080228396" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580080228396"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><b>Coconut Milk:</b></h3></div></div><!--gfsplit--><div data-label="Row" id="r-1580080238351" class="gf_row" data-icon="gpicon-row" data-id="1580080238351" data-extraclass=""><div class="gf_column gf_col-lg-9 gf_col-md-9 gf_col-sm-9 gf_col-xs-12" id="c-1580080145616" data-id="1580080145616" style="min-height: auto;"><div data-label="Text Block" id="e-1580080238350" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580080238350"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p class="p1" style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-family: &quot;Open Sans&quot;; font-size: 14px; color: rgb(17, 3, 3); text-align: inherit!important;">In place of ice cream we’ll be using coconut milk instead.  Trust us, it will bring so much creaminess to the dessert that you won’t even miss the other stuff.&nbsp;</p><p class="p1" style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-family: &quot;Open Sans&quot;; font-size: 14px; color: rgb(17, 3, 3); text-align: inherit!important;"><br></p><p class="p1" style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-family: &quot;Open Sans&quot;; font-size: 14px; color: rgb(17, 3, 3); text-align: inherit!important;">Coconut milk contains MCTs (Medium Chain triglycerides), a healthy fat that’s been linked to weight loss. Along with the fat being naturally satiating, MCT's may be beneficial to gut flora and increase insulin sensitivity. Coconut milk is also 50 percent lauric acid, which is anti-inflammatory and anti-microbial.&nbsp;</p><p class="p1" style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-family: &quot;Open Sans&quot;; font-size: 14px; color: rgb(17, 3, 3); text-align: inherit!important;"><br></p><p class="p1" style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-family: &quot;Open Sans&quot;; font-size: 14px; color: rgb(17, 3, 3); text-align: inherit!important;">While you can make this recipe with the type of coconut milk you’d find in the refrigerated section of the grocery store, we highly urge you to walk to the ethnic food isle and grab a can of the pure unadulterated stuff.  It’s thicker and has that tropical coconuty flavor that the perishable watered-down versions don’t have. If you’re concerned about calories, grab a light or unsweetened version.<br></p></div></div></div><div class="gf_column gf_col-lg-3 gf_col-md-3 gf_col-sm-3 gf_col-xs-12" id="c-1580080154103" data-id="1580080154103" style="min-height: auto;"><div data-label="Image" id="e-1580081734498" class="element-wrap" data-icon="gpicon-image" data-ver="1" data-id="1580081734498"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/169f71ee-8ff7-4ec8-b357-7820e0958e16/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Coconut and coconut flakes with wooden spoon" class="gf_image" data-gemlang="en"></div></div></div></div><!--gfsplit--><div data-label="Heading" id="e-1580080323610" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580080323610"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><b>Ceylon Cinnamon:</b></h3></div></div><!--gfsplit--><div data-label="Row" id="r-1580080333547" class="gf_row" data-icon="gpicon-row" data-id="1580080333547" data-extraclass=""><div class="gf_column gf_col-lg-9 gf_col-md-9 gf_col-sm-9 gf_col-xs-12" id="c-1580080145616" data-id="1580080145616" style="min-height: auto;"><div data-label="Text Block" id="e-1580080333621" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580080333621" style=""><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p class="p1" style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-family: &quot;Open Sans&quot;; font-size: 14px; color: rgb(17, 3, 3); text-align: inherit!important;">Like coconut milk, if you can’t track this specific type of cinnamon down, you can use the more common version cassia. However, do try to snag yourself the Ceylon kind because it’s the one with the thermogenic properties that may aid weight loss, lower cholesterol, and improve blood sugar levels. It’s also contains antioxidants like proanthocyanins, which promote liver health.<br></p></div></div></div><div class="gf_column gf_col-lg-3 gf_col-md-3 gf_col-sm-3 gf_col-xs-12" id="c-1580080154103" data-id="1580080154103" style="min-height: auto;"><div data-label="Image" id="e-1580081751863" class="element-wrap" data-icon="gpicon-image" data-ver="1" data-id="1580081751863"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/e17836e9-a8c6-4435-bd34-1072e3288d59/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Cinnamon sticks and powder in wooden bowl" class="gf_image" data-gemlang="en"></div></div></div></div><!--gfsplit--><div data-label="Heading" id="e-1580080356176" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580080356176"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><b>Nutmeg:</b></h3></div></div><!--gfsplit--><div data-label="Row" id="r-1580080366921" class="gf_row" data-icon="gpicon-row" data-id="1580080366921" data-extraclass=""><div class="gf_column gf_col-lg-9 gf_col-md-9 gf_col-sm-9 gf_col-xs-12" id="c-1580080145616" data-id="1580080145616" style="min-height: auto;"><div data-label="Text Block" id="e-1580080366917" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580080366917"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p class="p1" style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-family: &quot;Open Sans&quot;; font-size: 14px; color: rgb(17, 3, 3); text-align: inherit!important;">Don’t skimp on this spice. It’s been shown to ease digestion, boost mood, and help sleep disturbance. In one study, nutmeg was also shown to strengthen brain health. According to researchers, the spice contains volatile oils that stimulate neurotransmitters in the hippocampus. These findings indicate that nutmeg may be beneficial to those suffering from neuro-generative diseases.<br></p></div></div></div><div class="gf_column gf_col-lg-3 gf_col-md-3 gf_col-sm-3 gf_col-xs-12" id="c-1580080154103" data-id="1580080154103" style="min-height: auto;"><div data-label="Image" id="e-1580081770278" class="element-wrap" data-icon="gpicon-image" data-ver="1" data-id="1580081770278" style=""><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/d03ae198-e3d7-469d-b366-bf643ff4a6e4/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Nutmeg and powder in wooden bowl" class="gf_image" data-gemlang="en"></div></div></div></div><!--gfsplit--><div data-label="Heading" id="e-1580080390424" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580080390424"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><b>Flaxseed:</b></h3></div></div><!--gfsplit--><div data-label="Row" id="r-1580080400498" class="gf_row" data-icon="gpicon-row" data-id="1580080400498" data-extraclass=""><div class="gf_column gf_col-lg-9 gf_col-md-9 gf_col-sm-9 gf_col-xs-12" id="c-1580080145616" data-id="1580080145616" style="min-height: auto;"><div data-label="Text Block" id="e-1580080400551" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580080400551"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p class="p1" style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-family: &quot;Open Sans&quot;; font-size: 14px; color: rgb(17, 3, 3); text-align: inherit!important;">Ground flaxseed should be a staple in every healthy kitchen. It’s a great egg replacer for baking recipes and can serve as a natural thickener. It’s high in heart healthy omega-3 fatty acids, has soluble fiber, and Apha-linolenic acids which has been shown to slow and kill cancer cells.<br></p></div></div></div><div class="gf_column gf_col-lg-3 gf_col-md-3 gf_col-sm-3 gf_col-xs-12" id="c-1580080154103" data-id="1580080154103" style="min-height: auto;"><div data-label="Image" id="e-1580081787710" class="element-wrap" data-icon="gpicon-image" data-ver="1" data-id="1580081787710" style=""><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/8080d18f-a5c7-455b-9adf-04192a690aef/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Ground flax seeds with wooden spoon" class="gf_image" data-gemlang="en"></div></div></div></div><!--gfsplit--><div data-label="Heading" id="e-1580080436556" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580080436556"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><b>Maca:</b></h3></div></div><!--gfsplit--><div data-label="Row" id="r-1580080442716" class="gf_row" data-icon="gpicon-row" data-id="1580080442716" data-extraclass=""><div class="gf_column gf_col-lg-9 gf_col-md-9 gf_col-sm-9 gf_col-xs-12" id="c-1580080145616" data-id="1580080145616" style="min-height: auto;"><div data-label="Text Block" id="e-1580080442726" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580080442726"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p class="p1" style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-family: &quot;Open Sans&quot;; font-size: 14px; color: rgb(17, 3, 3); text-align: inherit!important;">A cruciferous vegetable  (yes, like broccoli), the Maca root is most commonly used by grinding it into a powder where it can be easily added to acai bowls, oatmeal, or baked goods. It has a nutty, slightly toffee taste which adds a malt-like flavor to milkshakes. This superfood is also an adaptogen and high in antioxidants. It’s been shown to fight free radicals and strengthen the immune system. It’s also hormone balancing, making it an ingredient to know if you’re having issues with stress, libido, PMS, and even weight gain.<br></p></div></div></div><div class="gf_column gf_col-lg-3 gf_col-md-3 gf_col-sm-3 gf_col-xs-12" id="c-1580080154103" data-id="1580080154103" style="min-height: auto;"><div data-label="Image" id="e-1580081807207" class="element-wrap" data-icon="gpicon-image" data-ver="1" data-id="1580081807207"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/dfcb2833-1799-42ae-943f-918a9b30697e/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Maca root powder on table" class="gf_image" data-gemlang="en"></div></div></div></div><!--gfsplit--><div data-label="Heading" id="e-1580080473833" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580080473833"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><b>Ginger:</b></h3></div></div><!--gfsplit--><div data-label="Row" id="r-1580080480676" class="gf_row" data-icon="gpicon-row" data-id="1580080480676" data-extraclass=""><div class="gf_column gf_col-lg-9 gf_col-md-9 gf_col-sm-9 gf_col-xs-12" id="c-1580080145616" data-id="1580080145616" style="min-height: auto;"><div data-label="Text Block" id="e-1580080480628" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580080480628"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p class="p1" style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-family: &quot;Open Sans&quot;; font-size: 14px; color: rgb(17, 3, 3); text-align: inherit!important;">If you’re looking to replenish yourself after a workout, this recipe may become your go-to. In one study, ginger was shown to help reduce muscle pain in eccentric exercisers. It’s also been shown to aid in digestion, lower risk of heart disease, and has anti-cancer properties.To truly make this milkshake sing, consider using 1-2 grates of the fresh stuff. However, if you don’t have it handy, you can still reap its benefits by using the powder form. <br></p></div></div></div><div class="gf_column gf_col-lg-3 gf_col-md-3 gf_col-sm-3 gf_col-xs-12" id="c-1580080154103" data-id="1580080154103" style="min-height: auto;"><div data-label="Image" id="e-1580081825199" class="element-wrap" data-icon="gpicon-image" data-ver="1" data-id="1580081825199" style=""><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/add9348b-7b26-4795-84aa-97094d362908/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Ginger roots and powder in bowl" class="gf_image" data-gemlang="en"></div></div></div></div><!--gfsplit--><div data-label="Heading" id="e-1580080542827" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580080542827"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h2><b>Full ingredients and servings:</b></h2></div></div><!--gfsplit--><div data-label="Row" id="r-1580080584111" class="gf_row" data-icon="gpicon-row" data-id="1580080584111" data-extraclass=""><div class="gf_column gf_col-lg-9 gf_col-md-9 gf_col-sm-9 gf_col-xs-12" id="c-1580080584041" data-id="1580080584041" style="min-height: auto;"><div data-label="Text Block" id="e-1580080592144" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580080592144"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>4-5 ice cubes</p><p>1 can of coconut milk&nbsp;</p><p>½ cup of unsweetened almond milk&nbsp;</p><p>2 tsp of turmeric&nbsp;</p><p>1 tbsp of ground flaxseed&nbsp;</p><p>½ tsp of nutmeg&nbsp;</p><p>½ tsp of cinnamon&nbsp;</p><p>½ tsp of Maca powder&nbsp;</p><p>½ tsp of ginger&nbsp;</p><p>½ tsp of vanilla extract&nbsp;</p><p>Pinch of black pepper&nbsp;</p><p>Pinch of pink Himalayan sea salt&nbsp;</p><p>Optional Add-Ins: Vanilla protein powder, stevia or coconut/date sugar</p></div></div></div><div class="gf_column gf_col-lg-3 gf_col-md-3 gf_col-sm-3 gf_col-xs-12" id="c-1580080586687" data-id="1580080586687" style="min-height: auto;"><div data-label="Image" id="e-1580081841375" class="element-wrap" data-icon="gpicon-image" data-ver="1" data-id="1580081841375" style=""><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/ac7d2083-0e5b-43dd-a199-5090b36b8ad9/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Glass of turmeric shake with turmeric root next to it" class="gf_image" data-gemlang="en"></div></div></div></div><!--gfsplit--><div data-label="Heading" id="e-1580080659258" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580080659258"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h2>Directions (1-2 servings):</h2></div></div><!--gfsplit--><div data-label="Heading" id="e-1580080748485" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580080748485"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><b>Step 1</b></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580080764808" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580080764808"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Add ingredients to blender and mix on high speed for 30-60 seconds.Note From RYZE:If you really want to give this shake the rich and icy texture of the dessert, use ½ the can of coconut milk to fill several cubes in an ice tray and allow to freeze before making the recipe.  This is an easy way to add creaminess and increase the nutrient density (and satiety) of many dishes. We highly recommend making these beforehand and keeping a supply in your freezer to add to shakes, coffees, and soups.<br></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580080781855" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580080781855"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><b>Step 2</b></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580080807743" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580080807743"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Serve immediately in chilled glasses. Garnish with an additional sprinkle of cinnamon and turmeric. If you have fresh ginger or coconut flakes, feel free to add those as well.</p><p><br></p><p><br></p><p><br></p><p>We’d love to see your Keto Turmeric Milkshake creations. Take a picture and tag us on Instagram <b><a href="https://www.instagram.com/ryzesuperfoods/?hl=en" class="" target="_blank">@ryzesuperfoods</a>.&nbsp;</b><br></p></div></div><!--gfsplit-->
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

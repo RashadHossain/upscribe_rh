@@ -1,0 +1,183 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Text Block" id="e-1582211978469" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1582211978469"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><span style="color: inherit; font-size: inherit; text-align: inherit;">Benjamin Franklin had some prolific quotes about taking action. Here are a few, "Well done is better than well said", and "Words may show a man's wit, but actions his meaning."&nbsp;</span><br></p><p><br></p><p>We all like to say actions speak louder than words. What is it about actions that we revere and idolize in parables and tropes but that are so hard to quite literally put into “action”. A simple action is arguably the most import - and hardest - thing one can do. Usually, when we’re unintentional we can be pretty poor at putting things into action. With time, maturity, and intention, overthinking actions turns into taking action. Overthinking actions can too often turn into procrastination, fatalistic thinking, and outright pessimistic cynicism. We don't want that.&nbsp;</p><p><br></p><p>Here are some simple ways to start doing more, and stewing less.&nbsp;&nbsp;<br></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1582212042621" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1582212042621"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3>1.&nbsp;Set yourself up for success.&nbsp;</h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1582212077498" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1582212077498"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>In order to perform an action, we need to set ourselves up with a great start. Do the hard things in the morning. That task that’s always hanging on in your to-do list. The hard phone call or tough email. Get it out of the way in the morning to clear your mind for the day.</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1582212101090" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1582212101090"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3>2.&nbsp;Every action has a process. Own it. Do it.</h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1582212132328" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1582212132328"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>One of our favorite quotes, "To action alone hast thou a right and never at all to its fruits; let not the fruits of action be thy motive; neither let there be in thee any attachment to inaction." -&nbsp;<i>S Radhakrishnan</i></p><p><br></p><p>This quote is so freakin awesome. I think it’s because it really tells us that the motivation can’t be in the outcome. It can’t be in how others react. It has to be in the process of getting there and that’s only possible through action.</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1582212168215" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1582212168215"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3>3.&nbsp;Make your steps small at first. Especially when you’re overwhelmed.</h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1582212187875" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1582212187875"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>You can do anything for 30 seconds. 10 squats before you shower. Sure. 5 minutes of reading a night. That's nothing.&nbsp;</p><p><br></p><p>Putting something in motion is often the hardest part. Once moving, it can keep going far longer (and better) than you ever could have imagined. </p></div></div><!--gfsplit--><div data-label="Heading" id="e-1582212231754" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1582212231754"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3>4.&nbsp;Act in a way that doesn’t hurt you.</h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1582212250690" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1582212250690"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>You might be thinking I mean something different than what I do. When I say that I mean, act in a way that if you were a third party, standing and observing you, you wouldn’t feel hurt, let down, and disappointed by you. Sounds trivial but next time you act (or don’t) on something, think from that perspective and I bet you’ll have some amazing moments of contemplation and realization. Better intention will follow.</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1582212267199" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1582212267199"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3>5. Help yourself succeed by giving yourself reminders.</h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1582212282783" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1582212282783"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Without them it’s too easy to let small things slip away without notice.&nbsp;<span style="color: inherit; font-size: inherit; text-align: inherit;">A good place to start would be a simple list with 3 things on it:</span></p><p>1. The three most important things in your life at that moment.</p><p><span style="color: inherit; font-size: inherit; text-align: inherit;">2. What you want your main focus to be for the next day, week, and month.&nbsp;</span></p><p><span style="color: inherit; font-size: inherit; text-align: inherit;">3.&nbsp; A motto, mantra, our quote that you want to remember and repeat to yourself every single day.&nbsp;</span></p><p><span style="color: inherit; font-size: inherit; text-align: inherit;"><br></span></p><p><span style="color: inherit; font-size: inherit; text-align: inherit;">If you don’t know what these things are, find them. Now. It is not a waste of time. Everyone should have answers (at least temporary ones) to this list.</span></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1582212358214" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1582212358214"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3>6. Ask for accountability from those around you.</h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1582212380850" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1582212380850"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Communities of people (friends, family, online forums even) can help keep us on track towards actions and goals. Find those who have your best interest in mind, plus motivation like you do and then work to maintain each other and take actionable steps every day, week, and month. While other people can't&nbsp;<i>make</i> you do anything, they can certainly help lots!&nbsp;</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1582212414375" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1582212414375"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3>7. Switch off between concentrated work and concentrated rest.</h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1582212678532" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1582212678532"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Here’s what I mean by this. Like our post about meditation (found <a href="https://www.ryzesuperfoods.com/blogs/essential-reading/the-secret-to-succeeding-at-meditation" class="" target="_blank">here</a>), about being able to focus for just a few minutes in order to get better at longer meditations without getting overwhelmed, a similar principal is at work here. Set a timer for 5-10 minutes and then build up the time that you can concentrate on a task over the upcoming few weeks. Eventually set the timer for 15, 20, 25 mins, and so on.&nbsp;</p><p>Set a timer for those allotted minutes and start, get ahead on, or complete your most important task. You do not need to do anything but that task for that time. Try to get rid of any distractions that would make that time less productive.&nbsp;</p><p><br></p><p>Take a break after that time is up and let your mind have a rest. Physically remove yourself from your work space and take a walk, stretch or do anything else for 15 mins.&nbsp;<span style="color: inherit; font-size: inherit; text-align: inherit;">By working in these highly concentrated and focused intervals of time, you’ll start to notice:&nbsp;</span></p><p>1. You get more high-quality work done.&nbsp;</p><p>2. You actually increase your periods of concentration, because you aren’t taxing your mind with other distracting loads while you’re trying to do important work.&nbsp;</p><p>3. You train yourself to concentrate on one thing at time, rather than overloading your mind and creating stress.&nbsp;</p><p>4. You'll start to enjoy periods of relaxation guilt free.&nbsp;</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1582212919657" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1582212919657" style=""><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3>8. Focus on the how, not the what.</h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1582212959754" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1582212959754"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Spinning minds are up there with some of the world’s worst things. Don’t let yourself experience that. Immediately shut a spinning mind down. Getting stuck in unhelpful analysis quite literally leads to action paralysis, defeating the whole point of taking action in the first place.&nbsp;</p><p><br></p><p>Don’t get us wrong though. We’re not suggesting to act without thinking. Rather, we’re talking about the insidious overthinking that tends to erode confidence and assuredness and prevents any action from being taken whatsoever.&nbsp;</p><p><br></p><p>Instead of asking yourself what could go wrong or why you shouldn’t do something, try out these questions instead:&nbsp;</p><p>1. What’s one thing I can do now to move my goal slightly ahead?</p><p>2. How can I learn from this situation?</p><p>3. And then, how do I help myself take action?&nbsp;</p><p>By literally writing your answers to these down, this will help remind you to take action on them.</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1582213179694" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1582213179694"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3>9. No one pays as much attention to you as you think they do.</h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1582213209299" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1582213209299"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>We don’t mean that in a cynical way. More so we mean, stop letting others’ opinions hold you back from doing anything because others rarely pay as much attention to what you're doing as you think they do. When you think about it, it’s almost a self-centered belief to think that others are sitting around thinking, judging, criticizing you and your actions.&nbsp;</p><p>Everyone is busy with their own goals, actions, and responsibilities. They have their own worries and dreams which are taking far more of their headspace than considering you. While at first, this may be a disappointment to us, you’ll soon learn that this is one of the most freeing realizations you could have.</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1582213403325" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1582213403325"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3>10. Lean into enthusiasm and excitement.&nbsp;</h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1582213413449" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1582213413449"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Excitement and enthusiasm are some of the most effective drivers of action. It can flow out of you like water if you’re excited about doing something. Don’t let slight waxes and wanes in that change your guiding principle or make you stop believing.&nbsp;</p><p><br></p><p>There are sources of enthusiasm all around us. Let energy and excitement from others fuel you and then give that back to them. Read things and take them in, so you can get ideas that excite you. Pets, friends, kids, are all a great source of positive energy. Music, movement, art, a beautiful day. These can all boost you.&nbsp;&nbsp;<br></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1582213443847" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1582213443847"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3>11. While you're at it, don't forget to put the <i>fun </i>in work.&nbsp;</h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1582213460706" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1582213460706"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>No matter how dull or “not fun” a task may be, that’s why you’re there after all! Go ahead and inject everything with some <i>fun</i>. You bring the the ideas and action. You make something what it is! Lighten up, change your perspective on what you’re doing. It becomes easier to get stuff done when you release the pressure sometimes. So be creative, and have fun!</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1582213464902" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1582213464902"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3>12. Thank yourself. Celebrate accomplishment.</h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1582213538180" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1582213538180"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>This is one of the most important things you can give back to yourself. <i>Gratitude</i>.&nbsp;</p><p>Take a few minutes at the end of each day to appreciate what you did, the actions that you put in motion and got started on. It’ll do a few things for you: give you motivation to start tomorrow even stronger, over time give you a self-esteem boost (who doesn’t want that!), and radiate positivity to those around you.</p><p><br></p><p><br></p><p><br></p></div></div><!--gfsplit--><div data-label="Product" id="m-1584798525150" class="module-wrap" data-icon="gpicon-product" data-ver="1.0" data-id="1584798525150" style="min-height: auto;"><div class="module" data-variant="auto" style="" data-current-variant="28783146762345"><form action="/cart/add" method="post" enctype="multipart/form-data" id="" class="AddToCartForm " data-productid="{{product.id}}">{% assign product = all_products['mushroom-coffee'] %}<input name="id" type="hidden" value="{{product.selected_or_first_available_variant.id}}" data-productid="{{product.id}}"><div data-index="1" class="item-content"><div class="module-wrap" id="m-1584798525150-0" data-id="1584798525150-0" data-label="(P) Image" data-icon="gpicon-product-image" data-ver="1"><div class="module gf_module-center gf_module-center-lg gf_module--md gf_module--sm gf_module--xs " data-effect="default" data-pid="{{product.id}}" data-image-type="variant" data-default-variant="{{defaultVariant}}" data-select-text="{{selectText}}" data-zoomstyle="{{zoomStyle}}" data-ori-size="1024x1024">{% if 'variant' == 'first' %}{% assign current_variant = product.selected %}{% else %}{% assign current_variant = product.selected_or_first_available_variant %}{% endif %}{% assign featured_image = current_variant.featured_image | default: product.featured_image %}{% if featured_image %}{% assign altTag = featured_image.alt %}{% unless altTag %}{% assign altTag = product.title %}{% endunless %}{% if '1' == '1' %}<a href="/products/{{ product.handle }}">{% endif %}<img class="gf_product-image gf_featured-image" src="{{ featured_image | img_url: '1024x1024' }}" data-zoom="{{ featured_image | img_url: '2048x2048' }}" alt="{{ altTag }}" style="width: 60%; height: auto">{% if 'default' == 'hover' %}{% if 'last' != 'last' %}{% assign nth = last | minus: 1 %}{% assign limit = product.images | size | minus: 1  %}{% assign nth = nth | at_most: limit %}{% assign hoverImage = product.images[nth] %}{% else %}{% assign hoverImage = product.images | last %}{% endif %}{% assign hoverImgAltTag = hoverImage.alt %}{% unless hoverImgAltTag %}{% assign hoverImgAltTag = product.title %}{% endunless %}<img class="gf_product-image gf_product-image-hover" src="{{ hoverImage.src | img_url: '1024x1024' }}" alt="{{ hoverImgAltTag }}" style="width: 60%; height: auto">{% endif %}{% if '1' == '1' %}</a>{% endif %}{% else %}{% if '1' == '1' %}<a href="/products/{{ product.handle }}">{% endif %}<img class="gf_product-image gf_featured-image" data-zoom="https://cdn.shopify.com/s/images/admin/no-image-2048x2048.gif" src="https://cdn.shopify.com/s/images/admin/no-image-2048x2048.gif" alt="{{ product.title }}" style="width: 60%; height: auto">{% if 'default' == 'hover' %}{% if 'last' != 'last' %}{% assign nth = last | minus: 1 %}{% assign limit = product.images | size | minus: 1  %}{% assign nth = nth | at_most: limit %}{% assign hoverImage = product.images[nth] %}{% else %}{% assign hoverImage = product.images | last %}{% endif %}{% assign hoverImgAltTag = hoverImage.alt %}{% unless hoverImgAltTag %}{% assign hoverImgAltTag = product.title %}{% endunless %}<img class="gf_product-image gf_product-image-hover" src="{{ hoverImage.src | img_url: '1024x1024' }}" alt="{{ hoverImgAltTag }}" style="width: 60%; height: auto">{% endif %}{% if '1' == '1' %}</a>{% endif %}{% endif %}</div></div><div class="module-wrap" id="m-1584798525150-1" data-id="1584798525150-1" data-label="(P) Title" data-icon="gpicon-product-title" data-ver="1.0"><div class="module gf_module-center gf_module-center-lg gf_module--md gf_module--sm gf_module--xs " data-pid="{{product.id}}"><h3 itemprop="name" class="product-single__title">{% if '1' == '1' %}<a href="/products/{{ product.handle }}" class="gf_product-title">{% else %}<span class="gf_product-title">{% endif %}{{ product.title }}{% if '1' == '1' %}</span></a>{% else %}{% endif %}</h3></div></div><div data-label="Text Block" id="e-1584798544700" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1584798544700" style=""><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p><b><br></b></p><p><b>Ingredients</b>: ORGANIC RYZE Mushroom Blend (Cordyceps, Reishi, Lion's Mane, Shiitake, King Trumpet, Turkey Tail), Spray-Dried Arabica Coffee, MCT Oil Powder&nbsp;</p><p><br></p><p><b>Vegan | 100% Natural | Keto-friendly | Non-GMO&nbsp;</b></p><p><b>30 Servings / $30</b></p><p><b><br></b></p></div></div><div data-label="Button" id="e-1584798582139" class="element-wrap" data-icon="gpicon-gpicon-button" data-ver="1.0" data-id="1584798582139" style=""><div class="elm gf-elm-center gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg"><a class="button btn gf_button" href="/products/mushroom-coffee" target="" data-exc=""><span>LEARN MORE</span></a></div></div></div><div class="gf_clearfix"></div>{% unless product == empty %}{% for variant in product.variants %}<input type="hidden" id="gf-hidden-variant{{variant.id}}" value="{{variant.id}}" data-compare-price="{{ variant.compare_at_price | money | strip_html }}" data-price="{{ variant.price | money | strip_html }}">{% endfor %}<script type="text/plain" class="product-json" id="product-json{{product.id}}">{{ product | json }}</script>{% endunless %}</form></div></div><!--gfsplit-->
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

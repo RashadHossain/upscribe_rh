@@ -1,0 +1,314 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div class="gryffeditor">
+<div data-label="Text Block"> <div class="elm text-edit"><h2> </h2>
+<p>Considering that there are more than 10,000 <a href="https://www.mushroom-appreciation.com/types-of-mushrooms.html" target="_blank" rel="noopener noreferrer">types of mushrooms</a>, it’s understandable if your knowledge of them doesn’t extend beyond the culinary. But types like Lion’s Mane, Reishi, and even Shitake are simply magic.</p>
+<p>Not like the psychedelic variety, mind you. Those are psilocybins and even though they may have some therapeutic qualities (in fact, states like <a href="http://www.drugpolicy.org/drug-facts/psilocybin-mushrooms-medicine-therapy" target="_blank" rel="noopener noreferrer">Denver, CO have decriminalized them</a>), they remain illegal in the United States. Medicinal mushrooms, on the other hand, are legal and have been shown to strengthen the immune system, increase energy, and lower stress. And you don’t have to make them into faux burgers to enjoy their health benefits either.</p>
+<p>In fairness, most mushrooms have some nutritional value. They contain selenium, potassium and B vitamins.  But the medicinal variety are extra special because of their healing properties that make them true superfoods. Unlike other species, they’ve been scientifically researched and more western practitioners are accepting them as an important part of functional medicine.</p>
+<h4></h4>
+<h4>Here are 8 medicinal mushrooms worth knowing.</h4>
+<p><strong> </strong></p>
+<h3>
+<strong>Chaga | </strong><em>Inonotus obliquus</em>
+</h3>
+<h4>
+<em><strong>Claim to Fame:</strong></em><em> Endurance Supporter</em>
+</h4>
+<p>Heavy in antioxidants, Chaga has the highest <a href="https://www.superfoodly.com/orac-values/" target="_blank" rel="noopener noreferrer">ORCA</a> (Oxygen Radical Absorbance Capacity) score of all-natural foods. It’s rich in superoxide dismutase, an enzyme that stops free radicals from mutating during oxidative stress.</p>
+<p><a href="https://www.healthline.com/health/oxidative-stress" target="_blank" rel="noopener noreferrer">Oxidative stress</a> is a major concern for most athletes. It occurs when the body has too many free radicals and not enough antioxidants to neutralize them.  Although it’s minimal for low to moderate activities, intense exercising, like long distance running or heavy lifting, can tax the body’s reserves of antioxidants<a href="#_ftn1" name="_ftnref1"><span>[1]</span></a>, increasing the likelihood of tissue damage. The superoxide dismutase in Chaga not only helps prevent injury but inhibits the inflammation<a href="#_ftn2" name="_ftnref2"><span>[2]</span></a> trigged by chronic fatigued.  It has also been linked to increased endurance.</p>
+<p>In a 2015 study<a href="#_ftn3" name="_ftnref3"><span>[3]</span></a>, subjects that took Chaga as a liquid extract were able to swim longer in comparison to subjects who were only given water. Researchers also noted that the glycogen in their muscles increased and their blood lactic acid levels became lower. For the sake of transparency, the subjects were mice, but it’s still promising, considering the other benefits.</p>
+<p>Chaga has been shown to inhibit and diminish tumor growth<a href="#_ftn4" name="_ftnref4"><span>[4]</span></a>, as well as protect against cancer<a href="#_ftn5" name="_ftnref5"><span>[5]</span></a>. Thanks to its high antioxidant content, it’s also considered anti-aging. It can be taken as a supplement or tincture. It can also be made into a tea by boiling chunks of the mushroom in hot water.</p>
+<p> </p>
+<p><strong> </strong></p>
+<h3>
+<strong>Reishi | </strong><em>Ganoderma lucidum</em>
+</h3>
+<h4>
+<strong>Claim to Fame:</strong> <em>Immune Booster</em>
+</h4>
+<p>A mushroom of many names, Reishi is sometimes referred to as the “spirit plant,” “the mushroom of immortality” and the “the divine fungus.” Along with containing zinc and iron, it has dietary fiber and amino acids. But what really makes the mushroom special is its immune enhancing bioactive components: <a href="https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/triterpenoid" target="_blank" rel="noopener noreferrer">triterpenoids</a>,<a href="https://www.sciencedirect.com/topics/medicine-and-dentistry/peptidoglycan-polysaccharide" target="_blank" rel="noopener noreferrer"> polysaccharides and peptidoglycans</a>.</p>
+<p>The molecules are antiviral, antimicrobial, and work as antioxidants that pump up the body’s natural defenses to fight disease<a href="#_ftn6" name="_ftnref6"><span>[6]</span></a>. The polysaccharides have been a particular interest to scientists as one study showed that when an extraction of Reishi was given to advanced-stage cancer patients, their tumors shrunk and immune systems became stronger<a href="#_ftn7" name="_ftnref7"><span>[7]</span></a>.</p>
+<p>Although western practitioners are just turning onto Rishi’s anti-inflammatory<a href="#_ftn8" name="_ftnref8"><span>[8]</span></a> powers, the Chinese have been using it to treat bronchitis for centuries. Studies have shown that its compounds inhibit histamine giving it an <a href="https://www.marioninstitute.org/anti-allergy-benefits-of-reishi-and-maitake-mushrooms/" target="_blank" rel="noopener noreferrer">anti-allergy benefit </a>and its antioxidants strengthen the liver<a href="#_ftn9" name="_ftnref9"><span>[9]</span></a> which helps with detoxification.</p>
+<p>Reishi has also been shown to successfully lower blood sugar levels<a href="#_ftn10" name="_ftnref10"><span>[10]</span></a> and scavenge free radicals<a href="#_ftn11" name="_ftnref11"><span>[11]</span></a>. There was even <a href="https://www.ncbi.nlm.nih.gov/pubmed/23557365" target="_blank" rel="noopener noreferrer">one study</a> that indicated that it could be used to treat chronic hepatitis, hypertension, arthritis and asthma.</p>
+<p>Parts of the mushroom can be eaten fresh, but many enjoy the convenience of having it as a tea or incorporated into a super blend powder.</p>
+<p> </p>
+<p> </p>
+<h3><strong></strong></h3>
+<h3>
+<strong>Lion’s Mane</strong> <strong>| </strong><em>Hericium erinaceus</em>
+</h3>
+<h4>
+<strong>Claim to Fame: </strong><em>Brain Enhancing</em>
+</h4>
+<p>Arguably, the prettiest of the mushrooms is Lion’s Mane. Sometimes referred to as “Pom Poms,” it looks a lot like white icicles and can be found throughout North America. Considered a <em>nootropic food</em>, it has properties that improve cognitive skills.</p>
+<p>In a 2015 study<a href="#_ftn12" name="_ftnref12"><span>[12]</span></a>, researchers discovered that an extract of Lion’s Mane triggered neurite outgrowth in brain, spinal cord and retinal cells. These finding could have positive applications for those suffering from neurodegenerative disease like Parkinson’s, as the mushroom may slow degeneration. In another study<a href="#_ftn13" name="_ftnref13"><span>[13]</span></a>, researchers found improved cognitive function in those who took a supplement of Lion’s Mane for 16 weeks, though it should be noted that subjects test scores fell after supplementation stopped.</p>
+<p>Along with the <a href="https://www.huffpost.com/entry/mushroom-memory_n_1725583?guccounter=1&amp;guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&amp;guce_referrer_sig=AQAAAHv1PIeehYGvI84fTXIdBTEokd7RLHumc_0ohSX73aGP_n6qUqQ-CuXxiQSwGbf4rbOUgv86fmQQ8ChSAGrR1DRReTyx9geKdGOaZag1dU7XEbw9kHXiXwMvp4pavWmV9hdmgrrHp5PQ1wPoEazRAwGtW3zAoH0iIB0BHtRmcDqt" target="_blank" rel="noopener noreferrer">mushroom helping memory</a><span>,</span> it’s been shown to alleviate symptoms of depression and anxiety<a href="#_ftn14" name="_ftnref14"><span>[14]</span></a>, prohibit the growth of cancer cells<a href="#_ftn15" name="_ftnref15"><span>[15]</span></a>, and lower triglycerides (commonly known as LDL or “bad” cholesterol). </p>
+<p>For the epicurean who loves Lion’s Mane meaty texture (some compare it to lobster), sautéing the mushroom may be the way to go. But if you’re culinary skills aren’t quite there, it can also be found as a tincture or supplement.</p>
+<p> </p>
+<p> </p>
+<h3>
+<strong>Cordyceps | </strong><em>Ophiocordyceps sinensis or </em><em>Cordyceps sinensis</em>
+</h3>
+<h4>
+<strong>Claim to Fame:</strong> <em>Energizing</em>
+</h4>
+<p>Sick of relying on energy drinks to get you through the day? Cordyceps may be your new best friend. It’s polysaccharides, peptides, phenolic compounds and triterpenoids work together to stimulate multiple functional systems, resulting in the increased ability to resist  fatigue<a href="#_ftn16" name="_ftnref16"><span>[16]</span></a>.</p>
+<p>Unlike other medicinal mushrooms, Cordyceps grows on a caterpillar making it a ‘parasitic fungi’. But don’t let that fun fact scare you. It’s no danger to humans, just super beneficial. </p>
+<p>In a 2006 study, researchers gave 36 men Cordyceps supplements for two weeks. At the end of the trial, they discovered that the men who took the mushroom had a higher endurance during exercise and needed less time to recover than those who were supplementing with a placebo<a href="#_ftn17" name="_ftnref17"><span>[17]</span></a>. Similar findings have been reported in other medical journals such as the <em>Journal of Alternative and Complimentary Medicine</em><a href="#_ftn18" name="_ftnref18"><span>[18]</span></a>.</p>
+<p>Cordyceps has also been shown to <a href="https://thegoodinside.com/5-mushrooms-to-balance-the-immune-system/" target="_blank" rel="noopener noreferrer">balance the immune system</a>,  <a href="https://www.wholesunwellness.com/blogs/articles-updates/how-medicinal-mushrooms-help-men-with-sexual-health-and-performance" target="_blank" rel="noopener noreferrer">help sexual function</a><span>,  </span>and <a href="https://nutritionreview.org/2013/09/research-supports-antiaging-benefits-elite-class-tonic-herbs/" target="_blank" rel="noopener noreferrer">have anti-aging benefits</a>.  Try adding it as a powder to protein shakes or smoothies for an energy boost.  </p>
+<p> </p>
+<p> </p>
+<h3>
+<strong>Turkey Tail | </strong><em>Trametes versicolor</em><strong><em>  </em></strong>
+</h3>
+<h4>
+<strong>Claim to Fame</strong>: <em>Gut Health Promoter</em>
+</h4>
+<p>Without the help of prebiotics, probiotics wouldn’t be able to do their job. Fortunately, this mushroom is loaded with undigestible fibers that the microorganisms love and rely on.</p>
+<p>The colorful fungi resembling the bird’s fanned tail is full of chitin, hemicellulose, galactans and other carbohydrates that support the growth of the microbiota<a href="#_ftn19" name="_ftnref19"><span>[19]</span></a> and aid digestion. With a 2013 survey showing that <a href="https://www.prnewswire.com/news-releases/new-survey-reveals-more-than-half-of-americans-are-living-with-gastrointestinal-symptoms-and-not-seeking-care-from-a-doctor-230804341.html" target="_blank" rel="noopener noreferrer">more than half of Americans</a> are living with GI issues, including prebiotics like Turkey Tail can help keep stomach issues at bay.</p>
+<p>Another impressive claim to fame is <a href="https://www.drweil.com/health-wellness/body-mind-spirit/cancer/turkey-tail-mushrooms-for-cancer-treatment/" target="_blank" rel="noopener noreferrer">Turkey Tail’s reputation as a potential cancer treatment</a>. In one study, researchers at the University of Minnesota and Bastyr University found that breast cancer patients who took a supplement of the mushroom had a better immune response than patients who did not. The findings of the study were enough to convince the <a href="https://bastyr.edu/news/general-news/2012/11/fda-approves-bastyr-turkey-tail-trial-cancer-patients" target="_blank" rel="noopener noreferrer">FDA to approve another clinical trial with Turkey Tail,</a> provided that it accompanied traditional treatments<a href="#_ftn20" name="_ftnref20"><span>[20]</span></a>.</p>
+<p>Frequent users of Turkey Tail often enjoy it as a tea, but if can also be purchased in capsule form to make taking it more convenient.</p>
+<p> </p>
+<p> </p>
+<h3>
+<strong>Maitake | </strong><em>Grifola frondosa</em>
+</h3>
+<h4>
+<strong>Claim to Fame:</strong> <em>Health Stabilizer</em>
+</h4>
+<p>Also known as the “Hen of the Woods,” <a href="https://www.huffpost.com/entry/maitake-mushroom_n_2908332" target="_blank" rel="noopener noreferrer">the maitake mushroom</a> has a rich and savory flavor and grows at the bottom of maple, elm, and oak trees. Like other medicinal mushrooms, it’s high in antioxidants, fiber and minerals. Nutrition aside, it’s been shown to help lower blood sugar levels and bad cholesterol.</p>
+<p>In a study involving rodents, researchers placed three groups of rats into a diabetic state. For a period of 100 days, each group was given a specific diet. At the study’s completion, researchers found that rats whose diet included maitake had a significantly higher glucose tolerance than rats who didn’t consume the mushroom<a href="#_ftn21" name="_ftnref21"><span>[21]</span></a>.  </p>
+<p>Maitake has also be shown to <a href="https://www.researchgate.net/publication/19747725_Blood_pressure-lowering_activity_present_in_the_fruit_body_of_Grifola_frondosa_Maitake_I" target="_blank" rel="noopener noreferrer">lower blood pressure</a> and help with infertility by <a href="http://www.nutritionaloutlook.com/womens-health/maitake-mushroom-improves-ovulation-womens-health-study" target="_blank" rel="noopener noreferrer">improving ovulation.</a> It can be prepared fresh or taken as powder, tonic or supplement. If you’re interested in the ladder, experts suggest making sure the label readers Maitake D-Faction on the label. </p>
+<p> </p>
+<p> </p>
+<h3>
+<strong>King Trumpet</strong> | <em>Pleurotus eryngii</em>
+</h3>
+<h4>
+<strong>Claim to Fame:</strong> <em>Heart Healthy</em>
+</h4>
+<p>More commonly known as “king oyster,” this fungi is the largest of its species and may be as healthy as a bowl of bran cereal for your heart.</p>
+<p>Along with being an anti-inflammatory, a study published in <em>Mycobiology</em> showed it had the ability to support cardiovascular functions by lowering atherogenic lipids and LDL levels<a href="#_ftn22" name="_ftnref22"><span>[22]</span></a>.  The same study also indicated it as a potential weight loss aid. Researchers attribute these benefits to the mushrooms fiber content which has been shown to assist weight maintenance and balance cholesterol levels<a href="#_ftn23" name="_ftnref23"><span>[23]</span></a>.</p>
+<p>King Trumpet is also a <a href="https://www.researchgate.net/publication/323018916_Oyster_mushroom_A_rich_source_of_antioxidants" target="_blank" rel="noopener noreferrer">rich source of antioxidants</a> and <a href="https://universityhealthnews.com/daily/memory/b-vitamins-for-memory-niacin-benefits-for-alzheimers-disease/" target="_blank" rel="noopener noreferrer">niacin, a B-vitamin that strengthens memory</a> and overall brain function.  It’s relatively easy to cultivate, but if you’re not interested in engaging your green thumb, it can be found in liquid form (extracts, essences) or as part of a superfood blend.</p>
+<p> </p>
+<p> </p>
+<h3>
+<strong>Shiitake</strong> <strong>| </strong><em>Lentinula edodes</em>
+</h3>
+<h4>
+<strong>Claim to Fame: </strong><em>Immune Boosting</em>
+</h4>
+<p>You didn’t think we’d forget Shiitake, did you? Along with being one of the more popular fungi, this small mushroom has the bragging right of having all eight amino acids. It contains the polysaccharide <a href="https://www.sciencedirect.com/topics/neuroscience/lentinan" target="_blank" rel="noopener noreferrer">lentinan</a> which has been shown to heal chromosome damage and reduce cholesterol. Shiitake is also an immune builder.</p>
+<p>In a study published in <em>Journal of The American College and Nutrition</em>, researchers observed that subjects who ate the dried mushroom for 4 weeks had lower levels of inflammation and an increase in overall immunity at the end of the trial<a href="#_ftn24" name="_ftnref24"><span>[24]</span></a>. </p>
+<p>Shiitake has demonstrated the ability to <a href="https://www.healthcentral.com/article/mushrooms-to-lower-blood-pressure" target="_blank" rel="noopener noreferrer">lower blood pressure</a> and aid weight loss through its <a href="https://experiencelife.com/article/cla-can-this-fatty-acid-help-you-get-thin/" target="_blank" rel="noopener noreferrer">naturally occurring CLA. </a> Along with being thrown into a stir fry or risotto, the mushroom can be brewed or taken as a tincture.</p>
+<p> </p>
+<p> </p>
+<strong><em>A Special Note:</em></strong> <em>It’s important to remember that just because something is natural doesn’t mean you won’t have an adverse reaction to it. When using any supplement, follow the recommended dosage on the package and speak with your physician to make sure it won’t int</em>
+<p> </p>
+<p><a href="#_ftnref1" name="_ftn1"><span>[1]</span></a> Knez WL, Coombes JS, Jenkins DG. Ultra-endurance exercise and oxidative damage: implications for cardiovascular health. Sports Medicine. 2006; 36:429-441. </p>
+<p><a href="#_ftnref2" name="_ftn2"><span>[2]</span></a> Younus H. Therapeutic potentials of superoxide dismutase. <em>Int J Health Sci (Qassim)</em>. 2018;12(3):88–93.</p>
+<p><a href="#_ftnref3" name="_ftn3"><span>[3]</span></a> Yue Z, Xiuhong Z, Shuyan Y, Zhonghua Z <em>Effect of Inonotus Obliquus Polysaccharides on physical fatigue in mice. </em><span>J Tradit Chin Med</span>. 2015 Aug;35(4):468-72. PMID: 26427119</p>
+<p><a href="#_ftnref4" name="_ftn4"><span>[4]</span></a> Figure 2f from: Irimia R, Gottschling M (2016) Taxonomic revision of Rochefortia Sw. (Ehretiaceae, Boraginales). Biodiversity Data Journal 4: E7720. https://doi.org/10.3897/BDJ.4.e7720. (n.d.). doi:10.3897/bdj.4.e7720.figure2f</p>
+<p><a href="#_ftnref5" name="_ftn5"><span>[5]</span></a>Chung, Ja, M., &amp; Chung. (n.d.). Anticancer activity of subfractions containing pure compounds of Chaga mushroom (Inonotus obliquus) extract in human cancer cells and in Balbc/c mice bearing Sarcoma-180 cells. https://synapse.koreamed.org</p>
+<p><a href="#_ftnref6" name="_ftn6"><span>[6]</span></a> Cör, D., Knez, Ž., &amp; Knez Hrnčič, M. (2018). Antitumour, Antimicrobial, Antioxidant and Antiacetylcholinesterase Effect of Ganoderma Lucidum Terpenoids and Polysaccharides: A Review. <em>Molecules (Basel, Switzerland)</em>, <em>23</em>(3), 649. doi:10.3390/molecules23030649</p>
+<p><a href="#_ftnref7" name="_ftn7"><span>[7]</span></a> Gao, Y., Zhou, S., &amp; Jiang, W. (2003, August). Effects of ganopoly (a Ganoderma lucidum polysaccharide extract) on the immune functions in advanced-stage cancer patients. Retrieved from https://www.ncbi.nlm.nih.gov/pubmed/12916709</p>
+<p><a href="#_ftnref8" name="_ftn8"><span>[8]</span></a> Bhardwaj, N., Katyal, P., &amp; Sharma, A. K. (2014). Suppression of inflammatory and allergic responses by pharmacologically potent fungus Ganoderma lucidum. Retrieved from https://www.ncbi.nlm.nih.gov/pubmed/24948193</p>
+<p><a href="#_ftnref9" name="_ftn9"><span>[9]</span></a> Wu, X., Zeng, J., &amp; Liao, Q. (2013). Hepatoprotective effects of aqueous extract from Lingzhi or Reishi medicinal mushroom Ganoderma lucidum (higher basidiomycetes) on α-amanitin-induced liver injury in mice. Retrieved from https://www.ncbi.nlm.nih.gov/pubmed/23796220</p>
+<p><a href="#_ftnref10" name="_ftn10"><span>[10]</span></a> Gao, Y., &amp; Lan, J. (n.d.). A Phase I/II Study of Ling Zhi Mushroom <em>Ganoderma lucidum</em> (W.Curt.:Fr.)Lloyd (Aphyllophoromycetideae) Extract in Patients with Type II Diabetes Mellitus. Retrieved from http://dl.begellhouse.com/journals</p>
+<p><a href="#_ftnref11" name="_ftn11"><span>[11]</span></a> Lin, J. M. (1995, June 23). Radical scavenger and antihepatotoxic activity of Ganoderma formosanum, Ganoderma lucidum and Ganoderma neo-japonicum.</p>
+<p><a href="#_ftnref12" name="_ftn12"><span>[12]</span></a> Samberkar, S., &amp; Gandhi, S. (2015). Lion's Mane, Hericium erinaceus and Tiger Milk, Lignosus rhinocerotis (Higher Basidiomycetes) Medicinal Mushrooms Stimulate Neurite Outgrowth in Dissociated Cells of Brain, Spinal Cord, and Retina: An In Vitro Study. Retrieved from https://www.ncbi.nlm.nih.gov/pubmed/26853959</p>
+<p><a href="#_ftnref13" name="_ftn13"><span>[13]</span></a>Mori, K., &amp; Inatomi, S. (2009, March). Improving effects of the mushroom Yamabushitake (Hericium erinaceus) on mild cognitive impairment: A double-blind placebo-controlled clinical trial. Retrieved from https://www.ncbi.nlm.nih.gov/pubmed/18844328</p>
+<p><a href="#_ftnref14" name="_ftn14"><span>[14]</span></a> Nagano, M., &amp; Shimizu, K. (2010, August). Reduction of depression and anxiety by 4 weeks Hericium erinaceus intake. Retrieved from https://www.ncbi.nlm.nih.gov/pubmed/20834180</p>
+<p><a href="#_ftnref15" name="_ftn15"><span>[15]</span></a> Zan, X., &amp; Cui, F. (2015, May). Hericium erinaceus polysaccharide-protein HEG-5 inhibits SGC-7901 cell growth via cell cycle arrest and apoptosis. Retrieved from https://www.ncbi.nlm.nih.gov/pubmed/25703932</p>
+<p><a href="#_ftnref16" name="_ftn16"><span>[16]</span></a> Geng, P., Siu, K. C., Wang, Z., &amp; Wu, J. Y. (2017). Antifatigue Functions and Mechanisms of Edible and Medicinal Mushrooms. <em>BioMed research international</em>, <em>2017</em>, 9648496. doi:10.1155/2017/9648496</p>
+<p><a href="#_ftnref17" name="_ftn17"><span>[17]</span></a> Nagata, A., Tajima, T., &amp; Uchida, M. (2012, September 27). <em>Supplemental Anti-Fatigue Effects of Cordyceps Sinensis  (Touch-Kaso) Extract Powder During Three Stepwise Exercise of Human. </em></p>
+<p><a href="#_ftnref18" name="_ftn18"><span>[18]</span></a> Chen, S., Li, Z., Krochmal, R., Abrazado, M., Kim, W., &amp; Cooper, C. B. (2010). Effect of Cs-4 (Cordyceps sinensis) on exercise performance in healthy older subjects: a double-blind, placebo-controlled trial. <em>Journal of alternative and complementary medicine (New York, N.Y.)</em>, <em>16</em>(5), 585–590. doi:10.1089/acm.2009.0226</p>
+<p><a href="#_ftnref19" name="_ftn19"><span>[19]</span></a> Jayachandran, M., Xiao, J., &amp; Xu, B. (2017). A Critical Review on Health Promoting Benefits of Edible Mushrooms through Gut Microbiota. <em>International journal of molecular sciences</em>, <em>18</em>(9), 1934. doi:10.3390/ijms18091934</p>
+<p><a href="#_ftnref20" name="_ftn20"><span>[20]</span></a> FDA Approves Bastyr Turkey Tail Trial for Cancer Patients. (n.d.). Retrieved from https://bastyr.edu/news/general-news/2012/11/fda-approves-bastyr-turkey-tail-trial-cancer-patients</p>
+<p><a href="#_ftnref21" name="_ftn21"><span>[21]</span></a> Horio, H., &amp; Ohtsuru, M. (2001, February). Maitake (Grifola frondosa) improve glucose tolerance of experimental diabetic rats. Retrieved from https://www.ncbi.nlm.nih.gov/pubmed/11349892</p>
+<p><a href="#_ftnref22" name="_ftn22"><span>[22]</span></a> Alam, N., Amin, R., Khan, A., Ara, I., Shim, M. J., Lee, M. W., … Lee, T. S. (2009). Comparative effects of oyster mushrooms on lipid profile, liver and kidney function in hypercholesterolemic rats. <em>Mycobiology</em>, <em>37</em>(1), 37–42. doi:10.4489/MYCO.2009.37.1.037</p>
+<p><a href="#_ftnref23" name="_ftn23"><span>[23]</span></a> <em>J. Agric. Food Chem.</em>201563337371-7380 Publication Date: August 18, 2015 </p>
+<p><a href="#_ftnref24" name="_ftn24"><span>[24]</span></a> Dai, X., Stanilka, J. M., &amp; Nieves, C. (2015). Consuming Lentinula edodes (Shiitake) Mushrooms Daily Improves Human Immunity: A Randomized Dietary Intervention in Healthy Young Adults. Retrieved from https://www.ncbi.nlm.nih.gov/pubmed/25866155</p>
+<p> </p>
+<p> </p></div></div>
+</div><div id="divContentBk"></div>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

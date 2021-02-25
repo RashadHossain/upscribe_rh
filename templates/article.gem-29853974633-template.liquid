@@ -1,0 +1,183 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Text Block" id="e-1580131361274" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580131361274"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><br></p><p>You’ve heard of charcoal being good for skin, but chocolate? You bet!</p><p><br></p><p>But not just any chocolate. We’re talking cacao. It’s the pure unadulterated sweet stuff, harvested from the cacao plant. It’s high in antioxidants which means that it’s not only beneficial for your insides, but your outsides as well.&nbsp;&nbsp;<br></p><p><br></p><p>Antioxidants are one of the key ingredients to targeting external signs of aging and cell damage. As a face mask, cacao can reduce redness and swollen breakouts by targeting inflamed areas. When used on a regular basis it can promote cell turn over and increase elasticity. In fact, because of its natural caffeine content, cacao can even help de-puff and tighten sagging skin!&nbsp;&nbsp;<br></p><p><br></p><p>But your face is not the only place you can use cacao. It can also be used on your hair. It’s high in sulfur, the mineral that’s been shown to help your mane grow thicker and longer. Some people even use it in DIY rinses to give additional shine and make darker hair a deeper tone.&nbsp;&nbsp;<br></p><p><br></p><p>Let your self-care routine RYZE and SHINE by adding this superfood ASAP. Here are some recipes to help you get started.&nbsp;&nbsp;<br></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580131407171" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580131407171"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><b>Chocolate/Sugar/Sea Salt Mask</b></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580131432711" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580131432711"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><i>Ingredients:</i></p><p>2 bars of&nbsp; dark chocolate&nbsp;</p><p>2/3 cup of whole milk&nbsp;</p><p>a few pinches of sea salt&nbsp;</p><p>3 tablespoons of brown sugar</p><p><br></p><p><i>Directions:</i></p><p>1.&nbsp;Heat chocolate in a double boiler for 3 minutes.&nbsp;</p><p>2. In a separate bowl, combine sea salt, brown sugar, and milk. Once chocolate has melted, add to the mixture and gently blend.&nbsp;</p><p>3. Using a facial brush, apply cooled mask to a clean and dry face. Allow to set for 5-10 minutes before rinsing. Follow with moisturizer for baby soft skin.</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580131497264" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580131497264"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><b>Chocolate/Yogurt/Honey Mask&nbsp;&nbsp;</b><br></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580131526673" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580131526673"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><i>Ingredients:&nbsp;</i></p><p>1 tsp cacao powder&nbsp;</p><p>1 tsp whole fat yogurt&nbsp;</p><p>1 tsp honey</p><p><i><br></i></p><p><i>Directions:&nbsp;</i></p><p>1. Blend cocoa powder with honey and yogurt. Cacao powder can be difficult to blend, so be patient with this step. Keep mixing until mixture looks like melted chocolate.&nbsp;</p><p>2. To a clean face, apply mask evenly avoiding lip and eye areas. Allow to set for 15-20 minutes before rinsing with lukewarm water.&nbsp;</p><p><br></p><p>&nbsp;Want something a little simpler? Try this recipe.&nbsp; &nbsp;<br></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580131581615" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580131581615"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h3><br></h3><h3><b>Chocolate Cream Facial Mask</b></h3></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580131627063" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580131627063"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><i>Ingredients:&nbsp;</i></p><p>1 tbsp of unsweetened cacao powder&nbsp;</p><p>3 tbsp of heavy cream&nbsp;</p><p><br></p><p><i>Directions:&nbsp;</i></p><p>1. Mix together a heaping tablespoon of unsweetened cacoa powder with heavy cream to form a paste. Apply to clean, dry skin and leave on for 15 minutes.&nbsp;</p><p>2. Gently wipe mask off with a washcloth before following up with a cleanser and patting dry with a towel. Follow up with your favorite toner and facial serum.</p></div></div><!--gfsplit-->
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

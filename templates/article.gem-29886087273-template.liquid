@@ -1,0 +1,183 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div class="element-wrap" data-label="Text Block" id="e-1567000453082" data-icon="gpicon-textblock" data-ver="1" data-id="1567000453082"><div class="elm text-edit"><p class="p1"><span class="s1">Have you been slaving at the gym, but not seeing the results you want? What you’re putting on your plate may be to blame. </span></p><p class="p1"><span class="s1">We’ve all heard that obnoxious saying “You can’t outrun a bad diet.” Unfortunately, it’s kind of true. Improper nutrition is one of the leading reasons people don’t see results from their <a href="https://www.huffpost.com/entry/fitness-myths_b_3963372" title="fitness-myths" target="_blank" rel="noopener noreferrer"><span class="s2">fitness routines</span></a>. </span></p><p class="p1"><span class="s1">But it’s not just what we eat throughout the day impacting how we feel and perform, but what we choose before and after our workouts that make a difference in our exercise session being all it can be.</span></p><p class="p1"><span class="s1">Although there’s a lot of information out there, that’s also sort of the problem. With everyone from celebrities to health influencers claiming that they know the best diet, it can be confusing figuring out what <i>you actually need. </i></span></p><p class="p1"><span class="s1">The simplest solution is to start educating yourself. Once you understand how your body operates, the role food plays and which ones work best for your specific goals, you’ll be able to stop self-sabotaging (no matter how unintentional) and start seeing the results you want. </span></p><p class="p1"><span class="s1"> Also, you’ll just feel better. The foods we eat have not only been linked to how we perform, <span style="color: #0000ff;"><a href="https://nutrition.org/food-and-mood-what-is-nutritional-psychiatry/" title="food-and-mood-what-is-nutritional-psychiatry/" style="color: #0000ff;" target="_blank" rel="noopener noreferrer"><span class="s2">but our energy levels and mood</span></a></span>.<span class="Apple-converted-space">&nbsp; </span>If you really want to live your best life - in and out of the gym - then you want to start familiarizing yourself with what proper nutrition is all about. </span></p><p class="p2">&nbsp;</p><p class="p1"><span class="s1"><b>Understanding Macronutrients</b></span></p><p class="p1"><span class="s1">Carbohydrates, proteins, and fats are Macronutrients. Sometimes referred to as “macros”, they are the major nutritional components for health. If your body was a car, they might be considered the gas, oil and transmission fluid. You need each to properly run.</span></p><p class="p1"><span class="s1">With all the various eating styles floating around it can be easy to dismiss certain macros as unnecessary. But just like oil, gas and transmission fluid play vital roles in how our vehicles run, carbohydrates, proteins and fats have separate important functions.</span></p><p class="p3"><span class="s1">More than calorie sources, macronutrients are the building blocks to all chemical and physiological functions. Not eating the proper amount from either group can cause a variety of health concerns, such as heart problems, poor cognition, and fatigue</span><span class="s3">. </span></p><p class="p3"><span class="s3"><b>[Recommended Reading: <a href="https://ryzewith.com/blogs/news/7-energizing-foods-to-start-eating-now" target="_blank" rel="noopener noreferrer">7 Energizing Foods To Start Eating Now</a>]</b></span></p><p class="p2">&nbsp;</p><p class="p1"><span class="s1"><b><i>Carbohydrates</i></b></span></p><p class="p4">Carbohydrates or “carbs” get a bad rep from some in the fitness community, but if you’ve ever tried to nix them from your diet you know just how many foods fall into this nutrient category. Unless you’re on a special diet, experts recommend trying to make 50-60 percent of your calorie intake from carbohydrates.<br><span class="s1"></span></p><p class="p1"><span class="s1">They are the body’s preferred source of energy. As soon as we eat a bite of toast or an orange, it's broken down into a sugar (glucose) which enters the blood steam and eventually the cells. Depending on the molecular structure they will be considered one of three types:<span class="Apple-converted-space">&nbsp; </span>starch, fiber or sugar.</span></p><p class="p1"><span class="s1">Sugar based carbohydrates, commonly referred to as simple carbohydrates, have a basic chemical makeup, especially in comparison to fibers and starches (complexed carbs), which are considered the most beneficial. They have a more detailed structure and are slowly broken down, producing a longer, more sustained form of energy. Simpler carbs are digested quickly which often leads to a spike in blood sugar, meaning if won’t be long until&nbsp;you’re hungry again.</span></p><p class="p4">&nbsp;</p><p class="p1"><span class="s1"><b><i>Examples of Complex Carbohydrates:</i></b></span></p><p class="p1"><span class="s1">Sweet potatoes</span></p><p class="p1"><span class="s1">Berries</span></p><p class="p1"><span class="s1">Legumes</span></p><p class="p1"><span class="s1">Whole/Sprouted breads and grains</span></p><p class="p1"><span class="s1">Leafy greens and other vegetables</span></p><p class="p2">&nbsp;</p><p class="p1"><span class="s1"><b><i>Protein </i></b></span></p><p class="p1"><span class="s1">The body<span class="Apple-converted-space">&nbsp;</span>uses this macro to not only repair and build muscle tissue but create enzymes. There are literally thousands of different types, all made from amino acids, each with different functions. </span></p><p class="p1"><span class="s1">Some are fibrous and bring structure to tissue, like collagen and elastin. Some turn into hormones, like amines, glucagon, and hGH (human growth hormone). Protein also plays a role in balancing our fluids, pH levels, assisting in metabolic function, and oxygenation.</span></p><p class="p1"><span class="s1">It takes the body longer to breakdown protein for digestion. For people watching their weight, it can be a crucial part of the diet since a meal with protein can keep us fuller longer.<span class="Apple-converted-space">&nbsp;</span>The average person should aim to get .36 grams per pound of body weight.</span></p><p class="p2">&nbsp;</p><p class="p1"><span class="s1"><b><i>Examples of Healthy Protein Sources:</i></b></span></p><p class="p1"><span class="s1">Eggs</span></p><p class="p1"><span class="s1">Greek Yogurt</span></p><p class="p1"><span class="s1">Quinoa</span></p><p class="p1"><span class="s1">Almonds</span></p><p class="p1"><span class="s1">Salmon</span></p><p class="p1"><span class="s1">Chicken</span></p><p class="p2">&nbsp;</p><p class="p1"><span class="s1"><b><i>Fats</i></b></span></p><p class="p1"><span class="s1">Back in the 90s, the diet fad was to avoid fats at all costs. Fortunately, most of us now realize that this macro isn’t the enemy.<span class="Apple-converted-space">&nbsp;</span>Like proteins, they create hormones but also support the growth of new cells and allow the body to absorb nutrients, such as fat-soluble vitamins.</span></p><p class="p1"><span class="s1">There are three type: Triglycerides, cholesterol, and essential fatty acids.<span class="Apple-converted-space">&nbsp; </span>Each are used to protect and insulate organs, and aid in brain health. They’re also used as energy storage. </span></p><p class="p1"><span class="s1">You may be asking why people would be afraid of fat if it’s so good for us. The chances are that they’re talking about two specific kinds: trans and saturated fat.</span></p><p class="p1"><span class="s1">Trans fat is the type of fat found in processed food. The saturated type is found in dairy, palm and coconut oil, and some meats.<span class="Apple-converted-space">&nbsp; </span>Both have been linked to diabetes and <span style="color: #0000ff;"><a href="https://www.hsph.harvard.edu/nutritionsource/2016/12/19/saturated-fat-regardless-of-type-found-linked-with-increased-heart-disease-risk/" title="saturated-fat-regardless-of-type-found-linked-with-increased-heart-disease-risk" style="color: #0000ff;" target="_blank" rel="noopener noreferrer"><span class="s2">heart disease risk</span></a></span>, which is why many choose to limit or avoid them.</span></p><p class="p1"><span class="s1">In contrast, <span style="color: #0000ff;"><a href="https://www.acc.org/about-acc/press-releases/2015/09/28/13/58/unsaturated-fats-high-quality-carbs-lower-risk-of-heart-disease" title="unsaturated-fats-high-quality-carbs-lower-risk-of-heart-disease" style="color: #0000ff;" target="_blank" rel="noopener noreferrer"><span class="s2">unsaturated fats have been shown to lower one’s chances</span></a></span> for these diseases and can be found in fish, vegetable base oils, nuts and seeds. </span></p><p class="p4">&nbsp;</p><p class="p1"><span class="s1"><b><i>Examples of Unsaturated Fats</i></b></span></p><p class="p1"><span class="s1">Avocado</span></p><p class="p1"><span class="s1">Salmon</span></p><p class="p1"><span class="s1">Almonds</span></p><p class="p1"><span class="s1">Sesame seeds</span></p><p class="p1"><span class="s1">Flaxseed oil</span></p><p class="p4">&nbsp;</p><p class="p1"><span class="s1"><b>What Should I Eat Before Working Out? </b></span></p><p class="p5"><span class="s1">It depends on what your goals are.&nbsp;</span></p><p class="p5"><span class="s1">For guidance, we reached out to fitness and nutrition expert <span style="color: #0000ff;"><a href="http://www.tylerkalisiak.com/" style="color: #0000ff;" target="_blank" rel="noopener noreferrer"><span class="s2">Tyler Kalisiak</span></a></span>. Along with being a Certified Sports Nutritionist and Sports Conditioning Specialist, he’s worked with extreme sports professionals such as Sean Cantrell, Vicki Golden, and Mitchell Falk. </span></p><p class="p5"><span class="s1">“Knowing what your body needs for the results you are looking to get is really important,” Tyler explains. For example, many people who are trying to lose weight calorie restrict and although creating a deficit is important, aiming to eat as little as possible pre-workout is not something suggested. “Restricting calories [would] result in your body taking lean muscle to try and create necessary energy and recovery,” he says.</span></p><p class="p5"><span class="s1">However, this isn’t to say that training fasted is a mistake. “With limited blood sugar and muscle glycogen, your body is forced to pull from fat stores as its energy source.”</span></p><p class="p5"><span class="s1">If you’re doing <span style="color: #0000ff;"><a href="https://www.elitedaily.com/life/the-results-from-fasted-cardio" title="the-results-from-fasted-cardio" style="color: #0000ff;" target="_blank" rel="noopener noreferrer"><span class="s2">fasted cardio</span></a></span>, try keeping it low intensity for 45 minutes or less. Although the calories burned will be similar to when exercising in a fed state, working out with no immediate fuel (aka breakfast) will force your body to gain energy from fat reserves.</span></p><p class="p5"><span class="s1">If doing anything without something in your stomach is unfathomable, carbohydrates are the way to go. With low intensity cardio, our body burns more body fat for fuel than what comes from carb intake, says Tyler.</span></p><p class="p5"><span class="s1"> “I always suggest increasing carbs and sometimes protein in the pre and post exercise intakes, while reducing the fat intake more than usual. Fats slow down your body’s speed of delivery for the much-needed carbohydrate and proteins.”</span></p><p class="p5"><span class="s1">This holds true in regards to weightlifting as well. As a rule of thumb, it’s not recommended to train on an empty stomach as it could hinder progress. And if you’re looking to tack on mass, you not only need a surplus of calories but should focus on having bigger meals before and after your training session.</span></p><p class="p5"><span class="s1">In fact, regardless of what your fitness goals, you should be eating after a workout- Point blank and period. </span></p><p class="p5"><span class="s1">“We always hear about the “window” to eat post workout but I like making that window easy by [saying] ‘the sooner the better’.” To get the most from your pre-workout meal, aim to eat 1.5 hours to 2.5 hours before training, depending on how much fat you’ve consumed. </span></p><p class="p5"><span class="s1">Even if you’re trying to lose weights, the calorie deficit shouldn’t be coming after training, but later in your day when it’s safer to cut back.</span></p><p class="p5"><span class="s1">“Your body after exercise (no matter the intensity levels) starts running low on blood sugar, glycogen, and needs proper amino acids and proteins to support the muscle you do want to keep,” Tyler explains.</span></p><p class="p5"><span class="s1">But this isn’t permission to go wild on burgers or sugary protein bars. “When refueling post workout, I suggest an intake with minimal fat, higher carbs and moderate protein, with your next meal having a bit more of a fat and protein intake, with a reduction of carbs.”</span></p><p class="p5">Now that you have a better idea of what a proper pre and post-workout meal looks like, check out some meal ideas to try this week.</p><p class="p6">&nbsp;</p><p class="p5"><span class="s1"><b>Before Exercise</b></span></p><ul class="ul1"><li class="li5"><span class="s4"></span><span class="s1">Oatmeal mixed with plain Greek yogurt and fresh berries,&nbsp;with a scoop of&nbsp;maca powder and spoonful of almond butter</span></li></ul><p class="p7">&nbsp;</p><ul class="ul1"><li class="li5"><span class="s4"></span><span class="s1">RYZE&nbsp;Protein Shake made with nut milk, banana, protein powder and a tablespoon of&nbsp;RYZE: Mushroom Keto Coffee&nbsp;powder.</span></li></ul><p class="p7">&nbsp;</p><ul class="ul1"><li class="li5"><span class="s4"></span><span class="s1">Avocado toast made with sprouted grained bread, sprinkled with hemp seeds</span></li></ul><p class="p7">&nbsp;</p><ul class="ul1"><li class="li5"><span class="s4"></span><span class="s1">Low-fat cottage cheese with blueberries and half a banana</span></li></ul><p class="p7">&nbsp;</p><ul class="ul1"><li class="li5"><span class="s4"></span><span class="s1">Protein pancakes with strawberries and blueberries</span></li></ul><p class="p6">&nbsp;</p><p class="p5"><span class="s1"><b>After Exercise</b></span></p><ul class="ul1"><li class="li5"><span class="s4"></span><span class="s1">Banana Cacao Protein Shake made with nut milk, ice, banana, protein powder, and a tablespoon of RYZE: Mushroom Keto Coffee</span></li></ul><p class="p7">&nbsp;</p><ul class="ul1"><li class="li5"><span class="s4"></span><span class="s1">Grilled chicken with baby spinach, bell peppers, tomatoes, and mushrooms</span></li></ul><p class="p7">&nbsp;</p><ul class="ul1"><li class="li5"><span class="s4"></span><span class="s1">Half a sweet potato, 1 tin of tuna in water on top a bed of greens, tomatoes, shredded carrots and sprouts.</span></li></ul><p class="p7">&nbsp;</p><ul class="ul1"><li class="li5"><span class="s4"></span><span class="s1">Egg omelet made with spinach, peppers, onions, a slice of<span class="Apple-converted-space">&nbsp; </span>sprouted grain toast with a tablespoon of nut butter</span></li></ul><p class="p7">&nbsp;</p><ul class="ul1"><li class="li5"><span class="s4"></span><span class="s1">Quinoa with shredded purple cabbage, carrots, kale, and baked tofu</span>&nbsp;</li></ul></div></div>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

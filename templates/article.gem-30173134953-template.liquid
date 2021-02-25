@@ -1,0 +1,183 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div class="element-wrap" data-label="Text Block" id="e-1567000298688" data-icon="gpicon-textblock" data-ver="1" data-id="1567000298688"><div class="elm text-edit"><p class="p1">It’s a mouthful to say, but if you’re struggling with energy or just feeling kind of <i>meh</i>, you may want to track this adaptogen down.&nbsp;<br><span class="s1"></span></p><p class="p2"><span class="s1"><a href="https://ryzewith.com/blogs/news/what-are-adaptogens" target="_blank" rel="noopener noreferrer">Adaptogens</a> are plants that help the body adjust to internal and environmental stressors, and Ashwagandha is one of the most well-known of the bunch.&nbsp;</span></p><p class="p2"><span class="s1">Native to India, Africa, and parts of Southern Europe, the botanical has been used in Ayurveda medicine for centuries to treat everything from wounds, restlessness, and hormone imbalance.<span class="Apple-converted-space">&nbsp;</span>Now that the miracle herb is growing in popularity in the west, don’t be surprised if you start seeing it everywhere. From superfood blends to beauty products, everyone is praising this root for its calming yet invigorating effect.</span></p><p class="p2"><span class="s1">Pronounced<span class="Apple-converted-space">&nbsp; </span><i>ash·​wa·​gan·​dha</i>, it’s sometimes referred to as <i>Indian Ginseng </i>or <i>Indian Winter Cherry</i>. Part of the nightshade family, it looks a lot like a like a flower with a red berry in its center. Although the entire plant is beneficial, it’s the root- with its fatty acids, aminos and alkaloids - that is traditionally turned into a powder or extract for herbal remedies. If you’re familiar with alternative health, you may have already tried it, but if this is your first time hearing about the plant, you’re in for a treat.</span></p><p class="p3">&nbsp;</p><p class="p4"><span class="s1"><b>Ashwagandha As An Adaptogen&nbsp;</b></span></p><p class="p2"><span class="s1">It’s hard to lock down what Ashwagandha is specifically good for, because it’s good for <i>so many</i> things! Most often it’s considered as an “energizing” adaptogen but it can be used for a variety of health concerns. Some include:</span></p><ul class="ul1"><li class="li2"><span class="s2"></span><span class="s1">Sleep disturbance</span></li><li class="li2"><span class="s2"></span><span class="s1">Anxiety</span></li><li class="li2"><span class="s2"></span><span class="s1">Stress</span></li><li class="li2"><span class="s2"></span><span class="s1">Fatigue</span></li><li class="li2"><span class="s2"></span><span class="s1">Arthritis</span></li><li class="li2"><span class="s2"></span><span class="s1">Poor Concentration</span></li></ul><p class="p1">&nbsp;</p><p class="p2"><span class="s1">Much of its reputation as an energy booster comes from the way it interacts with the central nervous and endocrine systems, which are part of our stress response. Most of us know by now that stress is a lot more than a racing heart or sweaty palms. <a href="https://www.psychologytoday.com/us/blog/urban-survival/201505/5-ways-stress-hurts-your-body-and-what-do-about-it" target="_blank" rel="noopener noreferrer"><span class="s3">Chronic stress hurts every system in the body</span></a> and interferes with its normal operation.<span class="Apple-converted-space">&nbsp; </span>Because it’s an adaptogen, Ashwagandha can address each system using its multiple compounds that interact with different chemicals to bring us back to a place of internal homeostasis.&nbsp;</span></p><p class="p2"><span class="s1">It contains many alkaloids but two - s<i>itoindosides</i> and <i>acylsterylglucoside&nbsp;</i>- are anti-stress agents. They’ve been shown to inhibit the production of the stress hormone cortisol, as well as engage the parasympathetic nervous system<i></i>so it becomes more resistant to negative stimuli. </span></p><p class="p2"><span class="s1">In a 60-day study (1), researchers gave 64 subjects with chronic stress high concentrations of Ashwagandha on a daily basis. They used several different mechanisms to measure stress, depression, anxiety, and well-being, including the <a href="https://www.psytoolkit.org/survey-library/depression-anxiety-stress-dass.html" target="_blank" rel="noopener noreferrer">Depression Anxiety Stress System, DASS</a>.<span class="Apple-converted-space">&nbsp;</span>With each test, researchers discovered that participants had lower cortisol levels, felt more calm, and experienced diminished symptoms of stress-induced issues, such as insomnia and social anxiety. </span></p><p class="p2"><span class="s1">There is already a ton of research available that shows how our stress levels can interfere with our digestive tract, cognitive skills, and energy levels. By reducing cortisol levels, Ashwagandha hinders other physical responses to anxiety, like IBS or an inability to focus. </span></p><p class="p5"><span class="s1"><b>Recommended Reading: <a href="https://ryzewith.com/blogs/news/5-morning-rituals-to-make-you-more-productive-and-happier" target="_blank" rel="noopener noreferrer"><i>5 Daily Morning Rituals to Become More Productive (and happier)</i></a></b></span></p><p class="p2"><span class="s1"> You know how when you have a lot on your mind, you can’t concentrate on anything? The withanolides (2) in Ashwagandha help address that by slowing down the overactive brain cells that make your mind skip from one thought to another. Take Ashwagandha regularly, and you’re less likely to have brain fog or feel your thoughts wander when you’re stressing over a task.<span class="Apple-converted-space">&nbsp;</span>In fact, one study found that the herb had a stronger <a href="https://www.naturalmedicinejournal.com/journal/2014-05/effect-ashwagandha-tests-cognitive-and-psychomotor-performance" target="_blank" rel="noopener noreferrer"><span class="s3">effect on cognitive skills and psychomotor performance</span></a> than Panax Ginseng, another adaptogen.<span class="Apple-converted-space">&nbsp;</span>Because of its ability to enhance brain function, researchers are also looking at it as a potential treatment for those with neurodegenerative diseases (3).</span></p><p class="p2"><span class="s1">Some practitioners have recommended using Ashwagandha in its powder form and adding it to milk as a sleeping aid. Along with lowering stress levels, the nootropic<span class="Apple-converted-space">&nbsp; </span>suppresses the release of the protein kinase (4). The protein not only plays a huge role in the quality of <a href="https://www.alzforum.org/news/research-news/mtorc-and-theta-rhythms-new-clues-how-sleep-locks-down-memories" target="_blank" rel="noopener noreferrer"><span class="s3">our sleep, but our memory</span></a>. </span></p><p class="p1">&nbsp;</p><p class="p3"><b>But How Does It Promote Energy</b><br><span class="s1"></span></p><p class="p2"><span class="s1">By engaging the circulatory system, of course! </span></p><p class="p2"><span class="s1">There have been several studies indicating Ashwagandha’s ability to improve the count of red blood cells and hemoglobin (5). An increase of both translates into more blood carrying oxygen faster to muscles.<span class="Apple-converted-space">&nbsp;</span>It also increases mitochondrial density, enzyme activity, and vascularization. Obviously, it’s also an adaptogen to know if you’re an athlete or gym buff. </span></p><p class="p2"><span class="s1">In a study conducted with elite cyclists, researchers found that participants who supplemented with the herb for 8-weeks improved their baseline V0</span><span class="s4">₂</span><span class="s1"> max by 32 percent. Along with its aerobic enhancing ability, researchers also noted participants had improved time exhaustion, adding to the evidence that<span class="Apple-converted-space">&nbsp; A</span>shwagandha is also an anti-fatigue agent (6).</span></p><p class="p2"><span class="s1">If you’re more interested in supplements that assist anaerobic activity, Ashwagandha may still be of service. With its amino acids, consider it mother nature’s version of BCAA.</span></p><p class="p2"><span class="s1">In one trial published in the <i>Journal of Ayurveda and Integrative Medicine</i> researchers took 18 men (ages 18-30) and gave them doses of the herb twice daily over the course of<span class="Apple-converted-space">&nbsp;</span>30 days. At the end of the trial, they found that the subjects had lower body fat percentages and had gained muscle (7).<span class="Apple-converted-space">&nbsp;</span>In a similar clinical study (this one with 57 men, ages 18-50), subjects who received Ashwagandha twice daily for 8 weeks increased their body mass at a higher percentage than subjects given a placebo. They also had a significant reduction in exercise related muscle damage (8). </span></p><p class="p3">&nbsp;</p><p class="p4"><span class="s1"><b>Other Health Benefits</b></span></p><p class="p2"><span class="s1">If you need more convincing that Ashwagandha is a totally kick ass plant, consider some of its other notable qualities. This miracle herb may be able to help with sexual function and reproductive health. </span></p><p class="p2"><span class="s1">In several studies where subjects were given Ashwagandha extracts, researchers noticed an increase in testosterone levels.<span class="Apple-converted-space">&nbsp; </span>Even in cases of stress-related infertility, those who were given the root in powder form experienced a higher quality in sperm (9).</span></p><p class="p2"><span class="s1">The nootropic is also heavy in antioxidants and considered anti-inflammatory which may be one of the reasons it has been studied as a treatment for arthritis. It has a higher steroidal content than hydrocortisone, making it a potentially healthier alternative for those looking to ease joint pain.</span></p><p class="p1">&nbsp;</p><p class="p4"><span class="s1"><b>Potential Risks</b></span></p><p class="p2"><span class="s1">There are no adverse side-effects listed with Ashwagandha, but there are also no long-term studies.<span class="Apple-converted-space">&nbsp;</span>Some have noted upset stomach or diarrhea if an exceptionally high dose is taken.</span></p><p class="p2"><span class="s1">Ashwagandha can lower blood sugar and blood pressure.<span class="Apple-converted-space">&nbsp;</span>If you’re taking medication for diabetes or hypertension, speak to your doctor before adding the supplement to your routine. Do not use if pregnant or breast feeding.</span></p><p class="p1">&nbsp;</p><p class="p4"><span class="s1"><b>How to Use</b></span></p><p class="p2"><span class="s1">Based off the current Ashwagandha research, the best time to take the supplement will depend on what issue you’re trying to combat. There is no uniform dosage with recommendations ranging between 300-1,500 milligrams. Although studies with the most impressive results were those where subjects took concentrated doses, it’s always better to practice moderation, especially when trying something new. As a general rule of thumb, follow the suggested serving size on a bottle or package. It may take a month to see or feel a noticeable difference. It can be taken up to twice a day. </span></p><p class="p2"><span class="s1">Ashwagandha can commonly be purchased at a health food store or ordered online as a tincture (it may also be called an extract or tonic) or capsule supplement. You can buy it as loose dried root or pre-ground. It can be taken alone or with other medicinal herbs and can sometimes be found in specialty blends.</span></p><p class="p2">&nbsp;</p><p class="p2">&nbsp;</p><p class="p2"><span class="s1">____________________</span></p><h6 class="p1"><span class="s1"></span><span class="s2">(1) Chandrasekhar, K., Kapoor, J., &amp; Anishetty, S. (2012). A prospective, randomized double-blind, placebo-controlled study of safety and efficacy of a high-concentration full-spectrum extract of ashwagandha root in reducing stress and anxiety in adults. <i>Indian journal of psychological medicine</i>, <i>34</i>(3), 255–262. doi:10.4103/0253-7176.106022</span></h6><h6 class="p1"><span class="s1">(2) [</span><span class="s2">4] Dar NJ, Hamid A, Ahmad M. Pharmacologic overview of <i>Withania somnifera</i>, the Indian ginseng. <i>Cell Mol Life Sci.</i> 2015 Dec; 72(23):4445-4460.</span></h6><h6 class="p1"><span class="s2">(3) Nagashayana N, Sankarankutty P, Nampoothiri MR, Mohan PK, Mohanakumar KP. Association of L-DOPA with recovery following Ayurveda medication in Parkinson's disease. <i>J Neurol Sci</i>. 2000;176(2):124-127.</span></h6><h6 class="p1"><span class="s2">(4) Panossian A, Hambardzumyan M, Hovhanissyan A, et al. The adaptogens rhodiola and schizandra modify the response to immobilization stress in rabbits by suppressing the increase of phosphorylated stress-activated protein kinase, nitric oxide and cortisol. <i>Drug Target Insights.</i> 2007; 2:39-54.</span></h6><h6 class="p1"><span class="s2">(5) Studies on the immunomodulatory effects of Ashwagandha. Ziauddin M, Phansalkar N, Patki P, Diwanay S, Patwardhan B J Ethnopharmacol. 1996 Feb; 50(2):69-76</span><span class="s3">.</span></h6><h6 class="p1"><span class="s1"></span><span class="s2">(6) Mishra LC. Florida: CRC Press; 2003. Scientific basis for Ayurvedic therapies</span></h6><h6 class="p1"><span class="s1"></span><span class="s2">(7) Raut AA, Rege NN, Tadvi FM, Solanki PV, Kene KR, Shirolkar SG, Pandey SN, Vaidya RA, Vaidya AB.J Ayurveda Integr Med. 2012 Jul;3(3):111-4. <i>Exploratory study to evaluate tolerability, safety, and activity of Ashwagandha (Withania somnifera) in healthy volunteers.</i></span><span class="s1"><i></i></span></h6><h6 class="p1"><span class="s1"></span><span class="s2">(8) Wankhede S, Langade D, Joshi K, Sinha SR, Bhattacharyya S</span><span class="s1">., </span><span class="s2">Examining the effect of Withania somnifera supplementation on muscle strength and recovery: a randomized controlled trial..J Int Soc Sports Nutr. 2015 Nov 25;12:43</span></h6><h6 class="p1"><span class="s2">(9) Mahdi AA, Shukla KK, Ahmad MK, Rajender S, Shankhwar SN, Singh V, Dalela D. <i>Withania somnifera Improves Semen Quality in Stress-Related Male Fertility.</i>,Evid Based Complement Alternat Med. 2009 Sep 29</span></h6></div></div>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

@@ -1,0 +1,183 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div class="element-wrap" data-label="Text Block" id="e-1567002151487" data-icon="gpicon-textblock" data-ver="1" data-id="1567002151487"><div class="elm text-edit"><p class="p1">Rituals are having a resurgence.<br><span class="s1"></span></p><p class="p2"><span class="s1">From wellness gurus to influencers, it seems like everyone is interested in what some may consider the rebranding of <i>good old-fashioned habits</i>. But rituals are so much more than that. </span></p><p class="p2"><span class="s1">Habits are singular actions repeated for a specific outcome. Rituals are about performing something (or a series of actions) with the intent of honoring a specific person or thing. Habits are done on autopilot. Rituals require intention. </span></p><p class="p2"><span class="s1">When scientists have looked at rituals from a biological perspective, they’ve noticed several things. When we practice them before a performance-related task (like a sports match), our neural response to mistakes becomes less sensitive and whether we fudge up or not, we’re more likely to remain calm (1). In fact, doing rituals before a stressful event has been shown to decrease anxiety levels (2), increasing the likelihood you’ll do better overall.&nbsp;</span></p><p class="p2"><span class="s1">Rituals offer another way to nourish our minds and bodies by deepening our connection to ourselves. They’re a form of self-care and mindfulness. <a href="https://www.health.harvard.edu/blog/mindfulness-meditation-may-ease-anxiety-mental-stress-201401086967" target="_blank" rel="noopener noreferrer"><span class="s2">Studies show that mindfulness</span></a> can lead to feeling happier and <a href="https://www.livescience.com/2829-study-zen-meditation-clear-mind.html" target="_blank" rel="noopener noreferrer"><span class="s2">clear-minded</span></a>.<span class="Apple-converted-space">&nbsp;</span>And really, who doesn’t want that? </span></p><p class="p3"><strong><span class="s1">Related: Learn what adaptogens do for the body&nbsp;<a href="https://ryzewith.com/blogs/news/what-are-adaptogens" target="_blank" rel="noopener noreferrer">here</a>.</span></strong></p><p class="p2"><span class="s1">Try these&nbsp;5 morning rituals before leaving your house. They’ll set the tone for your day and leave you feeling more energized and productive. </span></p><p class="p1">&nbsp;</p><p class="p2"><span class="s1"><b>1. Turn Onto Your Self, Not Your Phone</b></span></p><p class="p2"><span class="s1">For all of you reaching for your phone before opening your eyes, this one’s for you.</span></p><p class="p2"><span class="s1">There’s no quicker way to turn off happiness than turning on your phone when you first get up, but according to a recent report by <a href="https://www.nu.nl/files/IDC-Facebook%2520Always%2520Connected%2520(1).pdf" target="_blank" rel="noopener noreferrer"><span class="s2">IDC Research that was sponsored by Facebook</span></a>, that’s exactly what 4 out of 5 smartphone users do. </span></p><p class="p2"><span class="s1">You may already know that checking social media too often can damage self-esteem (3), but that’s not all we’re using our phones for. Along with learning news and connecting with friends, many of us need them for our jobs and it’s causing serious <a href="https://www.nbcnews.com/better/business/how-keep-career-fomo-ruining-your-work-life-ncna840351" target="_blank" rel="noopener noreferrer"><span class="s2">career FOMO</span></a>. </span></p><p class="p2"><span class="s1">According to Flexjobs, 3.9 million people performed <a href="https://smallbiztrends.com/2018/04/2018-remote-work-statistics.html" target="_blank" rel="noopener noreferrer"><span class="s2">remote work</span></a> part-time. In 2017, <i>The New York Times</i> reported that <a href="https://www.nytimes.com/2017/02/15/us/remote-workers-work-from-home.html" target="_blank" rel="noopener noreferrer"><span class="s2">43 percent of workers</span></a> continue job-related activities even after clocking out. As the line between work and personal time blurs, setting boundaries between ourselves and our devices becomes harder. But if you’re looking to become more productive and less anxious, it’s exactly what you need to do.</span></p><p class="p2"><span class="s1">When researchers had (4) 124 adults limit their email checking to only three times per day, they discovered that their subjects became less stressed and had a greater sense of well-being. Another study found that users who kept phone notifications on were more prone to distraction and less successful at completing tasks (5). </span></p><p class="p2"><span class="s1">To avoid the temptation of using your phone when you first get up, commit to keeping it away from your bedside. If it’s been serving as your alarm clock, go the classic route and invest in an old school one. Give yourself a few minutes to acclimate to being awake by <a href="https://www.health.harvard.edu/mind-and-mood/relaxation-techniques-breath-control-helps-quell-errant-stress-response" target="_blank" rel="noopener noreferrer"><span class="s2">practicing some breath control techniques</span></a>. Focus on breathing from the abdominals instead of your chest to take in more oxygen and expel carbon dioxide from your system. This is also a great time to practice personal affirmations. </span></p><p class="p1">&nbsp;</p><p class="p2"><span class="s1"><b>2. Replenish Your Body with Lemon Water</b></span></p><p class="p2"><span class="s1">This may seem like an insignificant form of self-care, but actively taking part of healthy behaviors has been shown to <a href="https://theweek.com/articles/607121/how-improve-selfesteem-secret-from-research" target="_blank" rel="noopener noreferrer"><span class="s2">improve self-esteem</span></a>. Replenishing your body with a large glass of lemon water is a simple way to do this. </span></p><p class="p2"><span class="s1">Fluid is lost through breathing when we sleep and <a href="https://www.livescience.com/36106-mild-dehydration-triggers-moodiness-fatigue-women.html" target="_blank" rel="noopener noreferrer"><span class="s2">mild dehydration is enough to trigger moodiness and fatigue</span></a>.<span class="Apple-converted-space">&nbsp;</span>By drinking water in the morning, we’re rehydrating our cells and revving up our metabolism (6) for the day ahead. </span></p><p class="p2"><span class="s1">The other health benefits of lemon water? Along with immune boosting Vitamin C, lemon contains heart healthy flavonoids and soluble fiber (when the pulp is used). The fruit’s acidity levels have also been shown to prevent the formation of kidney stones (7) and make it easier for the body to absorb iron from plant-based foods (8). </span></p><p class="p1"><br><span class="s1"></span></p><p class="p2"><span class="s1"><b>3. Go Outside</b></span></p><p class="p2"><span class="s1">You already know that exercise, <a href="https://www.nbcnews.com/better/health/9-really-good-reasons-exercise-early-morning-ncna795656" target="_blank" rel="noopener noreferrer"><span class="s2">especially early in the morning</span></a>, is a good thing. Along with improving circulation and releasing endorphins, it’s been shown to increase the size of the hippocampus, the part of the brain linked to <a href="https://www.health.harvard.edu/blog/regular-exercise-changes-brain-improve-memory-thinking-skills-201404097110" target="_blank" rel="noopener noreferrer"><span class="s2">memory and learning skills</span></a>. But even if you can’t spare the time for an hour run, going outside for a short period still holds plenty of health benefits. </span></p><p class="p2"><span class="s1">Researchers have found that being in nature promotes mental flexibility, creativity and problem solving (9). It’s also a great way to get Vitamin D which increases productivity (10). According to one study, 40 percent of Americans are deficient in the vitamin, which is all the more reason to make going outside a priority (11). </span></p><p class="p2"><span class="s1">Try taking a leisurely stroll around your block before getting ready for work. Even sitting outside for as little as five minutes is enough to boost your mood (12).&nbsp;</span></p><p class="p1">&nbsp;</p><p class="p2"><span class="s1"><b>4. Get Inspired</b></span></p><p class="p2"><span class="s1">Instead of seeking motivation, search for inspiration. </span></p><p class="p2"><span class="s1">Unlike motivation, which is driven by the intent to achieve a specific outcome (ex: <i>I’m motivated to go to work so I can pay my rent), </i>inspiration is a more transcendent and spiritual experience. It’s a feeling that’s triggered by <span class="s2"><a href="https://www.inc.com/marissa-levin/why-great-leaders-like-richard-branson-inspire-instead-of-motivate.html" target="_blank" rel="noopener noreferrer">an event, person or thing</a>&nbsp;</span>that awakens your mind or heart.</span></p><p class="p2"><span class="s1">How do we find it? According to Robert Epstein, a senior research psychologist at The American Institute for Behavioral Research and Technology, we can gain inspiration by opening ourselves to something unfamiliar or novel (13). </span></p><p class="p2"><span class="s1">When <a href="https://www.dailyinfographic.com/blog/how-to-learn-something-new-everyday" target="_blank" rel="noopener noreferrer"><span class="s2"> learning something new</span></a> we receive a rush of dopamine from the SN/VTA part of the brain which is linked to memory and comprehension. Going out of your comfort zone and seeking inspiration preps your mind to <a href="https://ryzewith.com/products/recharged-ritual" target="_blank" rel="noopener noreferrer"><span class="s2">become more focused</span></a>, creative&nbsp;<a href="https://hbr.org/2015/12/engaging-your-employees-is-good-but-dont-stop-there?utm_campaign=HBR&amp;utm_source=facebook&amp;utm_medium=social" target="_blank" rel="noopener noreferrer"><span class="s2">and engaged at work</span></a>, which means you leave the office feeling more satisfied. </span></p><p class="p2"><span class="s1">Downloading a language app or enrolling in an online course are some things you can do to learn something new. Podcasts, journaling, and listening to music are also other ways to find inspiration (14). </span></p><p class="p1">&nbsp;</p><p class="p1"><b>5. Map A Daily Plan Instead Of A Basic To-Do List</b></p><p class="p2"><span class="s1">Although <a href="https://www.thecut.com/2016/01/neuroscientist-really-wants-you-to-make-lists.html" target="_blank" rel="noopener noreferrer"><span class="s2">making lists</span></a> can ease confusion in the day, there’s a right and wrong way to create them.</span></p><p class="p2"><span class="s1">The problem with the traditional method is that it can set us up to feel bad. As illustrated by a study conducted by Florida State University, when we don’t achieve goals that we’ve written down, we obsessed about them or experience what is known as “goal-intrusive thoughts” (15).&nbsp;</span></p><p class="p2"><span class="s1">Instead of simply jotting down what you need to get done, experts suggest mapping out a plan that includes your goal and <i>how</i>, <i>when</i>, and <i>where</i> you plan to accomplish it. Be as detailed as possible, prioritizing the most important tasks first.<span class="Apple-converted-space">&nbsp; </span>Another way to create a more effective to-do list is by using the acronym S.M.A.R.T. When evaluating the day ahead, set <b>S</b>pecific goals that can be <b>M</b>easured and <b>A</b>ttained in a <b>R</b>easonable amount of <b>T</b>ime. If you have a very large project, consider dividing it into pieces using these guidelines so it’s less overwhelming. Because we’re <a href="https://www.inc.com/melissa-chu/why-your-brain-prioritizes-instant-gratification-o.html" target="_blank" rel="noopener noreferrer"><span class="s2">hardwired to prefer instant gratification</span></a> over delayed pleasure, breaking bigger goals into smaller, more achievable ones increases our chances of executing the plan but makes us feel more accomplished and less anxious about our work.</span></p><p class="p1">&nbsp;</p><p class="p1">&nbsp;</p><p class="p1">_________________________</p><h6 class="p1"><span class="s3">(1) Hobson, N. M., Bonk1, D., &amp; Inzlicht1, M. (2017, May 30). Rituals decrease the neural response to performance failure. Retrieved from https://peerj.com/articles/3363/</span></h6><h6 class="p1"><span class="s1"></span><span class="s2">(2) Don't stop believing: Rituals improve performance by decreasing anxiety. (2016, August 20). Retrieved from https://www.sciencedirect.com</span></h6><h6 class="p1"><span class="s1"></span><span class="s2">(3) Jan, M., Soomro, S. A., &amp; Ahmad, N. (n.d.). Impact of Social Media on Self-Esteem. Retrieved from http://eujournal.org/index.php/esj/article/view/9815</span></h6><h6 class="p1"><span class="s1"></span><span class="s2">(4) Checking email less frequently reduces stress. (2014, November 22). Retrieved from https://www.sciencedirect.com/science/article/pii/S0747563214005810</span></h6><h6 class="p1"><span class="s1"></span><span class="s2">(5) Florida State University. (2015, July 9). Cell phone notifications may be driving you to distraction. <i>ScienceDaily</i>. from www.sciencedaily.com/releases/2015/07/150709133044.htm</span></h6><h6 class="p1"><span class="s1"></span><span class="s2">(6) Thornton S. N. (2016). Increased Hydration Can Be Associated with Weight Loss. <i>Frontiers in nutrition</i>, <i>3</i>, 18. doi:10.3389/fnut.2016.00018</span></h6><h6 class="p1"><span class="s1"></span><span class="s2">(7) Penniston, K. L., Nakada, S. Y., Holmes, R. P., &amp; Assimos, D. G. (2008, March). Quantitative assessment of citric acid in lemon juice, lime juice, and commercially-available fruit juice products. Retrieved from https://www.ncbi.nlm.nih.gov/pubmed/18290732/</span></h6><h6 class="p1"><span class="s1"></span><span class="s2">(8) Ballot, D., &amp; Baynes, R. D. (1987, May). The effects of fruit juices and fruits on the absorption of iron from a rice meal. Retrieved from https://www.ncbi.nlm.nih.gov/pubmed/3593665</span></h6><h6 class="p1"><span class="s1"></span><span class="s2">(9) Conceptualizing creativity benefits of nature experience: Attention restoration and mind wandering as complementary processes. (2018, August 17). Retrieved from https://www.sciencedirect.com/science/article/pii/S0272494418304092</span></h6><h6 class="p1"><span class="s1"></span><span class="s2">(10) Plotnikoff, G. A., &amp; Finch, M. D. (2012, February). Impact of vitamin D deficiency on the productivity of a health care workforce. Retrieved from https://www.ncbi.nlm.nih.gov/pubmed/22269986</span></h6><h6 class="p1"><span class="s1"></span><span class="s2">(11) Forrest, K. Y., &amp; Stuhldreher, W. L. (2011, January). Prevalence and correlates of vitamin D deficiency in US adults. Retrieved from https://www.ncbi.nlm.nih.gov/pubmed/21310306</span></h6><h6 class="p1"><span class="s1"></span><span class="s2">(12) Calum Neill, Janelle Gerard &amp; Katherine D. Arbuthnott (2018) Nature contact and mood benefits: contact duration and mood type, The Journal of Positive Psychology, DOI: 10.1080/17439760.2018.1557242</span><span class="s1"></span></h6><h6 class="p1"><span class="s1"></span><span class="s2">(13) Field, H. (2018, September 06). 5 Science-Backed Ways to Boost Your Creativity. Retrieved from https://www.entrepreneur.com/article/311870</span></h6><h6 class="p1"><span class="s1"></span><span class="s2">(14) Schäfer, T., Sedlmeier, P., Städtler, C., &amp; Huron, D. (2013). The psychological functions of music listening. <i>Frontiers in psychology</i>, <i>4</i>, 511. doi:10.3389/fpsyg.2013.00511</span></h6><h6 class="p1"><span class="s1"></span><span class="s2">(15) Masicampo, E. J., &amp; Baumeister, R. F. (2011, June 20). Consider It Done! Plan Making Can Eliminate the Cognitive Effects of Unfulfilled Goals. Journal of Personality and Social Psychology. Advance online publication. doi: 10.1037/a0024192</span></h6></div></div>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

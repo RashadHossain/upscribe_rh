@@ -1,0 +1,140 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+<link data-instant-track rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-385435992169.css' | asset_url }}" class="gf_page_style">
+<!--GEM_HEADER_END-->
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}{% assign number_of_comments = article.comments_count %}{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}<article itemscope itemtype="http://schema.org/Article">  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>        <div class="article__body rte" itemprop="articleBody">
+          <!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div class="element-wrap" data-label="Text Block" id="e-1599234977891" data-icon="gpicon-textblock" data-ver="1" data-id="1599234977891"><div class="elm text-edit"><meta charset="utf-8"><p>Did you know that almost two-thirds of the population consumes supplements? When you go out to buy&nbsp;a bottle of herbal super supplement pills or vitamin C tablets, you may wonder if they are safe and if they will really help you. The truth is, not only do they work but most supplements are considered to be an important part of a super healthy lifestyle. In fact, nearly two-thirds of the population take at least one or more types of dietary supplements on a regular basis.</p><p>&nbsp;</p><p>But health supplements aren't just for people who want to lose weight or keep their energy level high. They can also improve the way your body functions. Here are some examples of super supplements for better health.</p><p>&nbsp;</p><p>Herbal supplements. These can be in tablet form or capsule form. Most are sold in stores, but there are also many online sites that sell them. There are many kinds of herbal supplements, such as Ginkgo biloba and ginseng.</p><p>&nbsp;</p><p>Vitamins and minerals. These can include vitamin D, calcium, magnesium, zinc, niacin, vitamin A, copper, riboflavin, and thiamine. This type of super supplement is recommended for adults over age 25, pregnant women, and children under the age of six months. They are also recommended for athletes.</p><p>&nbsp;</p><p>Antioxidants. They are available in both liquid and pill form. They can protect cells from damage and fight free radicals, which can contribute to a number of illnesses. They are also needed by the body to maintain the body's acidity.</p><p>&nbsp;</p><p>Immune system boosters. These are sometimes used in combination with other supplements. They include herbs and vitamins to boost the immune system so it can fight off colds, flu, or even cancer. Some immune system boosters are also used to boost the body's natural production of energy.</p><p>&nbsp;</p><p>Fish oil. This can be taken as a pill or oil. It comes from the oils of some types of fish, including wild oily fish like salmon or tuna. Because it has omega-3 fatty acids, it can promote healthier skin, heart health, and a strong immune system.</p><p>&nbsp;</p><p>It's also important to take a daily dose of these supplements on a regular basis. Since most people take several pills each day, there's no reason not to continue doing so. In fact, some research indicates that daily supplements have helped those who follow a healthier diet.</p><p>&nbsp;</p><p>Remember, however, that taking super supplements every day isn't a guarantee that you will get the results you're looking for. They can also be addictive, so make sure you don't start taking more than you should be taking. That's why many people use them as a supplement to another product or supplement.</p><p>&nbsp;</p><p>Remember that most supplements are safe when taken properly. There's no need to worry about a possible harmful reaction to any supplement, especially if you are using a standardized one. If you are allergic to any ingredient, consult your doctor to see what he or she recommends.</p><p>&nbsp;</p><p>Remember that even the most popular supplements don't work miracles. unless they contain the right ingredients. You may find that your body will produce more than you need from eating certain foods.</p><p>&nbsp;</p><p>Remember that your body will adapt to certain doses of the supplements you're taking. so don't expect to get any special results by taking them daily. You'll find that you need to take the supplement a bit less or a little bit more than you think to get the results you are looking for.</p><p>&nbsp;</p><p>When taking any super supplement, keep in mind that you will experience some side effects, too. Don't worry about them and keep taking them to help you get better.</p></div></div><!--gfsplit-->
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+        </div>
+      </div>      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>        {% paginate article.comments by 5 %}          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>          {% form 'new_comment', article %}            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>          {% endform %}          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		'{{ 'gem-article-385435992169.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev1.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

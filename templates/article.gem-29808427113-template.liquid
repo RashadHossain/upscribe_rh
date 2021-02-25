@@ -1,0 +1,186 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Row" id="r-1560799786827" class="gf_row" data-icon="gpicon-row" data-id="1560799786827"><div class="gf_col-lg-12 gf_column" id="c-1560799786889" data-id="1560799786889"><div data-label="Heading" id="e-1560799794553" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1560799794553"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h1><b>What’s the science behind adaptogens and how should you use them to reap their benefits?</b></h1></div></div></div></div><div data-label="Row" id="r-1560799811564" class="gf_row" data-icon="gpicon-row" data-id="1560799811564"><div class="gf_col-lg-12 gf_column" id="c-1560799811575" data-id="1560799811575"><div data-label="Text Block" id="e-1560799815778" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1560799815778"><div class="elm text-edit gf-elm-left" data-gemlang="en"><p>From moisturizers to kombucha teas, adaptogens seem to be everywhere these days. Touted for relieving anxiety and giving energy, it’s no mystery why people are intrigued by items claiming adaptogenic effect. With that said, many of us still don’t know what they actually are or how they work.&nbsp;</p><p><br></p><p>Adaptogens have been used for centuries in Chinese and Ayurvedic medicine. They’re a specific group of botanicals and fungi that “adapt” (hence their name) the body to environmental stressors. When made part of our daily rituals (think breakfast or that warm cup of milk before bed), they make us more resistant to fatigue, focused, and calmer. And since most of us are<b> #stressedAF</b>, anything that helps us become more chill is a good thing.</p></div></div></div></div><div data-label="Row" id="r-1560799908345" class="gf_row" data-icon="gpicon-row" data-id="1560799908345"><div class="gf_col-lg-12 gf_column" id="c-1560799908331" data-id="1560799908331"><div data-label="Heading" id="e-1560799915270" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1560799915270"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h1><b>Stress hormones and a brief history of adaptogens</b></h1></div></div></div></div><div data-label="Row" id="r-1560799963026" class="gf_row" data-icon="gpicon-row" data-id="1560799963026"><div class="gf_col-lg-12 gf_column" id="c-1560799963055" data-id="1560799963055"><div data-label="Text Block" id="e-1560799966792" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1560799966792"><div class="elm text-edit gf-elm-left" data-gemlang="en"><p>But first, let’s talk stress.&nbsp;</p><p><br></p><p>It gets a bad rap but is a necessary evil.Let’s pretend it’s hundreds of years ago. You’re looking out over a plain. Through the grass you spy a predator and almost immediately, your brain’s amygdala sends messages to the hypothalamic-pituitary-adrenal or “HPA axis” which is our response center for stress. It releases the hormone adrenaline which increases the heart’s rate, pumping more blood to the brain and muscles.  It also releases the hormone cortisol, which halts the body’s other operation systems so all energy can be harnessed into the impending attack. You take off running and once safe, another message goes to the HPA axis telling it to stop releasing the hormones. In a matter of minutes your other operating systems resume their work while your heart rate returns to normal.&nbsp;</p><p><br></p><p>In this scenario, stress is short lived or “acute” and humans are built to handle it. It’s the chronic type -you know, what you feel during a grueling commute- that wreaks havoc on the body. A 2018 Psychology Today article cited that 1 out of 5 people experience “distressingly high levels” of anxiety regularly. It’s well documented how chronic stress poorly impacts health by&nbsp;increasing inflammation, weakening the immune system,  disturbing sleep, inhibiting digestion, and causing a number of other problems.&nbsp;</p><p><br></p><p>Hungarian endocrinologist Dr. Hans Selye was the first to give a scientific explanation for the biological response known as stress. Now known as the Theory of Stress and General Adaption Syndrome, he broke down the reaction into three phases: <b>Alarm</b> (the brain sending the sympathetic nervous system into flight or fight mode), <b>Resistance</b> (when the body tries to physiologically calm itself while remaining mentally alert),  and <b>Exhaustion</b> (when the stressors surpass the body’s ability to cope, resulting in exhaustion or death).&nbsp;</p><p><br></p><p>The science community began examining adaptogens as a solution to combat stress in the late 1940s when the USSR was on the hunt for ways to strengthen performance and stamina in athletes, astronauts and soldiers. Russian Toxicologist Dr. Nikolai Lazarev is credited for looking at them in relation to Selye’s theory,  noting that specific substances gave the body a “non-specific resistance” to stress while also making it less sensitive to stressors. While he didn’t do an abundance of research, he studied them long enough to realize they prolonged the resistance phase and adjusted its level of homeostasis.&nbsp;</p><p><br></p><p>By the fifties, Dr. Israel Brekhman, another USSR scientist, began releasing his own personal findings on adaptogens such as Siberian Ginseng, Asian or “Panax” Ginseng, Schisandra berry, and Rhodiola rosea (golden root).  He established the criteria for what made an adaptogen different from other herbs and we still use them today.</p><p><br></p><p>To be considered an adaptogen, a plant or fungi must do the following:</p><p><br></p><p>1) Reduce harm caused by states of stress&nbsp;</p><p>2) Have a positive excitatory impact&nbsp;</p><p>3) Cause no side-effects such as excess energy or insomnia&nbsp;&nbsp;<br></p><p>4) Be non-toxic in normal doses.&nbsp;&nbsp;<br></p></div></div></div></div><div data-label="Row" id="r-1560800124082" class="gf_row" data-icon="gpicon-row" data-id="1560800124082"><div class="gf_col-lg-12 gf_column" id="c-1560800124085" data-id="1560800124085"><div data-label="Heading" id="e-1560800127608" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1560800127608"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h1><b>Okay, but how do adaptogens work?</b></h1></div></div></div></div><div data-label="Row" id="r-1560800192160" class="gf_row" data-icon="gpicon-row" data-id="1560800192160"><div class="gf_col-lg-12 gf_column" id="c-1560800192166" data-id="1560800192166"><div data-label="Text Block" id="e-1560800195741" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1560800195741"><div class="elm text-edit gf-elm-left" data-gemlang="en"><p>Adaptogens combat stress by engaging the HPA axis and the sympathoadrenal system. When we’re chronically stressed, cortisol builds up in our system throwing it off balance.  Working on a molecular level, adaptogens encourage the release of stress-sensor proteins which lowers the hormone and increases alertness. Instead of plummeting into the exhaustion phase, the body stays in the resistance phase where it is calm but focused.&nbsp;</p><p><br></p><p>Amazing, right? And there’s more. By creating a more stable environment, adaptogens act as a protectant for our other operating systems so we’re less likely to succumb to colds or gastro-issues when faced with a panic-inducing event like a work project or a weekend with the in-laws. Along with impacting the production of cortisol, they also regulate other hormones like estrogen and serotonin which is why they’re great for addressing multiple health concerns.&nbsp;</p><p><br></p><p>There are primary adaptogens and secondary ones. Primary adaptogens meet Brekhman’s criteria and directly influence the HPA axis. Asian ginseng, rhodiola, reishi, and cordyceps would be included in this list. In contrast, secondary adaptogens do not. They do, however, impact the immune, nervous and endocrine systems,  enhance anabolism, and include fatty acids, sterols and phenols. They have adaptogenic effect but haven’t necessarily been thoroughly researched as primary ones.&nbsp;</p><p><br></p><p>Another important thing to note is that while all adaptogens influence the body in the same way, they can have differing impacts. In an interview for Goop.com, Author and Clinical Herbalist David Winston discussed this further. He says, Some are stimulating, some calming, some warming, some cooling.&nbsp;</p><p><br></p><p> Based on their chemical makeup, some adaptogens can be used for non-stress related issues. For example, he says, ashwagandha—the only adaptogen rich in iron—is useful for treating anemia. &nbsp;</p><p>Along with being linked to better moods, weight maintenance, and immunity, Adaptogens have been clinically used to alleviate arthritis, sleep disturbances, and inhibit tumor growth. Some, such as Golden Root, have antioxidant properties. Although research continues, a case is steadily growing to add them to your wellness arsenal.&nbsp;</p><p><br></p><p>Here’s a list of some to familiarize yourself with:&nbsp;</p><p><br></p><p><b>Ashwagandha</b>: Cortisol regulator, thyroid boosting, anxiety reducing.&nbsp;</p><p><b>Astragalus</b>: High in flavonoids, protects cardiovascular system.&nbsp;</p><p><b>Chaga</b>: Anti-inflammatory, antioxidant rich, anti-bacterial.&nbsp;</p><p><b>Cordyceps</b>: Supports physical performance, anti-aging, inhibits tumor growth.&nbsp;</p><p><b>Ginseng</b>: Improves mental performance and male sexual performance, boosts immune system.&nbsp;</p><p><b>Himematsutake</b>: Anti-tumor, antiviral.&nbsp;</p><p><b>Holy</b><b>Basil</b>: Vitamin rich, lowers cortisol levels, mood boosting.&nbsp;</p><p><b>Licorice</b><b>root</b>: Antimicrobial, supports metabolism.&nbsp;</p><p><b>Lion’s</b><b>Mane</b>: Supports memory, mood boosting, anti-inflammatory.&nbsp;</p><p><b>Maca</b>: Supports libido, hormone balancing.&nbsp;&nbsp;&nbsp;&nbsp;<br></p><p><b>Reishi</b>: Supports liver, immune system boosting, strengthens endocrine system.&nbsp;</p><p><b>Rhaponticum</b>: Anti-inflammatory, cortisol regulating.&nbsp;</p><p><b>Rhodiola</b>: Boosts concentration, alleviates fatigue, stress reducing.&nbsp;</p><p><b>Schisandra</b>: Improves liver function, stress reducing. &nbsp;</p><p><b>Shiitake</b>: Supports weight maintenance, boosts immune system,  vitamin rich.&nbsp;</p><p><b>Turkey</b>&nbsp;<b>Tail</b>: Immune building, antimicrobial, supports weight maintenance.&nbsp;&nbsp;<br></p></div></div></div></div><div data-label="Row" id="r-1560800345260" class="gf_row" data-icon="gpicon-row" data-id="1560800345260"><div class="gf_col-lg-12 gf_column" id="c-1560800345285" data-id="1560800345285"><div data-label="Heading" id="e-1560800347977" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1560800347977"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h1><b>How to Use Adaptogens</b></h1></div></div></div></div><div data-label="Row" id="r-1560800367637" class="gf_row" data-icon="gpicon-row" data-id="1560800367637"><div class="gf_col-lg-12 gf_column" id="c-1560800367593" data-id="1560800367593"><div data-label="Text Block" id="e-1560800370908" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1560800370908"><div class="elm text-edit gf-elm-left" data-gemlang="en"><p>With more people turning to natural remedies, the market is rising to meet the demand. While you can find adaptogens in the form of capsules and tinctures, you can also purchase them as powders which makes them easy to add to smoothies, oatmeal and even  beauty treatments.  It may take several weeks to start feeling a physical difference, but even the daily ritual of doing something positive for yourself has been shown to improve health and mood.&nbsp;</p><p><br></p><p>Like with almost anything, just because adaptogens are natural doesn’t mean you won’t be allergic or have an adverse reaction to them. Especially when it comes to secondary adaptogens, it’s important to follow the guidelines given from the producer. Some herbal supplements negatively impact prescription medication, so check with your primary before adding them to your routine.</p></div></div></div></div>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

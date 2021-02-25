@@ -1,0 +1,183 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Row" id="r-1585059961110" class="gf_row gf_row-gap-0 gf_row-fluid gf_row-no-padding" data-icon="gpicon-row" data-id="1585059961110" data-extraclass="" data-row-gap="0px"><div class="gf_col-lg-12 gf_column" id="c-1585059961081" data-id="1585059961081" style="min-height: auto;"><div data-label="Text Block" id="e-1585059941589" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1585059941589"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Everyone deals with stress throughout their daily lives, whether it’s problems at work, at home, or anywhere in between. The truth is that <i>how</i> we react to these stressors is crucial to our own personal development. It's exactly what determines how our lives play out and how well we can succeed.&nbsp;</p><p><br></p><p>Here are 5 tips that can save you from making a serious mistake during certain stressful situations you might find yourself in:<br></p></div></div><div data-label="Row" id="r-1585060777832" class="gf_row" data-icon="gpicon-row" data-id="1585060777832" data-extraclass=""><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585060777855" data-id="1585060777855" style="min-height: auto;"><div data-label="Heading" id="e-1585060789954" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585060789954"><div class="elm text-edit gf-elm-center gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><h2><b>When Someone is Driving You Nuts</b>&nbsp;</h2></div></div><div data-label="Heading" id="e-1585065973360" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585065973360" style=""><div class="elm text-edit gf-elm-center gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><h1>(and you're ready to knock some teeth out...)</h1></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585060786002" data-id="1585060786002" style="min-height: auto;"><div data-label="Image" id="e-1585062032924" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1585062032924"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/69a09da7-8866-4430-82ea-c392e08ad6b1/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Man wearing joker makeup " class="gf_image" data-gemlang="en"></div></div></div></div><div data-label="Row" id="r-1585062833934" class="gf_row" data-icon="gpicon-row" data-id="1585062833934"><div class="gf_col-lg-12 gf_column" id="c-1585062833964" data-id="1585062833964"><div data-label="Text Block" id="e-1585062704518" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1585062704518"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><br></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; text-align: inherit;">Before you release your anger on anyone, or an insult comes out of your mouth that you’re going to regret a few minutes later, you need to count - slowly - to ten.&nbsp;</span><br></p><p><br></p><p>1….2….3….4….5….&nbsp;</p><p>6...7...8...9...10</p><p><br></p></div></div><div data-label="Text Block" id="e-1585062778992" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1585062778992"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>You don't have to say anything while you do it; just make sure you don't react or act in those moments. Whatever happens (and even if you’re ready to throw a scalding hot cup of coffee in your co-workers face)...&nbsp;<span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;"><b>Calm down.</b>&nbsp;</span></p><p><span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;"><br></span></p><p>In most circumstances, by the time you've reached ten, your mind has become clear enough to find a better way to deal with the problem than with your emotions. It’ll make the issue look smaller and more manageable.<span style="color: inherit; font-family: inherit; font-size: inherit; letter-spacing: 0px; text-align: inherit;"><br></span></p><p><br></p><p>If, after counting to ten, you still feel like trying your left hook, then treat yourself to a time-out. Back up, retreat, leave the building if you can. You won't gain anything by acting impulsively, so give yourself a longer time to stay calm and reevaluate the situation.&nbsp;</p><p><br></p><p>&nbsp;But, if nerves or anxiety are the problem, keep reading...&nbsp;<br></p></div></div></div></div><div data-label="Row" id="r-1585062966273" class="gf_row" data-icon="gpicon-row" data-id="1585062966273" data-extraclass=""><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585060777855" data-id="1585060777855" style="min-height: auto;"><div data-label="Image" id="e-1585062998772" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1585062998772" style=""><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/921b2729-6b0c-4647-9396-0000dd794adf/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Man in glasses biting his fingernails" class="gf_image" data-gemlang="en"></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585060786002" data-id="1585060786002" style="min-height: auto;"><div data-label="Heading" id="e-1585062966210" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585062966210"><div class="elm text-edit gf-elm-center gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><h2><b>When You're Feeling Nervous or Anxious</b>&nbsp;</h2></div></div><div data-label="Heading" id="e-1585065345272" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585065345272"><div class="elm text-edit gf-elm-center gf-elm-left-md gf-elm-left-sm gf-elm-center-lg gf-elm-center-xs" data-gemlang="en" data-exc=""><h3>(and you've run out of nails to bite...)</h3></div></div></div></div><div data-label="Row" id="r-1585064180002" class="gf_row" data-icon="gpicon-row" data-id="1585064180002"><div class="gf_col-lg-12 gf_column" id="c-1585064179992" data-id="1585064179992"><div data-label="Text Block" id="e-1585064187069" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1585064187069"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Wash your face with cold water.</p><p><br></p><p>It’s crazy how well this trick works. I would do it before big presentations at my previous job in order to ease the nerves. Turns out, splashing your face with cold water triggers your primitive diving reflex and will help lower your heart rate by 10 to 25 percent. If you don't have immediate access to water, try to breathe clean air (and getting a little sunshine while doing so will also help you stay calm).</p><p><br></p><p>Aside from this cool trick, you can also use medicinal mushrooms to help ease stress and anxiety by adding them to your daily routine. Helping your body adapt to stressful situations is exactly what they are known for and we created <a href="https://www.ryzesuperfoods.com/products/mushroom-coffee" class="" target="_blank">RYZE</a> so you can easily add mushrooms to your day. By swapping your boring morning coffee for our better-for-you <a href="https://www.ryzesuperfoods.com/products/mushroom-coffee" class="" target="_blank">Mushroom Coffee</a>, you'll feel calm energy and focus all day long without any jitters or crash. Not to mention all the awesome immune system benefits our mushrooms have as well.&nbsp;<br></p></div></div></div></div><div data-label="Row" id="r-1585065059811" class="gf_row" data-icon="gpicon-row" data-id="1585065059811" data-extraclass=""><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585060777855" data-id="1585060777855" style="min-height: auto;"><div data-label="Heading" id="e-1585065079515" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585065079515"><div class="elm text-edit gf-elm-center gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><h2><b>When You're Feeling Indecisive</b></h2></div></div><div data-label="Heading" id="e-1585065214345" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585065214345"><div class="elm text-edit gf-elm-center gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><h1>(and don't know whether to keep reading this article or not...)</h1></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585060786002" data-id="1585060786002" style="min-height: auto;"><div data-label="Image" id="e-1585065059874" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1585065059874" style=""><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/eb4feb5c-c109-40bc-ba2f-fbba39bb1ea3/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Sign post showing this way, that way, somewhere else" class="gf_image" data-gemlang="en"></div></div></div></div><div data-label="Row" id="r-1585065253144" class="gf_row" data-icon="gpicon-row" data-id="1585065253144"><div class="gf_col-lg-12 gf_column" id="c-1585065253126" data-id="1585065253126"><div data-label="Text Block" id="e-1585065271046" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1585065271046"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Time for a <b>cost-benefit analysis</b>.&nbsp;One of the most difficult decisions I ever had to make was leaving my secure, steady paycheck at the job I hated to move into my mother’s basement and start RYZE. The one thing that made the decision infinitely easier was writing out a cost-benefit analysis, or in lay mans terms, a pros and cons list.<br></p><p><br></p><p>Put each of your two (or however many) options on a piece of paper with a line in the middle, making a T chart. For each one, write its pros and cons in detail (Add a cartoon of the boss you hate if you think it's necessary). To make this quantitate and more effective, assign a weight to each one from 1 (not very influential) to 5 (very influential).<br></p><p><br></p><p>Add the numbers together on each side and that's it! No more excuses and no looking back. Side with the larger sum wins - you have your solution.&nbsp;<br></p></div></div></div></div><div data-label="Row" id="r-1585065419017" class="gf_row" data-icon="gpicon-row" data-id="1585065419017" data-extraclass=""><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585060777855" data-id="1585060777855" style="min-height: auto;"><div data-label="Image" id="e-1585065419035" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1585065419035"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/bd8bf58d-8e47-4d4c-aa89-637a273e9927/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Man in suit playing video games at his work desk " class="gf_image" data-gemlang="en"></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585060786002" data-id="1585060786002" style="min-height: auto;"><div data-label="Heading" id="e-1585065419058" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585065419058"><div class="elm text-edit gf-elm-center gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><h2><b>When You're Losing Motivation</b></h2></div></div><div data-label="Heading" id="e-1585065419106" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585065419106"><div class="elm text-edit gf-elm-center gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><h1>(and you're procrastinating three quarters of your day to nothingness..)</h1></div></div></div></div><div data-label="Row" id="r-1585065491320" class="gf_row" data-icon="gpicon-row" data-id="1585065491320"><div class="gf_col-lg-12 gf_column" id="c-1585065491231" data-id="1585065491231"><div data-label="Text Block" id="e-1585065496154" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1585065496154"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>My recommendation is to make a fitness goal and start exercising (preferably in the morning).</p><p><br></p><p>Fitness goals are amazing because they can be achieved daily and nothing has to be left up to luck. It’s completely in your control and anyone can do it. My first fitness goal was to do 5 yoga poses each for 1 minute every morning as soon as I wake up, followed by 10 pushups. It may seem easy, but just completing that task every morning set me up to have a great day because I felt like I had already accomplished something and was working towards a goal. Soon, I started counting my streaks of how many mornings in a row I kept it up and those became insanely rewarding as well.<br></p><p><br></p><p>While fitness is not related to other goals I have in my life like running a successful business or being a good uncle, the feelings of accomplishment and confidence that it gives me definitely flow through to all other aspects of my life and help me stay motivated on all fronts.&nbsp;<br></p></div></div></div></div><div data-label="Row" id="r-1585065651786" class="gf_row" data-icon="gpicon-row" data-id="1585065651786" data-extraclass=""><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585060777855" data-id="1585060777855" style="min-height: auto;"><div data-label="Heading" id="e-1585065651722" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585065651722" style=""><div class="elm text-edit gf-elm-center gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><h2><b>When You Feel Fear, Distrust, or Depression Coming Over You</b></h2></div></div><div data-label="Heading" id="e-1585066049316" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1585066049316"><div class="elm text-edit gf-elm-center gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><h1>(and you need to find peace ASAP)</h1></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1585060786002" data-id="1585060786002" style="min-height: auto;"><div data-label="Image" id="e-1585065651721" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1585065651721"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/09791f1d-6709-4793-91a9-5f555e838c5c/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Young man with blue eyes hiding under covers" class="gf_image" data-gemlang="en"></div></div></div></div><div data-label="Row" id="r-1585065743132" class="gf_row" data-icon="gpicon-row" data-id="1585065743132"><div class="gf_col-lg-12 gf_column" id="c-1585065743138" data-id="1585065743138"><div data-label="Text Block" id="e-1585065746694" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1585065746694"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Surround yourself with green and blue colors and try to be by nature. Go to a park and walk  around, maybe a lake or pond nearby, or a spot you know that has a great view. Do your best to find a space that can be truly yours for a moment, where you can meditate and silence your mind for at least half an hour.&nbsp;<br></p><p><br></p><p>For this difficult situation, the most important thing is to remember that you have the potential to solve any problem that comes your way. Your situation is unique to you so truly anything can happen, so make sure to never compare yourself to anyone else who might’ve been in a similar circumstance. And regardless of all that, remember that in the end it will all be okay.&nbsp;<br></p><p><br></p><p>You know this is true! All you need is for your heart to keep beating. Call it confidence or faith in yourself, whatever you want; but believe that you can really keep it together and make a change in your life.<br></p></div></div></div></div><div data-label="Product" id="m-1585066207777" class="module-wrap" data-icon="gpicon-product" data-ver="1.0" data-id="1585066207777" style="min-height: auto;"><div class="module" data-variant="auto" style="" data-current-variant="28783146762345"><form action="/cart/add" method="post" enctype="multipart/form-data" id="" class="AddToCartForm " data-productid="{{product.id}}">{% assign product = all_products['mushroom-coffee'] %}<input name="id" type="hidden" value="{{product.selected_or_first_available_variant.id}}" data-productid="{{product.id}}"><div data-index="1" class="item-content"><div class="module-wrap" id="m-1585066207777-0" data-id="1585066207777-0" data-label="(P) Image" data-icon="gpicon-product-image" data-ver="1" style=""><div class="module gf_module-center gf_module-center-lg gf_module--md gf_module--sm gf_module--xs " data-effect="default" data-pid="{{product.id}}" data-image-type="variant" data-default-variant="{{defaultVariant}}" data-select-text="{{selectText}}" data-zoomstyle="{{zoomStyle}}" data-ori-size="1024x1024">{% if 'variant' == 'first' %}{% assign current_variant = product.selected %}{% else %}{% assign current_variant = product.selected_or_first_available_variant %}{% endif %}{% assign featured_image = current_variant.featured_image | default: product.featured_image %}{% if featured_image %}{% assign altTag = featured_image.alt %}{% unless altTag %}{% assign altTag = product.title %}{% endunless %}{% if '1' == '1' %}<a href="/products/{{ product.handle }}">{% endif %}<img class="gf_product-image gf_featured-image" src="{{ featured_image | img_url: '1024x1024' }}" data-zoom="{{ featured_image | img_url: '2048x2048' }}" alt="{{ altTag }}" style="width: 40%; height: auto">{% if 'default' == 'hover' %}{% if 'last' != 'last' %}{% assign nth = last | minus: 1 %}{% assign limit = product.images | size | minus: 1  %}{% assign nth = nth | at_most: limit %}{% assign hoverImage = product.images[nth] %}{% else %}{% assign hoverImage = product.images | last %}{% endif %}{% assign hoverImgAltTag = hoverImage.alt %}{% unless hoverImgAltTag %}{% assign hoverImgAltTag = product.title %}{% endunless %}<img class="gf_product-image gf_product-image-hover" src="{{ hoverImage.src | img_url: '1024x1024' }}" alt="{{ hoverImgAltTag }}" style="width: 40%; height: auto">{% endif %}{% if '1' == '1' %}</a>{% endif %}{% else %}{% if '1' == '1' %}<a href="/products/{{ product.handle }}">{% endif %}<img class="gf_product-image gf_featured-image" data-zoom="https://cdn.shopify.com/s/images/admin/no-image-2048x2048.gif" src="https://cdn.shopify.com/s/images/admin/no-image-2048x2048.gif" alt="{{ product.title }}" style="width: 40%; height: auto">{% if 'default' == 'hover' %}{% if 'last' != 'last' %}{% assign nth = last | minus: 1 %}{% assign limit = product.images | size | minus: 1  %}{% assign nth = nth | at_most: limit %}{% assign hoverImage = product.images[nth] %}{% else %}{% assign hoverImage = product.images | last %}{% endif %}{% assign hoverImgAltTag = hoverImage.alt %}{% unless hoverImgAltTag %}{% assign hoverImgAltTag = product.title %}{% endunless %}<img class="gf_product-image gf_product-image-hover" src="{{ hoverImage.src | img_url: '1024x1024' }}" alt="{{ hoverImgAltTag }}" style="width: 40%; height: auto">{% endif %}{% if '1' == '1' %}</a>{% endif %}{% endif %}</div></div><div class="module-wrap" id="m-1585066207777-1" data-id="1585066207777-1" data-label="(P) Title" data-icon="gpicon-product-title" data-ver="1.0" style=""><div class="module gf_module-center gf_module-center-lg gf_module--md gf_module--sm gf_module--xs " data-pid="{{product.id}}"><h3 itemprop="name" class="product-single__title">{% if '1' == '1' %}<a href="/products/{{ product.handle }}" class="gf_product-title">{% else %}<span class="gf_product-title">{% endif %}{{ product.title }}{% if '1' == '1' %}</span></a>{% else %}{% endif %}</h3></div></div><div data-label="Text Block" id="e-1585066207786" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1585066207786" style=""><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p><b><br></b></p><p><b>Ingredients</b>: ORGANIC RYZE Mushroom Blend (Cordyceps, Reishi, Lion's Mane, Shiitake, King Trumpet, Turkey Tail), Spray-Dried Arabica Coffee, MCT Oil Powder&nbsp;</p><p><br></p><p><b>&nbsp;Vegan | 100% Natural | Keto-friendly | Non-GMO&nbsp;</b></p><p><br></p></div></div><div data-label="Button" id="e-1585066207684" class="element-wrap" data-icon="gpicon-gpicon-button" data-ver="1.0" data-id="1585066207684" style=""><div class="elm gf-elm-center gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg"><a class="button btn gf_button" href="/products/mushroom-coffee" target="" data-exc=""><span>LEARN MORE</span></a></div></div></div><div class="gf_clearfix"></div>{% unless product == empty %}{% for variant in product.variants %}<input type="hidden" id="gf-hidden-variant{{variant.id}}" value="{{variant.id}}" data-compare-price="{{ variant.compare_at_price | money | strip_html }}" data-price="{{ variant.price | money | strip_html }}">{% endfor %}<script type="text/plain" class="product-json" id="product-json{{product.id}}">{{ product | json }}</script>{% endunless %}</form></div></div></div></div><!--gfsplit--><div class="element-wrap" data-label="Text Block" id="e-1585059919994" data-icon="gpicon-textblock" data-ver="1" data-id="1585059919994"><div class="elm text-edit"></div></div><!--gfsplit-->
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

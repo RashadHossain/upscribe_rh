@@ -1,0 +1,183 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Text Block" id="e-1580134326580" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580134326580"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><br></p><p>So you want to know about mushroom coffee? We don’t blame you. People are talking about it everywhere and with good reason.</p><p><br></p><p>Heart healthy and energy boosting, mushroom coffee is the miracle alternative for those looking to ditch the java. But why?&nbsp;</p><p>&nbsp;<br></p><p>If you’ve spent any time in the wellness atmosphere, you’ve probably come across some article about someone detoxing from coffee. With 450 million cups consumed daily in the United States alone, it’s the most popular drink in the world. The average drinker downs 3.5 cups daily.&nbsp;</p><p><br></p><p>Now, before you click away, just relax. We’re going to explain why mushroom coffee is the business. We just think to fully appreciate what it does, a little background needs to be given on its predecessor and why some feel conflicted about consuming it.&nbsp;&nbsp;<br></p><p><br></p><p>Arguably, coffee is one of the most controversial drinks. Medical and holistic experts routinely praise it for its ability to boost brain health, while also denouncing its stimulant properties. It seems like there is a new article calling it beneficial or a health no-no every day, so what should we believe?&nbsp;&nbsp;<br></p><p><br></p><p>The truth is that<a href="https://www.caffeineinformer.com/7-good-reasons-to-drink-coffee" class="" target="_blank"> there are some good reasons to drink coffee</a>. In the journal of Hepatology, it was revealed that <a href="https://www.sciencecodex.com/coffee_consumption_reduces_mortality_risk_from_liver_cirrhosis-130968" class="" target="_blank">coffee consumption reduced the risk of liver cirrhosis</a>, specifically in those with non-viral hepatitis. Downing java has also been shown to decrease the risk of Type II diabetes by 6-9 percent, even if it's decaf [1].&nbsp; &nbsp;<br></p><p><br></p><p>Another benefit of the drink is that it may strengthen white blood cells. In a study published in EuropeanJournal of Nutrition, researchers found that those who enjoyed dark roast had stronger DNA strands than those who didn’t [2]. Coffee has also been shown to cut muscle pain post-workout [3]. It’s high in antioxidants, contains magnesium, and Vitamins B5, B2, and B2. There is even some promising research showing that it has the ability to reduce the risk of certain neurodegenerative diseases, like Parkinson’s and Alzheimer’s.&nbsp;&nbsp;<br></p><p><br></p><p>Clearly, we’re not here to slam coffee. However, it does have drawbacks.&nbsp; &nbsp;<br></p><p>&nbsp;<br></p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580134391865" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580134391865"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h2><b><br></b></h2><h2><b>Why Coffee Gets A Bad Rap</b></h2></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580134449161" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580134449161"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><br></p><p>The dark side of the daily favorite boils down to overconsumption and its caffeine content.</p><p><br></p><p>Caffeine’s power lies in its ability to stimulate the nervous system. It’s the reason why we not only feel super alert after having our favorite blend but also need to use the bathroom. Its chemical structure is very similar to the molecule adenosine. When we drink coffee or anything with caffeine, it’s taken by adenosine receptors in our brain. This prevents the actual adenosine molecules from being received. At the same time, dopamine is released. You not only feel awake but good - a dangerous combo.&nbsp; &nbsp;<br></p><p><br></p><p>Adenosine has the job of signaling to the body to wind down. When caffeine blocks it from reaching receptors, our system can’t receive its signal to relax. Since rest is a non-negotiable, our brain will overproduce more receptors to receive the molecule. The more receptors one has, the more caffeine that’s needed to feel the same levels of alertness.&nbsp; &nbsp;<br></p><p><br></p><p>Now that you know why a single cup of coffee isn’t enough to supercharge you like it once did, here’s why being dependent on the drink is problematic: Many of its benefits are short lived. Although coffee contains antioxidants, it can cause the hypothalamic-pituitary-adrenal axis to produce more hormones.&nbsp;&nbsp;<br></p><p><br></p><p>The hypothalamic-pituitary-adrenal axis (HPA) plays a part in the body’s stress response, including the release of epinephrine and cortisol. Researchers have found that caffeine can stimulate the production of the two hormones even at rest.&nbsp;&nbsp;<br></p><p><br></p><p>Along with causing excess weight around our mid-sections, <a href="https://www.premierhealth.com/your-health/articles/women-wisdom-wellness-/beware-high-levels-of-cortisol-the-stress-hormone" class="" target="_blank">having high levels of cortisol in our system</a> can lead to irritability, headaches, digestive issues, and poor sleep. Epinephrine causes our heart rate to rise and increases blood pressure. Although avoiding adrenal fatigue is another reason some opt to give up coffee, it’s not a diagnosable condition according to experts. If you’re feeling sluggish after your venti-mocha whatever, it’s more than likely a result of caffeine’s impact on your hormones.&nbsp;&nbsp;<br></p><p><br></p><p>While not as painful as withdrawing from nicotine or harder stimulants, giving up coffee isn’t a joy ride. Some people experience muscle aches, tiredness, poor concentration and moodiness. <a href="https://www.healthline.com/nutrition/caffeine-withdrawal-symptoms" class="" target="_blank">The symptoms of caffeine withdrawal </a>can persist anywhere between 2 and 9 days.&nbsp;&nbsp;</p></div></div><!--gfsplit--><div data-label="Heading" id="e-1580135094088" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1580135094088"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h2><br></h2><h2><br></h2><h2><b>Mushroom Coffee: A Better Alternative</b></h2></div></div><!--gfsplit--><div data-label="Row" id="r-1580135069407" class="gf_row" data-icon="gpicon-row" data-id="1580135069407" data-extraclass=""><div class="gf_column gf_col-lg-8 gf_col-md-8 gf_col-sm-8 gf_col-xs-12" id="c-1580135069321" data-id="1580135069321" style="min-height: auto;"><div data-label="Image" id="e-1580135077924" class="element-wrap" data-icon="gpicon-image" data-ver="1" data-id="1580135077924" style=""><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><img src="https://ucarecdn.com/f0d22a41-5798-41f2-a8b6-28524a778d28/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Medicinal mushrooms in glass bowls on table " class="gf_image" data-gemlang="en"></div></div></div><div class="gf_column gf_col-lg-4 gf_col-md-4 gf_col-sm-4 gf_col-xs-12" id="c-1580135072909" data-id="1580135072909" style="min-height: auto;"><div data-label="Text Block" id="e-1580135081737" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580135081737" style=""><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>A<span style="color: inherit; font-size: inherit; text-align: inherit;">ssorted medicinal mushrooms,&nbsp;</span></p><p><span style="color: inherit; font-size: inherit; text-align: inherit;">including Reishi, Lion's Mane,&nbsp;</span></p><p><span style="color: inherit; font-size: inherit; text-align: inherit;">Maitake, and King Trumpet.&nbsp;</span></p></div></div></div></div><!--gfsplit--><div data-label="Text Block" id="e-1580134582501" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1580134582501"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p><span style="color: inherit; font-size: inherit; text-align: inherit;">As we’ve already shared, there are some solid benefits to the coffee and when drunk in moderation, the health risks are minimal. But if you’re ready to break the habit but are fretting going cold turkey, there’s an alternative you may love just as much: Mushroom coffee.</span><br></p><p><br></p><p>If the idea of drinking chunks of fungi churns your stomach, rest assured, mushroom coffee is identical to your cold brew in appearance and texture. The mushrooms are pulverized to a very fine powder and then blended in with coffee grounds.&nbsp;&nbsp;<br></p><p><br></p><p>You may be thinking that it seems strange to add something to a drink you’re trying to cut out, but as luck would have it, when you blend mushrooms with coffee some extraordinary things happen. And BTW, we’re not talking the ordinary fungus. No, we’re talking about the superfood kind.&nbsp;&nbsp;<br></p><p><br></p><p>Superfoods are foods that have a high content of antioxidants, vitamins and other properties that reduce risks of disease and inflammation. Several types of mushrooms fall into this category, but they’re not the kind you’ll find on a typical salad. Medicinal mushrooms like <b>Reishi</b>, <b>Cordyceps</b>, <b>Lion's Mane</b>, <b>Turkey Tail</b>, <b>Shitake</b>, <b>Chaga</b>, and <b>King Trumpet</b> are nootropics. They contain a variety of minerals and chemical compounds that help with a variety of things.&nbsp;&nbsp;<br></p><p><br></p><p>For example, Lion’s Mane has been clinically shown to improve cognitive skills and ease symptoms of depression. <a href="https://firstendurance.com/cordyceps-endurance-performance/" class="" target="_blank">Cordyceps has been shown to increase endurance</a> and improve athletic performance. Shiitake lowers blood pressure and Turkey Tail is a natural pre-biotic. Not too shabby.&nbsp;&nbsp;<br></p><p><br></p><p>Along with being immune building, <a href="https://www.ryzesuperfoods.com/blogs/essential-reading/what-are-adaptogens" class="" target="_blank">medicinal mushrooms are adaptogens</a>. Consumed on a regular basis they help our body naturally adjust to internal and external environmental stressors. They’ve been used in eastern and complimentary medicine for centuries. It’s even been reported that Europeans have been drinking mushroom coffee since the 1940s and when you consider how the fungi enhances the traditional beverage, it’s easy to understand why. They’re alkaline, which means they can cut the level of acidity in coffee. This gives what most drinkers describe as a smoother, more earthy flavor.&nbsp;&nbsp;<br></p><p><br></p><p>According to an article published earlier this year in USA Today, the beverage has seen a 471 percent year-on-year spike in searches. Wellness gurus swear by it and while science hasn’t spent much time researching how it works, there is a bunch of scientific data on <a href="https://www.ryzesuperfoods.com/blogs/essential-reading/medicinal-mushrooms-not-magic-but-amazing" class="" target="_blank">the medicinal benefits of mushrooms</a>.&nbsp; &nbsp;<br></p><p><br></p><p>Medicinal mushrooms bring a gamut of health benefits that regular coffee just doesn’t have and can even counteract some of its negative side effects. It has half the amount of caffeine as the regular stuff. But that’s not the only reason why it’s superior to the typical French roast.&nbsp;&nbsp;<br></p><p><br></p><p>Because of its adaptogenic properties, it encourages the body to produce energy naturally. What does that mean for you? It means you can enjoy a delicious drink that will do all the same things your morning latte does without worrying about the jitters, headaches, or the upset stomach that sometimes happens with over consumption.&nbsp;&nbsp;<br></p><p><br></p><p>Perhaps the best thing that mushroom coffee has to offer is that it will actually help you become more energized, focused, and calmer over time. Once again, you can thank its adaptogenic nature for that. It’s also versatile and can be had hot, cold, and even added into dessert recipes.&nbsp; &nbsp;<br></p><p><br></p><p>While some people do go the long method of harvesting (we see you foragers!) and pulverizing the mushrooms themselves, it can be beneficial (and a hell of a lot easier) to find a specialized blend that’s customized to meet your needs. For example, our <a href="https://www.ryzesuperfoods.com/products/mushroom-coffee" class="" target="_blank">RYZE: Mushroom Keto Coffee</a> is one of our favorites, especially for pre-workout.&nbsp;&nbsp;<br></p><p><br></p><p>It features Cordyceps, which boosts strength and enhances physical stamina. According to studies [4], athletes who take supplements of the mushroom are more resistant to oxidative damage and can perform longer and more intensely than athletes who don’t. Along with the mushroom, the blend contains 5 other medicinal mushrooms (Lion's Mane, Reishi, Shiitake, Turkey Tail, King Trumpet) to fight free radicals, and keep inflammation at bay with thermogenic properties that are perfect for revving metabolism.&nbsp;&nbsp;<br></p><p><br></p><p>Besides giving energy for a gym session, it’s an effective and simple way to up our daily micronutrient intake without messing up your macro count. In fact, our RYZE blend is under 40 calories per serving, making it an awesome addition to any type of meal plan.&nbsp;&nbsp;<br></p><p><br></p><p>Trust us, once you start drinking mushroom coffee, we doubt you’ll want to go back to the regular stuff. Really, why would you want to?&nbsp;&nbsp;<br></p><p><br></p><p>Check out our RYZE mushroom coffee that contains 6 of these amazing mushrooms plus MCT oil powder to add extra creamy texture.</p></div></div><!--gfsplit--><div data-label="Product" id="m-1584796288218" class="module-wrap" data-icon="gpicon-product" data-ver="1.0" data-id="1584796288218" style="min-height: auto;"><div class="module" data-variant="auto" style="" data-current-variant="28783146762345"><form action="/cart/add" method="post" enctype="multipart/form-data" id="" class="AddToCartForm " data-productid="{{product.id}}">{% assign product = all_products['mushroom-coffee'] %}<input name="id" type="hidden" value="{{product.selected_or_first_available_variant.id}}" data-productid="{{product.id}}"><div data-index="1" class="item-content"><div class="module-wrap" id="m-1584796288218-0" data-id="1584796288218-0" data-label="(P) Image" data-icon="gpicon-product-image" data-ver="1"><div class="module gf_module-center gf_module-center-lg gf_module--md gf_module--sm gf_module--xs " data-effect="default" data-pid="{{product.id}}" data-image-type="variant" data-default-variant="{{defaultVariant}}" data-select-text="{{selectText}}" data-zoomstyle="{{zoomStyle}}" data-ori-size="1024x1024">{% if 'variant' == 'first' %}{% assign current_variant = product.selected %}{% else %}{% assign current_variant = product.selected_or_first_available_variant %}{% endif %}{% assign featured_image = current_variant.featured_image | default: product.featured_image %}{% if featured_image %}{% assign altTag = featured_image.alt %}{% unless altTag %}{% assign altTag = product.title %}{% endunless %}{% if '1' == '1' %}<a href="/products/{{ product.handle }}">{% endif %}<img class="gf_product-image gf_featured-image" src="{{ featured_image | img_url: '1024x1024' }}" data-zoom="{{ featured_image | img_url: '2048x2048' }}" alt="{{ altTag }}" style="width: 60%; height: auto">{% if 'default' == 'hover' %}{% if 'last' != 'last' %}{% assign nth = last | minus: 1 %}{% assign limit = product.images | size | minus: 1  %}{% assign nth = nth | at_most: limit %}{% assign hoverImage = product.images[nth] %}{% else %}{% assign hoverImage = product.images | last %}{% endif %}{% assign hoverImgAltTag = hoverImage.alt %}{% unless hoverImgAltTag %}{% assign hoverImgAltTag = product.title %}{% endunless %}<img class="gf_product-image gf_product-image-hover" src="{{ hoverImage.src | img_url: '1024x1024' }}" alt="{{ hoverImgAltTag }}" style="width: 60%; height: auto">{% endif %}{% if '1' == '1' %}</a>{% endif %}{% else %}{% if '1' == '1' %}<a href="/products/{{ product.handle }}">{% endif %}<img class="gf_product-image gf_featured-image" data-zoom="https://cdn.shopify.com/s/images/admin/no-image-2048x2048.gif" src="https://cdn.shopify.com/s/images/admin/no-image-2048x2048.gif" alt="{{ product.title }}" style="width: 60%; height: auto">{% if 'default' == 'hover' %}{% if 'last' != 'last' %}{% assign nth = last | minus: 1 %}{% assign limit = product.images | size | minus: 1  %}{% assign nth = nth | at_most: limit %}{% assign hoverImage = product.images[nth] %}{% else %}{% assign hoverImage = product.images | last %}{% endif %}{% assign hoverImgAltTag = hoverImage.alt %}{% unless hoverImgAltTag %}{% assign hoverImgAltTag = product.title %}{% endunless %}<img class="gf_product-image gf_product-image-hover" src="{{ hoverImage.src | img_url: '1024x1024' }}" alt="{{ hoverImgAltTag }}" style="width: 60%; height: auto">{% endif %}{% if '1' == '1' %}</a>{% endif %}{% endif %}</div></div><div class="module-wrap" id="m-1584796288218-1" data-id="1584796288218-1" data-label="(P) Title" data-icon="gpicon-product-title" data-ver="1.0" style=""><div class="module gf_module-center gf_module-center-lg gf_module--md gf_module--sm gf_module--xs " data-pid="{{product.id}}"><h3 itemprop="name" class="product-single__title">{% if '1' == '1' %}<a href="/products/{{ product.handle }}" class="gf_product-title">{% else %}<span class="gf_product-title">{% endif %}{{ product.title }}{% if '1' == '1' %}</span></a>{% else %}{% endif %}</h3></div></div><div data-label="Text Block" id="e-1584796313258" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1584796313258" style=""><div class="elm text-edit gf-elm-left gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><p><b><br></b></p><p><b>Ingredients</b>: ORGANIC RYZE Mushroom Blend (Cordyceps, Reishi, Lion's Mane, Shiitake, King Trumpet, Turkey Tail), Spray-Dried Arabica Coffee, MCT Oil Powder&nbsp;</p><p><br></p><p><b>Vegan | 100% Natural | Keto-friendly | Non-GMO&nbsp;</b></p><p><br></p></div></div><div data-label="Button" id="e-1584796356635" class="element-wrap" data-icon="gpicon-gpicon-button" data-ver="1.0" data-id="1584796356635" style=""><div class="elm gf-elm-center gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg"><a class="button btn gf_button" href="/products/mushroom-coffee" target="" data-exc=""><span>SHOP NOW</span></a></div></div></div><div class="gf_clearfix"></div>{% unless product == empty %}{% for variant in product.variants %}<input type="hidden" id="gf-hidden-variant{{variant.id}}" value="{{variant.id}}" data-compare-price="{{ variant.compare_at_price | money | strip_html }}" data-price="{{ variant.price | money | strip_html }}">{% endfor %}<script type="text/plain" class="product-json" id="product-json{{product.id}}">{{ product | json }}</script>{% endunless %}</form></div></div><!--gfsplit--><div class="element-wrap" data-label="Text Block" id="e-1567000651116" data-icon="gpicon-textblock" data-ver="1" data-id="1567000651116"><div class="elm text-edit gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-exc=""><p class="p1"><br></p><p class="p2"><span style="color: inherit; font-size: inherit; text-align: inherit;"><br></span></p><p class="p2"><span style="color: inherit; font-size: inherit; text-align: inherit;"><br></span></p><p class="p2"><span style="color: inherit; font-size: inherit; text-align: inherit;">&nbsp;</span><br></p><p class="p2"><span class="s1">__________________________</span></p><undefined><span class="s1"><a href="https://www.ncbi.nlm.nih.gov/pubmed/16801515?dopt=Abstract" class="" target="_blank">[1]</a> https://www.ncbi.nlm.nih.gov/pubmed/16801515?dopt=Abstract</span></undefined><div><undefined><span class="s1"><a href="https://www.ncbi.nlm.nih.gov/pubmed/24740588" class="" target="_blank">[2]</a> https://www.ncbi.nlm.nih.gov/pubmed/24740588</span></undefined></div><div><undefined><span class="s1"><a href="https://www.jpain.org/article/S1526-5900(06)01023-6/abstract" class="" target="_blank">[3]</a> https://www.jpain.org/article/S1526-5900(06)01023-6/abstract</span></undefined></div><div><undefined><span class="s1"><a href="https://www.tandfonline.com/doi/abs/10.1080/19390211.2016.1203386?journalCode=ijds20" class="" target="_blank">[4]</a> Hirsch, K. R., Smith-Ryan, A. E., Roelofs, E. J., Trexler, E. T., &amp; Mock, M. G. (2017). Cordyceps militaris Improves Tolerance to High-Intensity Exercise After Acute and Chronic Supplementation. <i>Journal of dietary supplements</i>, <i>14</i>(1), 42–53. doi:10.1080/19390211.2016.1203386</span></undefined></div></div></div><!--gfsplit-->
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

@@ -1,0 +1,140 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+<link data-instant-track rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-385515421801.css' | asset_url }}" class="gf_page_style">
+<!--GEM_HEADER_END-->
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}{% assign number_of_comments = article.comments_count %}{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}<article itemscope itemtype="http://schema.org/Article">  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>        <div class="article__body rte" itemprop="articleBody">
+          <!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Heading" id="e-1600716362332" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1600716362332"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h2>The Gratitude Bullet Journal</h2></div></div><!--gfsplit--><div class="element-wrap" data-label="Text Block" id="e-1600716351171" data-icon="gpicon-textblock" data-ver="1" data-id="1600716351171"><div class="elm text-edit"><meta charset="utf-8"><p><span>If you want to start creating an archive of your precious moments, consider using a gratitude bullet journal or gratitude journal as your new record keeping system. You can use it for your everyday journaling, as well as your formal journaling like your prayer journal.</span></p><p>&nbsp;</p><meta charset="utf-8"><p>Grit is a key word that should be on every page of your gratitude journal. Don't forget to include in your journal what your goals are, how you intend to reach them, and when you expect to achieve them. A good way to gauge your progress is to write your goals down in the first four lines of your journal.</p><p>&nbsp;</p><p>When using your gratitude bullet journal, always record where you wrote your goal down. You don't want to forget the place, or you'll be tempted to jot it down again when you're done.</p><p>&nbsp;</p><p>Include a poem or a song when you're journaling with your gratitude journal. Think about what you feel grateful for and why you feel grateful for it. You may even need to write the lyrics to that song, if you feel so inclined.</p><p>&nbsp;</p><p>The best time to begin writing your gratitude journal is when you're least expecting it. Just write down the things that happen to you that lift you up when you least expect them.</p><p>&nbsp;</p><p>By using a gratitude bullet journal as your journal, you're able to get closer to the "why" of your gratitude. You're able to learn how to appreciate those things that have come before you, those that will continue to come.</p><p>&nbsp;</p><p>For people who want to be in the position to share their gratitude, they may want to start a gratitude journal now. Once they get the hang of it, they'll be glad to share it with friends and family.</p><p>&nbsp;</p><p>In this way, they can print out their own private copy for future reference and use it when they need to keep track of their own list of gratitude. They'll also be able to give it out to others as well, just as a gift.</p><p>&nbsp;</p><p>If you don't think you have the time or patience to create your own gratitude bullet journal, you can hire someone else to write the entries for you. A great way to go about it is by looking through one of the many gratitude journaling software programs available today. There are software options available that let you journal in any style or format you like.</p><p>&nbsp;</p><p>You can find software that will create a customized journal that will suit your own unique needs. The advantage of having this type of journal is that you can be as creative as you want to be.</p><p>&nbsp;</p><p>You don't have to write everything you wish to say. You can also choose journal prompts that will prompt you to write daily or weekly, monthly, biweekly, or weekly, etc.</p><p>&nbsp;</p><p>There are many types of journals you can purchase that will send you special items like books, games, free gifts, and other gifts that you can give to yourself. Or you can make a collage of all your journal entries to give to someone else as a gift.</p><p>&nbsp;</p><meta charset="utf-8"><div id="spin_panel" class="panel panel-default spintax-area"><div class="panel-body"><div class="row"><div class="content-area" id="content-area-div"><div class="summernote perfecttense" id="content-area-div-summernote"><p>Remember that a journal is a tool. It gives you the ability to express your gratitude for the things you love.</p></div></div></div></div></div><div class="panel panel-default spintax-area"></div><p><span>&nbsp;</span></p></div></div><!--gfsplit-->
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+        </div>
+      </div>      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>        {% paginate article.comments by 5 %}          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>          {% form 'new_comment', article %}            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>          {% endform %}          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		'{{ 'gem-article-385515421801.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

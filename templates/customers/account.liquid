@@ -1,0 +1,307 @@
+
+<!-- /templates/customers/account.liquid -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" type="text/css" media="all">
+
+<style>
+  .grid {
+    margin-left: 0px;
+  }
+  .grid__item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .ryze-sidenav {
+    margin-top: 10px;
+    border-radius: 5px;
+    float: left;
+    width: 150px;
+    padding: 10px 0;
+  }
+  .ryze-sidenav .title {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .ryze-sidenav .content {
+    border-radius: 5px;
+    padding: 5px 0;
+    background: white;
+  }
+  .ryze-sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #555;
+    font-weight: 400;
+    display: block;
+    border: 1px solid #fff;
+  }
+  .ryze-sidenav a:hover {
+    border-left: 1px solid #000;
+    color: #000;
+    font-weight: 400;
+  }
+  .ryze-main {
+    margin-left: 150px;
+    font-size: 12px;
+    padding: 0px 10px;
+  }
+  .ryze-main>.title {
+    display: none;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .ryze-main .header{
+    color: #666;
+    padding: 40px 20px 0;
+  }
+  .ryze-main .header h3{
+    font-size: 18px;
+    margin: 0;
+    font-weight: 400;
+  }
+  .ryze-main .item {
+    display: block;
+    position: relative;
+    padding:15px;
+    color: white;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 15px;
+    height: 220px;
+    text-decoration: none;
+  }
+  .ryze-main .item .title {
+    font-size: 16px;
+    padding-top: 15px;
+  }
+  .ryze-main .item .description {
+    color: #fff;
+    padding-top: 70px;
+    line-height: 14px;
+  }
+  .ryze-main .item img {
+    width: 100%;
+  }
+  .ryze-main .order-history {
+    padding: 15px;
+  }
+  .ryze-main table {
+    background-color: white;
+  }
+  .ryze-main .dropdown {
+    display: none;
+  }
+  .dropbtn {
+    background-color: #f9f9f9;
+    color: #000;
+    padding: 7px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+  .dropdown-content {
+    display: none;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    width: 120px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 7px 10px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover {
+    background-color: #f1f1f1
+  }
+  .dropdown:hover .dropbtn {
+    background-color: #f9f9f9;
+  }
+  .show {
+    display: block;
+  }
+  @media only screen and (min-width: 750px) {
+    .responsive-table th, .responsive-table td {
+        padding: 20px 15px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .ryze-sidenav {
+      display: none;
+    }
+    .ryze-main {
+      margin-left: 0px;
+    }
+    .ryze-main>.title {
+      display: block;
+    }
+    .ryze-main .dropdown {
+      display: block;
+    }
+    .ryze-main .item {
+      height: 300px;
+    }
+  }
+  /* fixed mirror issues */
+  a.btn-link {
+    font-size: 12px;
+    color: #000;
+  }  
+</style>
+
+<div class="page-width" style="padding-top: 80px; display:block;">
+
+  <div class="ryze-sidenav">
+    <h3 class="title"> 
+      {% if customer %}
+      	Hey there, {{ customer.first_name }}!
+      {% endif %}
+  	<br> How are things going?
+    </h3>
+    <div class="content">
+      <a href="/account">Home</a>
+      <a href="/tools/recurring/login">Subscriptions</a>
+      <a href="/account/addresses">Addresses</a>
+      <a href="#">Billing</a>
+      <a href="/account/logout">Sign Out</a>
+    </div>
+  </div>
+
+  <div class="ryze-main">
+    <h3 class="title">
+      {% if customer %}
+      	Hey there, {{ customer.first_name }}!
+      {% endif %}
+    </h3>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">My Account &nbsp;&nbsp;<i class="fa fa-caret-down"></i></button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="/account">Home</a>
+        <a href="/tools/recurring/login">Subscriptions</a>
+        <a href="/account/addresses">Addresses</a>
+        <a href="#">Billing</a>
+        <a href="/account/logout">Sign Out</a>
+      </div>
+    </div>
+    <div style="text-align: center; padding-top: 20px; padding-bottom: 20px;">
+      <a href="#orders">Jump to orders</a>
+    </div>
+             
+    <div class="grid">
+      <div class="grid__item one-whole header" style="padding-top: 10px;">
+        <h3> Our Favorite Recipes </h3>
+      </div>
+      <div class="grid__item medium-up--one-third small--one-whole">
+        <div class="item" style="background-image: url(https://i.postimg.cc/3Js6BCXV/recipe1.png);">
+        </div>
+      </div>
+      <div class="grid__item medium-up--one-third small--one-whole">
+        <div class="item" style="background-image: url(https://i.postimg.cc/K8tWskQz/recipe2.png);">
+        </div>
+      </div>
+      <div class="grid__item medium-up--one-third small--one-whole">
+        <div class="item" style="background-image: url(https://i.postimg.cc/yNBGq1rT/recipe3.png);">
+        </div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="grid__item one-whole header">
+        <h3> Our Favorite Quotes </h3>
+      </div>
+      <div class="grid__item medium-up--one-third small--one-whole">
+        <div class="item" style="background-image: url(https://i.ibb.co/kG4yQPF/quote1.png);">
+        </div>
+      </div>
+      <div class="grid__item medium-up--one-third small--one-whole">
+        <div class="item" style="background-image: url(https://i.ibb.co/bBSsJVT/quote2.png);">
+        </div>
+      </div>
+      <div class="grid__item medium-up--one-third small--one-whole">
+        <div class="item" style="background-image: url(https://i.ibb.co/37FDk3D/quote3.png);">
+        </div>
+      </div>
+    </div>
+    <div id="orders" class="header">
+      <h3> Your Order History </h3>
+    </div>
+	<div class="grid__item medium-up--one-shole">
+
+      {% paginate customer.orders by 20 %}
+      {% if customer.orders.size != 0 %}
+
+        <table class="responsive-table">
+          <thead>
+          <tr>
+            <th>{{ 'customer.orders.order_number' | t }}</th>
+            <th>{{ 'customer.orders.date' | t }}</th>
+            <th>{{ 'customer.orders.payment_status' | t }}</th>
+            <th>{{ 'customer.orders.fulfillment_status' | t }}</th>
+            <th>{{ 'customer.orders.total' | t }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          {% for order in customer.orders %}
+            <tr class="responsive-table__row">
+              <td data-label="{{ 'customer.orders.order_number' | t }}">
+                <a href="{{ order.customer_url }}"
+                   class="btn-link btn-link--wide">
+                   {{ order.name }}
+                 </a>
+              </td>
+              <td data-label="{{ 'customer.orders.date' | t }}">
+                {{ order.created_at | time_tag: format: 'date' }}
+              </td>
+              <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>
+              <td data-label="{{ 'customer.orders.fulfillment_status' | t }}">{{ order.fulfillment_status_label }}</td>
+              <td data-label="{{ 'customer.orders.total' | t }}">{{ order.total_price | money }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+
+      {% else %}
+
+        <p>{{ 'customer.orders.none' | t }}</p>
+
+      {% endif %}
+      {% if paginate.pages > 1 %}
+        {% include 'pagination' %}
+      {% endif %}
+      {% endpaginate %}
+    </div>
+  </div>
+
+</div>
+
+<script>
+  
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  document.body.addEventListener("click", function (event) {
+    console.log(event.target);
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  });
+  
+</script>

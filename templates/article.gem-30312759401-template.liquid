@@ -1,0 +1,183 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div data-label="Image" id="e-1568501169224" class="element-wrap" data-icon="gpicon-image" data-ver="1" data-id="1568501169224"><div class="elm gf-elm-center gf_elm-left-xs"><img src="//d1um8515vdn9kb.cloudfront.net/images/parallax.jpg" alt="" class="gf_image" data-gemlang="en"></div></div><div data-label="Row" id="r-1568501203608" class="gf_row" data-icon="gpicon-row" data-id="1568501203608"><div class="gf_col-lg-12 gf_column" id="c-1568501203628" data-id="1568501203628"><div data-label="Text Block" id="e-1568501217511" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1568501217511"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Rituals are having a resurgence.</p><p><br></p><p>From wellness gurus to influencers, it seems like everyone is interested in what some may consider the rebranding of good old-fashioned habits. But rituals are so much more than that.<br></p><p><br></p><p>Habits are singular actions repeated for a specific outcome. Rituals are about performing something (or a series of actions) with the intent of honoring a specific person or thing. Habits are done on autopilot. Rituals require intention.<br></p><p><br></p><p>When scientists have looked at rituals from a biological perspective, they’ve noticed several things. When we practice them before a performance-related task (like a sports match), our neural response to mistakes becomes less sensitive and whether we fudge up or not, we’re more likely to remain calm (1). In fact, doing rituals before a stressful event has been shown to decrease anxiety levels (2), increasing the likelihood you’ll do better overall.&nbsp;<br></p><p><br></p><p>Rituals offer another way to nourish our minds and bodies by deepening our connection to ourselves. They’re a form of self-care and mindfulness. <a href="https://www.health.harvard.edu/blog/mindfulness-meditation-may-ease-anxiety-mental-stress-201401086967" class=""><font color="#1e73be"><u>Studies show that mindfulness</u></font></a> can lead to feeling happier and <a href="https://www.livescience.com/2829-study-zen-meditation-clear-mind.html" class=""><font color="#1e73be">clear-minded</font></a>. And really, who doesn’t want that?<br></p><p><br></p><p>Related: Learn what adaptogens do for the body <u><a href="https://ryzewith.com/blogs/news/what-are-adaptogens" class=""><font color="#1e73be">here</font></a></u>.&nbsp;</p><p><br></p><p>Try these 5 morning rituals before leaving your house. They’ll set the tone for your day and leave you feeling more energized and productive.<br></p></div></div><div data-label="Heading" id="e-1568501448679" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1568501448679"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h1>1. Turn Onto Your Self, Not Your Phone</h1></div></div><div data-label="Text Block" id="e-1568501487281" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1568501487281"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>For all of you reaching for your phone before opening your eyes, this one’s for you.</p><p><br></p><p>There’s no quicker way to turn off happiness than turning on your phone when you first get up, but according to a recent report by <a href="https://www.nu.nl/files/IDC-Facebook%2520Always%2520Connected%2520(1).pdf" class=""><u><font color="#1e73be">IDC Research that was sponsored by Facebook</font></u></a>, that’s exactly what 4 out of 5 smartphone users do.<br></p><p><br></p><p>You may already know that checking social media too often can damage self-esteem (3), but that’s not all we’re using our phones for. Along with learning news and connecting with friends, many of us need them for our jobs and it’s causing serious <a href="https://www.nbcnews.com/better/business/how-keep-career-fomo-ruining-your-work-life-ncna840351" class=""><u style=""><font color="#1e73be" style="">career FOMO</font></u></a>.<br></p><p><br></p><p>According to Flexjobs, 3.9 million people performed <u><a href="https://smallbiztrends.com/2018/04/2018-remote-work-statistics.html" class=""><font color="#1e73be">remote work</font></a></u> part-time. In 2017, The New York Times reported that <u><a href="https://www.nytimes.com/2017/02/15/us/remote-workers-work-from-home.html" class=""><font color="#1e73be">43 percent of workers</font></a></u> continue job-related activities even after clocking out. As the line between work and personal time blurs, setting boundaries between ourselves and our devices becomes harder. But if you’re looking to become more productive and less anxious, it’s exactly what you need to do.<br></p><p><br></p><p>When researchers had (4) 124 adults limit their email checking to only three times per day, they discovered that their subjects became less stressed and had a greater sense of well-being. Another study found that users who kept phone notifications on were more prone to distraction and less successful at completing tasks (5).<br></p><p><br></p><p>To avoid the temptation of using your phone when you first get up, commit to keeping it away from your bedside. If it’s been serving as your alarm clock, go the classic route and invest in an old school one. Give yourself a few minutes to acclimate to being awake by <u><a href="https://www.health.harvard.edu/mind-and-mood/relaxation-techniques-breath-control-helps-quell-errant-stress-response" class=""><font color="#1e73be">practicing some breath control techniques</font></a></u>. Focus on breathing from the abdominals instead of your chest to take in more oxygen and expel carbon dioxide from your system. This is also a great time to practice personal affirmations.<br></p></div></div><div data-label="Heading" id="e-1568511890960" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1568511890960"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h1>2. Replenish Your Body with Lemon Water</h1></div></div><div data-label="Text Block" id="e-1568511911979" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1568511911979"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>This may seem like an insignificant form of self-care, but actively taking part of healthy behaviors has been shown to <u><a href="https://theweek.com/articles/607121/how-improve-selfesteem-secret-from-research" class=""><font color="#1e73be">improve self-esteem</font></a></u>. Replenishing your body with a large glass of lemon water is a simple way to do this.&nbsp;</p><p><br></p><p>Fluid is lost through breathing when we sleep and <u><a href="https://www.livescience.com/36106-mild-dehydration-triggers-moodiness-fatigue-women.html" class=""><font color="#1e73be">mild dehydration is enough to trigger moodiness and fatigue</font></a></u>. By drinking water in the morning, we’re rehydrating our cells and revving up our metabolism (6) for the day ahead.&nbsp;</p><p><br></p><p>The other health benefits of lemon water? Along with immune boosting Vitamin C, lemon contains heart healthy flavonoids and soluble fiber (when the pulp is used). The fruit’s acidity levels have also been shown to prevent the formation of kidney stones (7) and make it easier for the body to absorb iron from plant-based foods (8).<br></p></div></div><div data-label="Heading" id="e-1568512157692" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1568512157692"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h1>3. Go Outside</h1></div></div><div data-label="Text Block" id="e-1568512176407" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1568512176407"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>You already know that exercise, <a href="https://www.nbcnews.com/better/health/9-really-good-reasons-exercise-early-morning-ncna795656" class="" style=""><font color="#1e73be" style=""><u>especially early in the mornin</u>g</font></a>, is a good thing. Along with improving circulation and releasing endorphins, it’s been shown to increase the size of the hippocampus, the part of the brain linked to <u><a href="https://www.health.harvard.edu/blog/regular-exercise-changes-brain-improve-memory-thinking-skills-201404097110" class=""><font color="#1e73be">memory and learning skills</font></a></u>. But even if you can’t spare the time for an hour run, going outside for a short period still holds plenty of health benefits.&nbsp;</p><p><br></p><p>Researchers have found that being in nature promotes mental flexibility, creativity and problem solving (9). It’s also a great way to get Vitamin D which increases productivity (10). According to one study, 40 percent of Americans are deficient in the vitamin, which is all the more reason to make going outside a priority (11).&nbsp;</p><p><br></p><p>Try taking a leisurely stroll around your block before getting ready for work. Even sitting outside for as little as five minutes is enough to boost your mood (12).&nbsp;<br></p></div></div><div data-label="Heading" id="e-1568514719296" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1568514719296"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h1>4. Get Inspired</h1></div></div><div data-label="Text Block" id="e-1568514732956" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1568514732956"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p>Instead of seeking motivation, search for inspiration.&nbsp;&nbsp;<br></p><p><br></p><p>Unlike motivation, which is driven by the intent to achieve a specific outcome (ex: I’m motivated to go to work so I can pay my rent), inspiration is a more transcendent and spiritual experience. It’s a feeling that’s triggered by an event, person or thing that awakens your mind or heart.<br></p></div></div></div></div>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

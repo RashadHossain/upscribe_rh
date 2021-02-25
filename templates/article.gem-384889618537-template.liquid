@@ -1,0 +1,187 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          {% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div class="element-wrap" data-label="Text Block" id="e-1587907124821" data-icon="gpicon-textblock" data-ver="1" data-id="1587907124821"><div class="elm text-edit"></div></div><!--gfsplit--><div data-label="Row" id="r-1587908033640" class="gf_row" data-icon="gpicon-row" data-id="1587908033640" data-extraclass=""><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1587908033689" data-id="1587908033689" style="min-height: auto;"><div data-label="Heading" id="e-1587907160977" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1587907160977"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h4>Ingredients:</h4><div><br></div></div></div><div data-label="Text Block" id="e-1587907304945" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1587907304945"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p></p><ul><li>12 tbsp chia seeds&nbsp;</li><li>4 tbsp unsweetened cacao powder&nbsp;</li><li>4 tbsp no sugar added almond butter&nbsp;</li><li>4 tbsp <a href="https://www.ryzesuperfoods.com/products/mushroom-coffee" class="" target="_blank">RYZE Mushroom-Enhanced Keto Coffee Powder&nbsp;</a></li><li>2 cups unsweetened almond milk&nbsp;</li><li>1 cup water&nbsp;</li><li>4 packets of stevia&nbsp;</li><li>1 cup raspberries (or berry of choice)&nbsp;</li><li>4 tbsp slivered almonds (optional)&nbsp;</li><li>4 organic sweet leaf stevia packets (optional)&nbsp;</li><li>&nbsp;1 tsp cinnamon<br></li></ul><p></p></div></div></div><div class="gf_column gf_col-lg-6 gf_col-md-6 gf_col-sm-6 gf_col-xs-12" id="c-1587908034699" data-id="1587908034699" style="min-height: auto;"><div data-label="Heading" id="e-1587908087176" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1587908087176"><div class="elm text-edit gf-elm-center gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-gemlang="en" data-exc=""><h1><b>Recipe by:</b></h1><h1>Christy T.</h1><h1><a href="https://www.instagram.com/nutritionrefresh/" class="" target="_blank"><span style="letter-spacing: 0px; text-align: inherit; background-color: rgb(255, 255, 255);">@</span>nutritionrefresh</a><br></h1></div></div><div data-label="Image" id="e-1587908039178" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1587908039178"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="https://www.instagram.com/naturally.ray/" target="" class="image-link"><img src="https://ucarecdn.com/7531b9a4-6fd7-409d-b500-2752afb1c715/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en"></a></div></div><div data-label="Separator" id="e-1587908167639" class="element-wrap" data-icon="gpicon-separator" data-ver="1.0" data-id="1587908167639"><div class="elm gf-elm-center gf-elm-center-lg gf-elm-center-md gf-elm-center-sm gf-elm-center-xs" data-align="left" data-exc=""><hr class="gf_separator"></div></div></div></div><!--gfsplit--><div data-label="Image" id="e-1587907374974" class="element-wrap" data-icon="gpicon-image" data-ver="1.0" data-id="1587907374974"><div class="elm gf-elm-center gf_elm-left-xs gf-elm-center-md gf-elm-center-sm gf-elm-center-xs gf-elm-center-lg" data-exc=""><a href="https://www.instagram.com/p/B_fTR8Jpi9o/" target="" class="image-link"><img src="https://ucarecdn.com/f15b98d0-48c6-478f-aaba-d93279c2ef3b/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="" class="gf_image" data-gemlang="en"></a></div></div><!--gfsplit--><div data-label="Heading" id="e-1587907718510" class="element-wrap" data-icon="gpicon-heading" data-ver="1" data-id="1587907718510"><div class="elm text-edit gf-elm-center gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><h4>Directions:</h4><div><br></div></div></div><!--gfsplit--><div data-label="Text Block" id="e-1587907731229" class="element-wrap" data-icon="gpicon-textblock" data-ver="1" data-id="1587907731229"><div class="elm text-edit gf-elm-left gf-elm-left-lg gf-elm-left-md gf-elm-left-sm gf-elm-left-xs" data-gemlang="en" data-exc=""><p></p><ol><li>Gather four medium glass containers with lids (I use Tupperware)&nbsp;</li><li>Add 3 tbsp of chia seeds to each bowl.</li><li>In one bowl, add 4 tbsp of unsweetened cacao powder, 1/2 cup unsweetened almond milk, 1/4 cup water, 1 packet of stevia and 1 tsp cinnamon. Stir until combined, put on the lid and set aside.</li><li>In the second bowl, add 4 tbsp of the RYZE coffee powder, 1/2 cup unsweetened almond milk, 1/4 cup water and 1 packet of stevia. Stir until combined, put on the lid and set aside.&nbsp;</li><li>Add 4 tbsp almond butter to a microwave safe dish and microwave on high for 30 seconds.&nbsp;</li><li>In the third bowl, add melted almond butter, 1/2 cup unsweetened almond milk, 1/4 cup water and 1 packet of stevia. Stir until combined, put on the lid and set aside.&nbsp;</li><li>In the last bowl, add 1/2 cup unsweetened almond milk, 1/4 cup water, and 1 packet of stevia. Stir until combine, put on the lid and set aside.&nbsp;</li><li>Store all of the bowls in the fridge overnight or for a minimum of 30 minutes.&nbsp;</li><li>Once the chia seeds have completely absorbed the liquid, remove from the fridge and assemble the parfaits.&nbsp;</li><li>Start with the chocolate pudding on the bottom, followed by the coffee layer, almond butter layer and plain layer. Top with fresh berries and sprinkle with slivered almonds or a nut of your choice.&nbsp;</li></ol><p></p></div></div><!--gfsplit-->
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>

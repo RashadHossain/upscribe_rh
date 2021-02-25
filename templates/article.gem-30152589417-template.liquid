@@ -1,0 +1,183 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!-- /templates/article.liquid -->
+{% comment %}
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/my-post?comment=3721372
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted but requires moderation, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.status != 'published' %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <div class="article" data-section-id="{{ section.id }}" data-section-type="article-template">
+
+  {% if article.image %}
+    <div class="section-header-image-wrapper">
+      <div class="section-header-image{% if section.settings.image_parallax %} section-header-image--parallax{% endif %} lazyload" data-bgset="{% include 'bgset', image: article.image %}"></div>
+
+      <noscript>
+        <div class="section-header-image" style="background-image: {{ article.image | img_url: 'master' }}"></div>
+      </noscript>
+    </div>
+  {% endif %}
+
+  <div class="page-width">
+    <div class="article__wrapper grid">
+      <div class="article__content article__content--large grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+        <header class="article__header separator" data-animate>
+          {% if section.settings.show_date %}
+            <span class="article__date text-small--uppercase">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+          {% endif %}
+          {% if section.settings.show_author %}
+            <span class="article__author text-small--uppercase">
+              {{ article.author }}
+            </span>
+          {% endif %}
+          <h1 class="article__title h2">{{ article.title }}</h1>
+        </header>
+
+        <div class="article__body rte" itemprop="articleBody">
+          
+
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor">
+<div class="element-wrap" data-label="Text Block" id="e-1567002025590" data-icon="gpicon-textblock" data-ver="1" data-id="1567002025590"><div class="elm text-edit"><p class="p1">I’ve always had a love/hate relationship with caffeine.&nbsp;</p><p class="p1">The love part is easy to understand. Who doesn’t enjoy feeling more alert and focused? Exactly. No one.</p><p class="p2"><span class="s1">My favorite way to get my caffeine fix was always coffee - preferably, with some version of a non-dairy milk. But really, with the exception of those energy drinks, I’d take it however I could find it. Coffee, fancy lattes, chocolate, teas, and I admit, soda. Nothing was off limits when searching for a jolt of energy. Please, hold your judgements. </span></p><p class="p2"><span class="s1">Caffeine has taken me through <a href="https://ryzewith.com/blogs/news/what-to-eat-pre-and-post-workout" target="_blank" rel="noopener noreferrer">improperly fueled workouts</a></span><span class="s1">, helped with all night study sessions during college, and taken me through brutal work deadlines. It’s also brought me down. Like, way down which is something you also probably relate to.</span></p><p class="p2"><span class="s1">We’ve all experienced that extreme slump that happens a few hours after consuming our favorite caffeinated beverage. It’s the worst and unfortunately, drinking more caffeine is not the remedy. </span></p><p class="p3">&nbsp;</p><p class="p2"><span class="s1"><b>YOUR BRAIN ON CAFFEINE</b></span></p><p class="p2"><span class="s1">A lot of people think that caffeine gives energy but that’s a falsehood. At least, nutritionally speaking. </span></p><p class="p2"><span class="s1">As famed nutritionist Keri Glassman mentioned in an interview with <i>Well + Good</i>, “the only thing that can provide energy is calories.”</span></p><p class="p2"><span class="s1">So, why do you feel keyed up when you have a red eye or black tea? Caffeine! Duh.</span></p><p class="p2"><span class="s1">Caffeine is a stimulant and engages your central nervous system. It increases your heart rate and speeds up your metabolism. It even kicks your excretory functions into high gear, which is why we tend to feel the call of the bathroom shortly after consuming something that has it.</span></p><p class="p2"><span class="s1">But what really makes caffeine unique is how it engages parts of the brain. It’s similar to a molecule called adenosine, which is responsible for helping us relax. When we eat something like chocolate or drink a soda, the adenosine receptors in our brain mistake the caffeine for the molecule and grab hold. </span></p><p class="p2"><span class="s1">This poses two problems, the first being that the actual molecule can’t be received. The second issue is that this triggers the brain to produce more receptors, resulting in even more adenosine in our system.<span class="Apple-converted-space">&nbsp; </span>When the effects of caffeine wear off (usually within a few hours), we feel zonked. If we reach for another coffee or cola to perk up, it will take even more of the substance to experience the same effect because there are more molecule receptors to fill. </span></p><p class="p2"><span class="s1">Now that you know how you went from drinking one innocent cup of coffee to twelve, here is why it matters.</span></p><p class="p1">&nbsp;</p><p class="p2"><span class="s1"><b>MORE THAN A CAFFEINE CRASH</b></span></p><p class="p1">Although a stimulant, caffeine is relatively harmless in moderate doses. It even has <span style="color: #0000ff;"><a href="https://www.caffeineinformer.com/top-10-caffeine-health-benefits" title="top-10-caffeine-health-benefits" style="color: #0000ff;" target="_blank" rel="noopener noreferrer"><span class="s3">some health benefits</span></a></span>. Some include:<br><span class="s1"></span></p><p class="p2">&nbsp;</p><ul class="ul1"><li class="li4"><span class="s4" style="color: #0000ff;"><a href="https://www.caffeineinformer.com/caffeine-reduces-muscle-pain" title="caffeine-reduces-muscle-pain" style="color: #0000ff;" target="_blank" rel="noopener noreferrer"><span class="s5">Reducing muscle pain</span></a></span><span class="s6"> post workout</span></li></ul><ul class="ul1"><li class="li2"><span class="s7"></span><span class="s1">Helping <span style="color: #0000ff;"><a href="https://www.caffeineinformer.com/caffeine-great-for-athletes" title="caffeine-great-for-athletes" style="color: #0000ff;" target="_blank" rel="noopener noreferrer"><span class="s3">athletic performance</span></a></span> by replenishing muscle glycogen when paired with carbohydrates</span></li></ul><ul class="ul1"><li class="li2"><span class="s7"></span><span class="s1">Promoting brain health (1)</span></li></ul><ul class="ul1"><li class="li2"><span class="s7"></span><span class="s1">Lowering risk of <span class="s3" style="color: #0000ff;"><a href="https://www.aarp.org/health/conditions-treatments/info-02-2013/coffee-drinkers-risk-of-cancer.html" title="coffee-drinkers-risk-of-cancer" style="color: #0000ff;" target="_blank" rel="noopener noreferrer">certain cancers</a></span></span></li></ul><ul class="ul1"><li class="li4"><span class="s4" style="color: #0000ff;"><a href="https://hub.jhu.edu/2014/01/12/caffeine-enhances-memory/" title="caffeine-enhances-memory" style="color: #0000ff;" target="_blank" rel="noopener noreferrer"><span class="s5">Enhancing memory</span></a></span></li></ul><p class="p1">&nbsp;</p><p class="p1">Plus, it helps us stay awake.</p><p class="p2"><span class="s1">But after consuming 500-600 mg (there’s about 95mg in an 8-ounce cup of coffee) those benefits go south. On the less alarming side, consuming too much caffeine can leave one feeling restless, jittery, nauseous, and unable to sleep. </span></p><p class="p2"><span class="s1">On the scarier side, if you have an anxiety disorder or smoke, your body may metabolize the stimulant faster, making it easier to pass your natural caffeine threshold. And unfortunately, there’s no way of knowing what that threshold actually is, because everyone reacts to the substance differently. While some will be wired after a single espresso, there are others who will be able to drink teas and soft drinks till bed with no problem.</span></p><p class="p2"><span class="s1">But of course, it <i>is</i> a problem.</span></p><p class="p2"><span class="s1">As we’ve already illustrated, too much caffeine throws adenosine levels out of whack. Along with messing with your body’s natural homeostasis it can trigger headaches, irregular heartbeat, and even ringing in the ear. When the caffeine crash happens (and you know it will), you can look forward to being irritable, unfocused, groggy or straight up exhausted.</span></p><p class="p1">&nbsp;</p><p class="p2"><span class="s1"><b> HOW TO AVOID THE CAFFEINE CRASH</b></span></p><p class="p1">Avoiding the feeling that you just ran headfirst into a wall is actually easy. It also doesn’t require you to completely eradicate caffeine from your life.&nbsp;<br><span class="s1"></span></p><p class="p2"><span class="s1">To dodge the dreaded caffeine crash, remember these tips.</span></p><p class="p1">&nbsp;</p><p class="p6"><span class="s1"><b><i>EAT SOMETHING</i></b></span></p><p class="p1">If you want to be sustainably energized you’ll need an actual energy source. And no, the double venti mint chocolate frap isn’t the best option.</p><p class="p2"><span class="s1">Besides not being an actual nutrient, not all sources of caffeine are equal. If you’re noshing on candy bars or chugging colas, you’re not only setting yourself up for a crash but a spike in blood sugar. Sure, you’ll fly high for an hour, but then you’ll hit the ground. <i>Hard.</i></span></p><p class="p2"><span class="s1">Since caffeine is a stimulant it can also upset your stomach, especially when empty. All the more reason to eat something substantial that your body can actually use.<span class="Apple-converted-space">&nbsp; </span>Carbohydrates (the complex kind) is the body’s preferred energy source. If you pair them with protein and a healthy fat, you’ll not only feel revved up, but remain that way much longer than if you only had a cup of green tea.&nbsp;</span></p><p class="p2"><span class="s1">There are </span><span class="s2">many <a href="https://ryzewith.com/blogs/news/7-energizing-foods-to-start-eating-now" target="_blank" rel="noopener noreferrer">energizing foods </a></span><span class="s1">to pick from but if you need some ideas, try having a slice of sprouted grain toast with almond butter and hemp seeds sprinkled on top. Another great option is water packed tuna on a bed of leafy salad greens with a splash of olive or avocado oil. </span></p><p class="p1">&nbsp;</p><p class="p1"><b><i>GET MORE SLEEP</i></b><br><span class="s1"></span></p><p class="p1">One of the best ways to not be dependent on caffeine for alertness is to give your body rest. That’s easier when you’re not drinking caffeinated beverages late into the evening.</p><p class="p2"><span class="s1">Adenosine levels naturally fluctuate throughout the day. According to experts, if you don’t want to interfere with their process, caffeine should be avoided after 2pm. While this may sound extreme, just know it takes up to 6 hours for it to work its way out of your system. The earlier you pull the plug on consumption, the quicker you’ll be able to relax come bedtime. </span></p><p class="p1">&nbsp;</p><p class="p6"><span class="s1"><b><i>SWITCH TO MUSHROOM COFFEE</i></b></span></p><p class="p2"><span class="s1">If you can’t fathom making it through the 3pm without a cup of Joe, this part is for you.</span></p><p class="p2"><span class="s1">Mushroom coffee is the bees knees! In terms of taste, it’s virtually indistinguishable from the regular kind. It also promotes real energy and has other health benefits. Allow me to explain.</span></p><p class="p2"><a href="https://ryzewith.com/blogs/news/what-is-mushroom-coffee-and-why-you-should-switch-to-it" target="_blank" rel="noopener noreferrer"><span class="s2">Mushroom coffee </span></a><span class="s1">is a blend of ground medicinal mushrooms and coffee. <a href="https://ryzewith.com/blogs/news/what-are-adaptogens" target="_blank" rel="noopener noreferrer">Medicinal mushrooms are adaptogens</a>, which means they have properties that make your body naturally more resilient to internal and environmental stressors. </span></p><p class="p2"><span class="s1">They can:</span></p><ul class="ul1"><li class="li2"><span class="s7"></span><span class="s1">Decrease anxiety</span></li><li class="li2"><span class="s7"></span><span class="s1">Increase stamina </span></li><li class="li2"><span class="s7"></span><span class="s1">Promote sleep and Improve sleep quality</span></li><li class="li2"><span class="s7"></span><span class="s1">Boost the immune system</span></li><li class="li2"><span class="s7"></span><span class="s1">Strengthen mental focus</span></li><li class="li2"><span class="s7"></span><span class="s1">Increase libido</span></li></ul><p class="p2"><span class="s1">It’s easy to forget but the human body is like a delicate ecosystem. When overworked or lacking adequate nutrients it quickly becomes susceptible to fatigue and illness. Unlike stimulants, medicinal mushrooms have compounds that engage with different body systems and their hormones.<span class="Apple-converted-space">&nbsp;</span>Over time, they make our systems stronger and more adaptable (hence the term <i>adaptogen</i>) to negative stimuli, whether it comes in the form of a killer work week or a cold germ being passed around the office. </span></p><p class="p2"><span class="s1">Most mushroom blends (like ours) contain a variety of species that work together to strengthen biological functions that have been thrown off balance through stress. Most importantly, because they’re nootropics (a fancy term for medicinal or “super” foods), they provide vital nutrients. They won’t make you crash and encourage an overproduction of anything. In short, they’re sort of amazing and are a relatively simple way to promote health and wellbeing.</span></p><p class="p2"><span class="s1">Although mushroom coffee contains caffeine, the alkaline nature of the mushrooms neutralizes the coffee’s acidity and inhibits some of the negative side effects of the stimulant. It also gives your coffee brew a smoother and richer taste. </span></p><p class="p2"><span class="s1">Because mushroom coffee and blends are adaptogenic you’ll feel more alert and focused. This may lead to you reaching for caffeinated beverages less as your body becomes better at utilizing its own energy. </span></p><p class="p2"><span class="s1">&nbsp;</span></p><p class="p6"><span class="s1"><b><i>DRINK WATER</i></b></span></p><p class="p1">Dehydration can lead to feelings of lethargy and if you didn’t know, caffeine is very dehydrating. In fact, it’s one of the reasons the crash feels so bad. The best solution for this is to drink water and plenty of it.<br><span class="s1"></span></p><p class="p2"><span class="s1">Experts recommend aiming for 11 cups a day to steer clear of crashing and burning. If you find drinking plain H2O boring, try spicing it up with slices of lemon, lime, or cucumber. Switching between flat and sparkling is another way to keep things interesting.<span class="Apple-converted-space">&nbsp; </span>And remember, eating fruits, some vegetables and drinking juices can up our hydration level too. </span></p><p class="p1">&nbsp;</p><p class="p2"><span class="s1"><span class="Apple-tab-span"></span><span class="Apple-tab-span"></span><span class="Apple-tab-span"></span><span class="Apple-tab-span"></span><span class="Apple-tab-span"></span><b><i>CONSUMING CONCIOUSLY </i></b></span></p><p class="p2"><span class="s1">Moderation is key. And not just in overall consumption, but when you choose to consume. To prevent a caffeine crash, avoid downing caffeinated beverages back to back. Instead of having two cups of coffee as soon as you wake, save one to enjoy at lunch time. This way you’re not bombarding your system with the stimulate and forcing it to produce more adenosine to compensate.</span>&nbsp;</p><p class="p2"><span class="s1">What are your thoughts on caffeine? Can you live without it or is it a must have? Let us know in the comments or on Instagram @ryzewithus.</span></p><p class="p2">&nbsp;</p><p class="p2">&nbsp;</p><p class="p2"><span class="s1">______________</span></p><h6 class="p1"><span class="s1"></span><span class="s2">(1) Borota, D., Murray, E., Keceli, G., Chang, A., Watabe, J. M., Ly, M., . . . Yassa, M. A. (2014, January 12). Post-study caffeine administration enhances memory consolidation in humans. Retrieved from https://www.nature.com/articles/nn.3623</span></h6></div></div>
+</div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+
+        </div>
+      </div>
+
+      {% if section.settings.show_share_buttons %}
+        {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+          <div class="article__share-desktop grid__item medium-up--two-twelfths">
+            <div class="article__share-desktop-wrapper">
+              {% include 'social-sharing', type: 'article', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_share_buttons %}
+    {% if settings.share_facebook or settings.share_twitter or settings.share_pinterest %}
+      <div class="article__share-mobile">
+          {% include 'social-sharing', type: 'mobile', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+
+
+
+  {% if blog.comments_enabled? and number_of_comments > 0 %}
+    <div class="comments-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="h4">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          </div>
+        </div>
+
+        {% paginate article.comments by 5 %}
+
+          {% comment %}
+            If a comment was just submitted, show it with the appropriate success message.
+          {% endcomment %}
+          <div id="comments" class="grid">
+
+            {% if comment and comment.status and paginate.current_page == 1 %}
+              <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+                <div class="form-success form-success--comment">
+                  {% if blog.moderated? and comment.status != 'published' %}
+                    {{ 'blogs.comments.success_moderated' | t }}
+                  {% else %}
+                    {{ 'blogs.comments.success' | t }}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            {% if number_of_comments > 0 %}
+              {% if comment and comment.status != 'published' %}
+                {% include 'comment' %}
+              {% endif %}
+
+              {% for comment in article.comments %}
+                {% include 'comment' %}
+              {% endfor %}
+            {% endif %}
+
+            {% if paginate.pages > 1 %}
+              <div class="grid__item">
+                {% include 'pagination' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endpaginate %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+    <div class="comments-form-wrapper">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item medium-up--push-one-twelfth">
+            <h3 class="comments-form__title h4">{{ 'blogs.comments.title' | t }}</h3>
+          </div>
+
+          {% form 'new_comment', article %}
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              {{ form.errors | default_errors }}
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+              <input type="text" name="comment[author]" id="CommentAuthor" class="{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}">
+            </div>
+
+            <div class="grid__item medium-up--five-twelfths medium-up--push-one-twelfth">
+              <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+              <input type="email" name="comment[email]" id="CommentEmail" class="{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+            </div>
+
+            <div class="grid__item medium-up--ten-twelfths medium-up--push-one-twelfth">
+              <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+              <textarea name="comment[body]" id="CommentBody" class="{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
+            </div>
+
+            <div class="grid__item medium-up--push-one-twelfth">
+              <input type="submit" class="btn btn--input" value="{{ 'blogs.comments.post' | t }}">
+            </div>
+
+          {% endform %}
+
+          {% if blog.moderated? %}
+            <div class="grid__item medium-up--push-one-twelfth">
+              <p class="comments__moderated text-small">{{ 'blogs.comments.moderated' | t }}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</article>
