@@ -45,7 +45,37 @@
           {%- assign cartItems = cart.items -%}
         {% endif %}
 
+        {% comment %} Set initial Upscribe variable {% endcomment %}
+        {% assign upscribe_total = 0 %}
+        {% assign subscription_in_cart = false %}
+
         {% for item in cartItems %}
+          <!-- Upscribe hidden properties assign -->
+          {%- assign property_size = item.properties | size -%}
+
+          {% if property_size > 0 %}
+              {% for p in item.properties %}
+                {% if p.first == 'Subscription Product Title' %}
+                  {%- assign subscription_product_title = p.last -%}
+                {% endif %}
+
+                {% if p.first == 'Subscription Amount' %}
+                  {%- assign subscription_product_amount = p.last -%}
+                {% endif %}
+              {% endfor %}
+          {% endif %}
+
+          {% if subscription_product_amount %}
+            {% assign subscription_in_cart = true %}
+            {% assign line_price_total = subscription_product_amount | times: item.quantity %}
+          {% else %}
+            {% assign line_price_total = item.discounted_price | times: item.quantity %}
+          {% endif %}
+
+          {% comment %} Add total to Upscribe {% endcomment %}
+
+          {% assign upscribe_total = upscribe_total | plus: line_price_total %}
+
           <tr class="cart-item{% if item == 'template' %} ajax-cart__template{% endif %}" data-cart-item data-cart-item-id="{{ item.key }}">
             <td class="cart-item__image-wrapper">
               {% assign itemImage = true %}
@@ -237,7 +267,7 @@
 
           <div class="cart-subtotal">
             <span class="cart-subtotal__title h4">{{ 'cart.general.subtotal' | t }}</span>
-            <span class="cart-subtotal__price" data-cart-subtotal><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>{{ cart.total_price | money }}</span>
+            <span class="cart-subtotal__price" data-cart-subtotal><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>{{ upscribe_total | money }}</span>
           </div>
 
           {%- capture taxes_shipping_checkout -%}
@@ -255,7 +285,7 @@
           <p class="cart-policies text-small rte">{{ taxes_shipping_checkout }}</p>
           <div class="btn-group">
             <input type="submit" name="update" class="btn btn--secondary supports-no-js supports-js--hide" value="{{ 'cart.general.update' | t }}">
-            <button type="submit" name="checkout" class="btn btn--loader" data-cart-submit>
+            <button type="button" name="checkout" class="btn btn--loader">
               {{ 'cart.general.checkout' | t }}
               <span class="btn--loader-balls"></span>
             </button>
