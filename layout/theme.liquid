@@ -207,6 +207,7 @@ or template.name == 'search'
 
       <a class="visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 
+      {% include 'upscribe-clear-cart' %}
       {% section 'header' %}
 
       <div class="main-content{% if template.name == blank %} main-content--no-template{% endif %}" data-drawer-push>
