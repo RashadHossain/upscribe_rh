@@ -169,8 +169,19 @@
       {% endif %}
   	<br> How are things going?
     </h3>
+      
+    {% assign isUpscribeCustomer = false %}
+    {% for tag in customer.tags %}
+        {% if tag == 'SubscriptionActive' or tag == 'SubscriptionInactive'%}
+            {% assign isUpscribeCustomer = true %}
+        {% endif %}
+    {% endfor %}
+
     <div class="content">
       <a href="/account">Home</a>
+      {% if isUpscribeCustomer %}
+        <a href="https://{{ shop.domain }}/account?view=subscriptions#/"">Your Subscription</a>
+      {% endif %}
       <a href="/tools/recurring/login">Subscriptions</a>
       <a href="/account/addresses">Addresses</a>
       <a href="#">Billing</a>
