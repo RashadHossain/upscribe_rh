@@ -2,6 +2,24 @@ body.customer-logged-in * {
   font-family: "Open Sans", sans-serif;
 }
 
+h1 {
+  font-size: 1.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.u-color--primary {
+  color: #ca583a;
+}
+
 .c-header,
 .c-portal__main,
 .c-subscription__outer,
@@ -28,6 +46,10 @@ body.customer-logged-in * {
 }
 
 .c-header .c-header__navLink-middle a:hover {
+  border-color: #ca583a;
+}
+
+.c-header .c-header__navLink-middle a.nuxt-link-exact-active {
   border-color: #ca583a;
 }
 
@@ -64,7 +86,28 @@ body.customer-logged-in * {
   border-color: #ca583a;
 }
 
-.c-button--transparent {
+.c-button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ca583a;
+  border-color: #ca583a;
+  color: #fff;
+  height: 48px;
+}
+
+.c-button:hover, .c-button:focus {
+  background: #ca583a;
+  border-color: #ca583a;
+}
+
+.c-button--transparent,
+button[class*=active] ~ .c-button {
+  background: transparent;
+  color: #000;
+}
+
+[class*=c-button] {
   border-radius: 0;
 }
 
@@ -75,7 +118,6 @@ body.customer-logged-in * {
 .c-button--primary {
   background: #ca583a;
   text-transform: uppercase;
-  border-radius: 0;
 }
 
 .c-button--primary:hover {
@@ -113,5 +155,83 @@ body.customer-logged-in * {
 
 .c-form__submitButton {
   background: #ca583a;
+}
+
+.c-checkboxLabel input:checked ~ .checkmark {
+  background-color: #ca583a;
+}
+
+.c-drawerEditAddress input[type='text'],
+.c-drawerEditAddress input[type='email'],
+.c-drawerEditAddress select {
+  padding: 20px 20px 0;
+}
+
+.c-drawerEditAddress input[type='search'] {
+  display: none;
+}
+
+.c-drawerEditAddress .c-addressCancelButton {
+  background: #e0e0e0;
+  border-color: #e0e0e0;
+}
+
+.c-headerTablet__menu .c-header__menu,
+.header-portal .c-header__menu {
+  color: #ca583a;
+  border-color: #ccc;
+  background: #fcfbf3;
+  color: #000;
+}
+
+.c-headerTablet__menu .c-header__menu .c-header__selected,
+.header-portal .c-header__menu .c-header__selected {
+  font-weight: normal;
+}
+
+.c-headerTablet__menu .c-header__menu .c-menuSelect__nav,
+.header-portal .c-header__menu .c-menuSelect__nav {
+  border: none;
+}
+
+.c-headerTablet__menu .c-header__menu .c-menuSelect__nav .c-menuSelect__navLink,
+.header-portal .c-header__menu .c-menuSelect__nav .c-menuSelect__navLink {
+  border: 1px solid #ccc;
+  border-bottom: none;
+  background: #fcfbf3;
+}
+
+.c-headerTablet__menu .c-header__menu .c-menuSelect__nav .c-menuSelect__navLink:last-child,
+.header-portal .c-header__menu .c-menuSelect__nav .c-menuSelect__navLink:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.c-headerTablet__menu .c-header__menu .c-menuSelect__nav .c-menuSelect__navLink.c-menuSelect__navLink--active,
+.header-portal .c-header__menu .c-menuSelect__nav .c-menuSelect__navLink.c-menuSelect__navLink--active {
+  background: #ca583a;
+}
+
+@media only screen and (max-width: 768px) {
+  .c-headerTop .c-headerActions {
+    background: #f5f0ec !important;
+  }
+  .c-headerTop .c-headerActions > a,
+  .c-headerTop .c-headerActions > span {
+    color: #000 !important;
+  }
+  .u-mt-4 {
+    background: #f5f0ec;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  .c-billingAddressForm input[type='text'],
+  .c-billingAddressForm input[type='email'],
+  .c-billingAddressForm select {
+    font-size: 1rem;
+    padding: 20px 20px 0;
+  }
+  .c-billingAddressForm input[type='search'] {
+    display: none;
+  }
 }
 /*# sourceMappingURL=upscribe_subscription_style.css.map */

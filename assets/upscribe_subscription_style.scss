@@ -1,11 +1,13 @@
 $theme-color: #ca583a;
+$theme-background: #f5f0ec;
 $light-grey: #e0e0e0;
 $sections-bkg: #fcfbf3;
+$text-color: #000;
 
 @mixin section-title {
     text-align: center;
     font-weight: normal;
-    color: #000;
+    color: $text-color;
 };
 
 
@@ -17,12 +19,27 @@ body {
     }    
 }
 
+h1 {
+    font-size: 1.8rem;
+    @media screen and (min-width:768px) {
+        font-size: 2.6rem; 
+    } 
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.u-color--primary {
+    color: $theme-color;
+}
+
 .c-header,
 .c-portal__main,
 .c-subscription__outer,
 .c-portal__languagePickerWrap,
 .c-subscription__inner {
-    background-color: #f5f0ec;
+    background-color: $theme-background;
 }
 
 .c-portal__languagePickerWrap {
@@ -42,6 +59,10 @@ body {
             margin: 0 0 -3px;
             
             &:hover {
+                border-color: $theme-color;
+            }
+
+            &.nuxt-link-exact-active {            
                 border-color: $theme-color;
             }
         }
@@ -81,8 +102,31 @@ body {
     }
 }
 
-.c-button--transparent {
+.c-button {        
+    align-items: center;
+    background: $theme-color;
+    border-color: $theme-color;
+    color: #fff;
+    height: 48px;
+
+    &:hover,
+    &:focus {
+        background: $theme-color;
+        border-color: $theme-color;
+    }
+}
+
+.c-button--transparent,
+button[class*=active] ~ .c-button {
+    background: transparent;
+    color: $text-color;
+}
+
+[class*=c-button] {
     border-radius: 0;
+}
+
+.c-button--transparent {
     &:hover,
     &:focus {
         border-color: $theme-color;
@@ -91,8 +135,7 @@ body {
 
 .c-button--primary {
     background: $theme-color;
-    text-transform: uppercase;
-    border-radius: 0;
+    text-transform: uppercase;    
 
     &:hover {
         background: $theme-color;
@@ -134,4 +177,93 @@ body {
 
 .c-form__submitButton {
     background: $theme-color;
+}
+
+.c-checkboxLabel {
+    input:checked ~ .checkmark {
+        background-color: $theme-color;
+    }
+}   
+
+.c-drawerEditAddress {
+    input[type='text'],
+    input[type='email'],
+    select {
+        padding: 20px 20px 0;
+    }
+
+    input[type='search'] {
+        display: none;
+    }
+
+    .c-addressCancelButton {
+        background: $light-grey;
+        border-color: $light-grey;
+    }
+}
+
+.c-headerTablet__menu,
+.header-portal {
+    .c-header__menu {
+        color: $theme-color;        
+        border-color: #ccc;
+        background: $sections-bkg;
+        color: $text-color;
+
+        .c-header__selected {
+            font-weight: normal;                        
+        }
+
+        .c-menuSelect__nav {
+            border: none;
+
+            .c-menuSelect__navLink {
+                border: 1px solid #ccc;
+                border-bottom: none;
+                background: $sections-bkg;
+
+                &:last-child {
+                    border-bottom: 1px solid #ccc;
+                }
+
+                &.c-menuSelect__navLink--active {
+                    background: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+
+// MOBILE SIZE
+@media only screen and (max-width: 768px) {
+    .c-headerTop {
+        .c-headerActions {
+            background: $theme-background !important;
+
+            > a,
+            > span {
+                color: $text-color !important;
+            }
+        }
+    }
+
+    .u-mt-4 {
+        background: $theme-background;
+        margin: 0;
+        padding-bottom: 20px;
+    }
+
+    .c-billingAddressForm {
+        input[type='text'],
+        input[type='email'],
+        select {
+            font-size: 1rem;
+            padding: 20px 20px 0;
+        }
+        
+        input[type='search'] {
+            display: none;
+        }
+    }
 }
