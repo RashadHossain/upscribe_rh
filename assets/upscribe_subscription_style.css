@@ -1,0 +1,117 @@
+body.customer-logged-in * {
+  font-family: "Open Sans", sans-serif;
+}
+
+.c-header,
+.c-portal__main,
+.c-subscription__outer,
+.c-portal__languagePickerWrap,
+.c-subscription__inner {
+  background-color: #f5f0ec;
+}
+
+.c-portal__languagePickerWrap {
+  padding: 0;
+}
+
+.c-header {
+  margin-top: 20px;
+}
+
+.c-header nav {
+  border-bottom: 1px solid #000;
+}
+
+.c-header .c-header__navLink-middle a {
+  padding: 20px 25px;
+  margin: 0 0 -3px;
+}
+
+.c-header .c-header__navLink-middle a:hover {
+  border-color: #ca583a;
+}
+
+.c-header .c-header__backToAccount {
+  border: none;
+}
+
+.c-header .c-header__button {
+  background: #e0e0e0;
+  border-radius: 0px;
+}
+
+.c-header .c-header__button:hover {
+  background: #ca583a;
+  border-color: #ca583a;
+  color: #fff;
+}
+
+.c-subscriptionHeadline__title {
+  font-size: 28px;
+}
+
+.c-subscriptionHeadline__button-contain {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.c-subscriptionHeadline__button {
+  border-color: #ca583a;
+}
+
+.c-subscriptionHeadline__button.c-subscriptionHeadline__button--active, .c-subscriptionHeadline__button:hover {
+  background: #ca583a;
+  border-color: #ca583a;
+}
+
+.c-button--transparent {
+  border-radius: 0;
+}
+
+.c-button--transparent:hover, .c-button--transparent:focus {
+  border-color: #ca583a;
+}
+
+.c-button--primary {
+  background: #ca583a;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
+.c-button--primary:hover {
+  background: #ca583a;
+  border-color: #ca583a;
+}
+
+.c-button--alt {
+  background: #ca583a;
+  border-color: #ca583a;
+  color: #fff;
+}
+
+.c-subscriptionBlock__sectionTitle,
+.c-productsGrid__title {
+  text-align: center;
+  font-weight: normal;
+  color: #000;
+}
+
+.c-productsGrid__inner,
+.c-subscriptionBlock__inner {
+  background: #fcfbf3;
+  border: none;
+}
+
+.c-productsGrid__link-contain .c-productsGrid__link--active {
+  font-weight: normal;
+  border-bottom: 2px solid #ca583a;
+}
+
+.c-drawerDeliveryFrequency__options button:active, .c-drawerDeliveryFrequency__options button:focus, .c-drawerDeliveryFrequency__options button:hover {
+  border-color: #ca583a;
+}
+
+.c-form__submitButton {
+  background: #ca583a;
+}
+/*# sourceMappingURL=upscribe_subscription_style.css.map */

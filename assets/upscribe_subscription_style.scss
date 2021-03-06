@@ -1,0 +1,137 @@
+$theme-color: #ca583a;
+$light-grey: #e0e0e0;
+$sections-bkg: #fcfbf3;
+
+@mixin section-title {
+    text-align: center;
+    font-weight: normal;
+    color: #000;
+};
+
+
+body {
+    &.customer-logged-in {
+        * {
+            font-family: "Open Sans", sans-serif;
+        }    
+    }    
+}
+
+.c-header,
+.c-portal__main,
+.c-subscription__outer,
+.c-portal__languagePickerWrap,
+.c-subscription__inner {
+    background-color: #f5f0ec;
+}
+
+.c-portal__languagePickerWrap {
+    padding: 0;
+}
+
+.c-header {
+    margin-top: 20px;
+    
+    nav {
+        border-bottom: 1px solid #000;
+    }
+
+    .c-header__navLink-middle {
+        a {
+            padding: 20px 25px;
+            margin: 0 0 -3px;
+            
+            &:hover {
+                border-color: $theme-color;
+            }
+        }
+    }
+
+    .c-header__backToAccount {
+        border: none;
+    }
+
+    .c-header__button {
+        background: $light-grey;
+        border-radius: 0px;
+        
+        &:hover {
+            background: $theme-color;
+            border-color: $theme-color;
+            color: #fff;
+        }
+    }
+}
+
+.c-subscriptionHeadline__title {
+    font-size: 28px;
+}
+.c-subscriptionHeadline__button-contain {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.c-subscriptionHeadline__button {
+    border-color: $theme-color;
+
+    &.c-subscriptionHeadline__button--active,
+    &:hover {        
+        background: $theme-color;
+        border-color: $theme-color;
+    }
+}
+
+.c-button--transparent {
+    border-radius: 0;
+    &:hover,
+    &:focus {
+        border-color: $theme-color;
+    }
+}
+
+.c-button--primary {
+    background: $theme-color;
+    text-transform: uppercase;
+    border-radius: 0;
+
+    &:hover {
+        background: $theme-color;
+        border-color: $theme-color;
+    }
+}
+
+.c-button--alt {
+    background: $theme-color;
+    border-color: $theme-color;
+    color: #fff;
+}
+
+.c-subscriptionBlock__sectionTitle,
+.c-productsGrid__title {
+    @include section-title;
+}
+
+.c-productsGrid__inner,
+.c-subscriptionBlock__inner {
+    background: $sections-bkg;
+    border: none;
+}
+
+.c-productsGrid__link-contain {
+    .c-productsGrid__link--active {
+        font-weight: normal;
+        border-bottom: 2px solid $theme-color;
+    }
+}
+
+.c-drawerDeliveryFrequency__options {
+    button {
+        &:active, &:focus, &:hover {
+            border-color: $theme-color;
+        }
+    }
+}
+
+.c-form__submitButton {
+    background: $theme-color;
+}
