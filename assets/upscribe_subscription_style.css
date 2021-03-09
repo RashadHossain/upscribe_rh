@@ -77,15 +77,6 @@ h2 {
   margin-right: 0;
 }
 
-.c-subscriptionHeadline__button {
-  border-color: #ca583a;
-}
-
-.c-subscriptionHeadline__button.c-subscriptionHeadline__button--active, .c-subscriptionHeadline__button:hover {
-  background: #ca583a;
-  border-color: #ca583a;
-}
-
 .c-button {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -129,6 +120,17 @@ button[class*=active] ~ .c-button {
   background: #ca583a;
   border-color: #ca583a;
   color: #fff;
+}
+
+.c-subscriptionHeadline__button {
+  border-color: #ca583a;
+  background: transparent;
+  color: #000;
+}
+
+.c-subscriptionHeadline__button.c-subscriptionHeadline__button--active, .c-subscriptionHeadline__button:hover {
+  background: #ca583a;
+  border-color: #ca583a;
 }
 
 .c-subscriptionBlock__sectionTitle,
@@ -209,6 +211,43 @@ button[class*=active] ~ .c-button {
 .c-headerTablet__menu .c-header__menu .c-menuSelect__nav .c-menuSelect__navLink.c-menuSelect__navLink--active,
 .header-portal .c-header__menu .c-menuSelect__nav .c-menuSelect__navLink.c-menuSelect__navLink--active {
   background: #ca583a;
+}
+
+.c-shippingMethodItem__inner:hover {
+  border-color: #ca583a;
+}
+
+.c-option__select--picked {
+  background-color: #ca583a;
+}
+
+.c-drawerLogic__nextOrderWarning {
+  color: #ca583a;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='password'],
+input[type='search'],
+input[type='number'],
+textarea,
+select {
+  padding-bottom: 0;
+  font-size: 1.2rem;
+  height: 46px;
+}
+
+.c-formGroup.c-formGroup--focused .c-formGroup__label,
+.c-formGroup.c-formGroup--hasValue .c-formGroup__label {
+  top: 0;
+}
+
+.c-formGroup {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 @media only screen and (max-width: 768px) {

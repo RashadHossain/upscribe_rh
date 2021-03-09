@@ -92,15 +92,6 @@ h2 {
     margin-right: 0;
 }
 
-.c-subscriptionHeadline__button {
-    border-color: $theme-color;
-
-    &.c-subscriptionHeadline__button--active,
-    &:hover {        
-        background: $theme-color;
-        border-color: $theme-color;
-    }
-}
 
 .c-button {        
     align-items: center;
@@ -149,6 +140,17 @@ button[class*=active] ~ .c-button {
     color: #fff;
 }
 
+.c-subscriptionHeadline__button {
+    border-color: $theme-color;
+    background: transparent;
+    color: $text-color;
+
+    &.c-subscriptionHeadline__button--active,
+    &:hover {        
+        background: $theme-color;
+        border-color: $theme-color;
+    }
+}
 .c-subscriptionBlock__sectionTitle,
 .c-productsGrid__title {
     @include section-title;
@@ -233,6 +235,43 @@ button[class*=active] ~ .c-button {
         }
     }
 }
+
+.c-shippingMethodItem__inner {
+    &:hover {
+        border-color: $theme-color;
+    }
+}
+.c-option__select--picked {
+    background-color: $theme-color;
+}
+
+.c-drawerLogic__nextOrderWarning {
+    color: $theme-color;
+}
+
+input[type='text'],
+input[type='email'], 
+input[type='tel'], 
+input[type='password'], 
+input[type='search'], 
+input[type='number'], 
+textarea, 
+select {
+    padding-bottom: 0;
+    font-size: 1.2rem;
+    height: 46px;
+}
+
+.c-formGroup.c-formGroup--focused .c-formGroup__label, 
+.c-formGroup.c-formGroup--hasValue .c-formGroup__label {
+    top: 0;
+}
+
+.c-formGroup {
+    flex-direction: row;
+}
+
+
 
 
 // MOBILE SIZE
