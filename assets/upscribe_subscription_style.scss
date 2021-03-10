@@ -282,6 +282,26 @@ select {
     }
 }
 
+.c-paymentMethods__options {
+    .c-button {
+        flex: 1 0 100%;
+        margin: 5px 0;
+
+        @at-root div[style*=flex] {
+            flex-flow: row wrap;
+        }
+    }
+    .c-paymentMethodsBlock__button--white {
+        background: transparent;
+        color: $theme-color;        
+        order: 2;
+    }
+
+    .c-vueCheckbox__label {
+        margin-bottom: 0;
+    }
+}
+
 
 // MOBILE SIZE
 @media only screen and (max-width: 768px) {

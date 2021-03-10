@@ -261,6 +261,32 @@ select {
   background: transparent;
 }
 
+.c-paymentMethods__options .c-button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  margin: 5px 0;
+}
+
+div[style*=flex] {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.c-paymentMethods__options .c-paymentMethodsBlock__button--white {
+  background: transparent;
+  color: #ca583a;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.c-paymentMethods__options .c-vueCheckbox__label {
+  margin-bottom: 0;
+}
+
 @media only screen and (max-width: 768px) {
   .c-headerTop .c-headerActions {
     background: #f5f0ec !important;
