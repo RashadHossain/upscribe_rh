@@ -250,6 +250,17 @@ select {
           flex-direction: row;
 }
 
+.c-button--danger {
+  background: transparent;
+  color: red;
+  border-color: transparent;
+}
+
+.c-button--danger:hover {
+  border-color: red;
+  background: transparent;
+}
+
 @media only screen and (max-width: 768px) {
   .c-headerTop .c-headerActions {
     background: #f5f0ec !important;

@@ -271,7 +271,16 @@ select {
     flex-direction: row;
 }
 
+.c-button--danger {
+    background: transparent;
+    color: red;
+    border-color: transparent;
 
+    &:hover {
+        border-color: red;
+        background: transparent;
+    }
+}
 
 
 // MOBILE SIZE
