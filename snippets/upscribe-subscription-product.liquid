@@ -1,14 +1,5 @@
 <!-- Upscribe -->
 {% if product.metafields.sf_upscribe.enable_subscription %}
-
-    {% comment %}
-    Snippet variables that can be passed
-
-    upscribe_exclude_vue_cdn_in_snippet = Whether or not to load the vue.js script from CDN
-    (excluded if loaded globally, defaults to true)
-    {% endcomment %}
-
-    {% comment %} Used in case there are multiple Upscribe blocks loaded per page {% endcomment %}
     {% unless upscribe_component_uid %}
         {% assign upscribe_component_uid = product.id %}
     {% endunless %}
@@ -16,7 +7,6 @@
     {% if upscribe_include_vue_cdn_in_snippet != false %}
         {% assign upscribe_include_vue_cdn_in_snippet = true %}
     {% endif %}
-
 
     {% if upscribe_keep_component_in_sync != false %}
 		{% assign upscribe_keep_component_in_sync = true %}
@@ -28,46 +18,29 @@
         console.log('{{upscribe_price_display_regular}}', '{{upscribe_price_display_sale}}');
     </script>
 
-    <style>
-    .cu-upscribe {
-        position: relative;
-        width: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding: 0 5px;
-    }
-
-        .cu-upscribe__inner {
-
+    <style type="text/css">
+        .cu-upscribe {
+            position: relative;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 0 5px;
         }
-
-        .cu-upscribe__inner--hidden {
-            display:none;
-        }
-
-        .cu-productTypeSelect__itemWrap {
-            display: inline-block;
-        }
-
+        .cu-upscribe__inner--hidden { display: none; }
+        .cu-productTypeSelect__itemWrap { display: inline-block; }
         .cu-productTypeSelect__itemLabel {
             position: relative;
             margin: 0;
         }
-
         .cu-productTypeSelect__itemText {
             padding-left: 8px;
             font-size: 16px;
         }
-
         .cu-options {
             width: 100%;
             margin-bottom: 20px;
         }
-
-        .cu-options--frequency {
-            margin-top: 40px;
-        }
-
+        .cu-options--frequency { margin-top: 40px; }
         .cu-optionsTitle {
             display: block;
             margin-bottom: 20px;
@@ -77,11 +50,7 @@
             text-transform: uppercase;
             text-align: left;
         }
-
-        .cu-optionsGrid {
-            display: flex;
-        }
-
+        .cu-optionsGrid { display: flex; }
         .cu-option {
             border-radius: 10px;
             border: 2px solid;
@@ -95,15 +64,10 @@
             cursor: pointer;
             text-align: center;
         }
-
-        .cu-option:active,
-        .cu-option:hover,
-        .cu-option:focus,
-        .cu-option.is-active {
+        .cu-option:active, .cu-option:hover, .cu-option:focus, .cu-option.is-active {
             border-color: #7FC464;
             color: #7FC464;
         }
-
         .cu-option.is-active .cu-option__check {
             display: block;
             display: flex;
@@ -111,7 +75,6 @@
             align-items: center;
             justify-content: center;
         }
-
         .cu-option.is-active .cu-option__check svg {
             width: 13px;
             fill-color: white;
@@ -119,39 +82,35 @@
             margin-left: -1px;
             margin-bottom: -1px;
         }
-
-            .cu-option__check {
-                display: none;
-                position: absolute;
-                transform: translateX(-50%) translateY(-50%);
-                left: 50%;
-                top: -2px;
-                background-color: #7FC464;
-                border-radius: 100px;
-                color: #fff;
-                width: 24px;
-                height: 24px;
-            }
-
-            .cu-option__mainText {
-                display: inline-block;
-                font-size: 19px;
-                letter-spacing: 2px;
-                font-weight: 400;
-                text-transform: uppercase;
-                text-align: center;
-            }
-            .cu-option__subText {
-                font-size: 16px;
-                width: 100%;
-                max-width: 250px;
-                margin-ttop: 6px;
-                letter-spacing: 0;
-                font-weight: 400;
-                text-align: center;
-            }
-
-
+        .cu-option__check {
+            display: none;
+            position: absolute;
+            transform: translateX(-50%) translateY(-50%);
+            left: 50%;
+            top: -2px;
+            background-color: #7FC464;
+            border-radius: 100px;
+            color: #fff;
+            width: 24px;
+            height: 24px;
+        }
+        .cu-option__mainText {
+            display: inline-block;
+            font-size: 19px;
+            letter-spacing: 2px;
+            font-weight: 400;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .cu-option__subText {
+            font-size: 16px;
+            width: 100%;
+            max-width: 250px;
+            margin-ttop: 6px;
+            letter-spacing: 0;
+            font-weight: 400;
+            text-align: center;
+        }
         .cu-popup {
             display: inline-block;
             padding: 8px;
@@ -183,9 +142,7 @@
                 right: auto;
             }
         }
-        .cu-popup__block--isOpen {
-            display: block;
-        }
+        .cu-popup__block--isOpen { display: block; }
         .cu-popup__block:before {
             display: none;
             content: "";
@@ -203,9 +160,7 @@
             bottom: -20px;
         }
         @media (min-width: 500px) {
-            .cu-popup__block:before {
-                display: block;
-            }
+            .cu-popup__block:before { display: block; }
         }
         .cu-popup__block__content {
             line-height: 1.5;
@@ -245,17 +200,11 @@
             transform: translateY(3px);
             cursor: pointer;
         }
-
         .cu-infoOpener svg {
             width: 20px;
             height: 20px;
         }
-
-        .cu-infoOpener:hover .cu-popup__block,
-        .cu-infoOpener:active .cu-popup__block,
-        .cu-infoOpener:focus .cu-popup__block {
-            display: block;
-        }
+        .cu-infoOpener:hover .cu-popup__block, .cu-infoOpener:active .cu-popup__block, .cu-infoOpener:focus .cu-popup__block { display: block; }
 
         /* Upscribe subscription widget specific styling */
         .cu-upscribe__inner {
@@ -335,36 +284,22 @@
         /* End Upscribe subscription widget specific styling */
     </style>
 
-    {% comment %} Vue for Upscribe logic include unless specificied not to from snippet include{% endcomment %}
     {% if upscribe_include_vue_cdn_in_snippet %}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
     {% endif %}
 
-
     <section v-if="product && componentMounted" id="upscribe-subscription-product-{{upscribe_component_uid}}" class="cu-upscribe">
-        <div class="cu-upscribe__inner"
-            :class="{'cu-upscribe__inner--hidden': !activeVariantIsApplicableVariant}"
-        >
-
+        <div class="cu-upscribe__inner" :class="{'cu-upscribe__inner--hidden': !activeVariantIsApplicableVariant}">
             <div class="cu-subscription-inputs" v-if="subscriptionSelected || isOnetimeSubscription">
                 <input v-if="finalSubscriptionProperty" type="hidden" :value="finalSubscriptionProperty" name="properties[Subscription]">
-
                 <input v-if="subscriptionProductTitleDisplay" type="hidden" :value="subscriptionProductTitleDisplay" name="properties[Subscription Product Title]">
-
                 <input v-if="subscriptionAmount" type="hidden" :value="subscriptionAmount" name="properties[Subscription Amount]">
-
                 <input v-if="activeDiscountAmount" type="hidden" :value="activeDiscountAmount" name="properties[Discount Amount]">
-
                 <input v-if="chargeLimit" type="hidden" :value="chargeLimit" name="properties[Charge Limit]">
-
                 <input v-if="recurringDiscountAmount" type="hidden" :value="recurringDiscountAmount" name="properties[Recurring Discount Amount]">
-
                 <input v-if="recurringDiscountAfterOrder" type="hidden" :value="recurringDiscountAfterOrder" name="properties[Recurring Discount After Order]">
-
                 <input v-if="intervalFrequency" type="hidden" :value="intervalFrequency" name="properties[Interval Frequency]">
-
                 <input v-if="intervalUnit" type="hidden" :value="intervalUnit" name="properties[Interval Unit]">
-
             </div>
 
             <div class="cu-productTypeSelect">
@@ -387,10 +322,7 @@
                         <span class="checkbox-icon"></span>
                         <span class="cu-productTypeSelect__itemText">${ subscriptionMessage || 'Subscribe & Save' } ${ activeDiscountAmount }</span>
 
-                        <div
-                            _v-if="selectFrequencyOptions && subscriptionSelected"
-                            class="cu-options cu-options--frequency"
-                        >
+                        <div v-if="selectFrequencyOptions && subscriptionSelected" class="cu-options cu-options--frequency">
                             <span class="cu-optionsTitle" style="">Frequency (${ intervalUnit })</span>
 
                             <div class="cu-optionsGrid">
@@ -414,37 +346,6 @@
                             + Free Shipping. Cancel anytime.
                         </div>
                     </label>
-                </div>
-                <div class="cu-infoOpener"
-                    @click="infoIsOpen = !infoIsOpen"
-                >
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 437.6 437.6" style="enable-background:new 0 0 437.6 437.6;" xml:space="preserve">
-                        <path d="M194,142.8c0.8,1.6,1.6,3.2,2.4,4.4c0.8,1.2,2,2.4,2.8,3.6c1.2,1.2,2.4,2.4,4,3.6c1.2,0.8,2.8,2,4.8,2.4
-                            c1.6,0.8,3.2,1.2,5.2,1.6c2,0.4,3.6,0.4,5.2,0.4c1.6,0,3.6,0,5.2-0.4c1.6-0.4,3.2-0.8,4.4-1.6h0.4c1.6-0.8,3.2-1.6,4.8-2.8
-                            c1.2-0.8,2.4-2,3.6-3.2l0.4-0.4c1.2-1.2,2-2.4,2.8-3.6s1.6-2.4,2-4c0-0.4,0-0.4,0.4-0.8c0.8-1.6,1.2-3.6,1.6-5.2
-                            c0.4-1.6,0.4-3.6,0.4-5.2s0-3.6-0.4-5.2c-0.4-1.6-0.8-3.2-1.6-5.2c-1.2-2.8-2.8-5.2-4.8-7.2c-0.4-0.4-0.4-0.4-0.8-0.8
-                            c-1.2-1.2-2.4-2-4-3.2c-1.6-0.8-2.8-1.6-4.4-2.4c-1.6-0.8-3.2-1.2-4.8-1.6c-2-0.4-3.6-0.4-5.2-0.4c-1.6,0-3.6,0-5.2,0.4
-                            c-1.6,0.4-3.2,0.8-4.8,1.6H208c-1.6,0.8-3.2,1.6-4.4,2.4c-1.6,1.2-2.8,2-4,3.2c-1.2,1.2-2.4,2.4-3.2,3.6
-                            c-0.8,1.2-1.6,2.8-2.4,4.4c-0.8,1.6-1.2,3.2-1.6,4.8c-0.4,2-0.4,3.6-0.4,5.2c0,1.6,0,3.6,0.4,5.2
-                            C192.8,139.6,193.6,141.2,194,142.8z"/>
-                        <path d="M249.6,289.2h-9.2v-98c0-5.6-4.4-10.4-10.4-10.4h-42c-5.6,0-10.4,4.4-10.4,10.4v21.6c0,5.6,4.4,10.4,10.4,10.4h8.4v66.4
-                            H188c-5.6,0-10.4,4.4-10.4,10.4v21.6c0,5.6,4.4,10.4,10.4,10.4h61.6c5.6,0,10.4-4.4,10.4-10.4V300
-                            C260,294,255.2,289.2,249.6,289.2z"/>
-                        <path d="M218.8,0C98,0,0,98,0,218.8s98,218.8,218.8,218.8s218.8-98,218.8-218.8S339.6,0,218.8,0z M218.8,408.8
-                            c-104.8,0-190-85.2-190-190s85.2-190,190-190s190,85.2,190,190S323.6,408.8,218.8,408.8z"/>
-                    </svg> Subscription Details
-
-                    <div class="cu-popup__block"
-                        :class="{'cu-popup__block--isOpen': infoIsOpen}"
-                    >
-                        <div class="cu-popup__block__content">
-                        <div>
-                            <strong>${ howItWorksTitle || 'How Subscriptions Work'}</strong>
-                        </div>
-                            ${ howItWorksText || 'Products are automatically delivered on your schedule. No obligation, modify or cancel your subscription anytime.'}
-                            <br><a v-if="learnMoreUrl" :href="learnMoreUrl" target="_blank">Learn more</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -514,15 +415,12 @@
         };
 
         var upscribeSubscriptionProduct = new Vue ({
-
             {% endraw %}
             name: 'upscribe-{{upscribe_component_uid}}',
-
             el: '#upscribe-subscription-product-{{upscribe_component_uid}}',
             {% raw %}
 
             delimiters: ['${', '}'],
-
             components: {
                 'v-option': VOption,
             },
@@ -532,20 +430,14 @@
 
                 {% endraw %}
                 product: {{ product | json }},
-
                 activeVariantId: {{ product.selected_or_first_available_variant.id }},
                 initialApplicableVariants: '{{ product.metafields.sf_upscribe.applicable_variants }}',
-
-
                 subscriptionProductTitle: '{{ product.metafields.sf_upscribe.subscription_product_title | format_money }}',
                 intervalFrequncyMetafield: '{{ product.metafields.sf_upscribe.interval_frequency }}',
                 intervalUnitMetafield: '{{ product.metafields.sf_upscribe.interval_unit }}',
-
                 defaultGlobalDiscountAmount: '{{ shop.metafields.sf_upscribe.default_discount_amount }}',
-
                 discountAmount: '{{ product.metafields.sf_upscribe.discount_amount }}',
                 initialChargeLimit: '{{ product.metafields.sf_upscribe.charge_limit }}',
-
                 recurringDiscountAmount: '{{ product.metafields.sf_upscribe.recurring_discount_amount }}',
                 recurringDiscountAfterOrder: '{{ product.metafields.sf_upscribe.recurring_discount_after_order }}',
 
@@ -554,7 +446,6 @@
                 learnMoreUrl: '{{ shop.metafields.sf_upscribe.learn_more_url }}',
                 howItWorksTitle: '{{ shop.metafields.sf_upscribe.how_it_works_title }}',
                 howItWorksText: '{{ shop.metafields.sf_upscribe.how_it_works_text }}',
-
                 activeSubsriptionDisplayPrice: '{{ product.selected_or_first_available_variant.price }}',
                 activeSubsriptionDisplayComparePrice: '{{ product.selected_or_first_available_variant.compare_at_price }}',
                 {% raw %}
@@ -563,11 +454,8 @@
                 productPurchaseType: 'onetime',
                 infoIsOpen: false,
                 subscriptionPrice: null,
-
                 activeVariantId: null,
-
                 subscriptionAmount: null,
-
                 componentMounted: false
             },
             mounted() {
@@ -614,23 +502,18 @@
                     }));
                   {% endif %}
                 {% raw %}
-
                     if (newVal === 'onetime') {
                         console.log('newVal watcher', {newVal});
                         var originalPrice = this.activeSubsriptionDisplayPrice || false;
                         var comparePrice = this.activeSubsriptionDisplayComparePrice || false;
-
                         var formatOriginalPrice = originalPrice ? this.formatMoney(originalPrice) : false;
                         var formatComparePrice = comparePrice ? this.formatMoney(comparePrice) : false;
 
                         this.setPricingDisplayEls(formatOriginalPrice,formatComparePrice);
-                    }
-
-                    else {
+                    } else {
                         console.log('is subscription pricing');
                         var originalPrice = this.activeSubsriptionDisplayPrice || false;
                         var comparePrice = this.activeSubsriptionDisplayComparePrice || false;
-
                         this.calculateVariantPrices(originalPrice, comparePrice);
                     }
                 }
@@ -718,7 +601,7 @@
                 },
                 intervalFrequency() {
                     return this.intervalFrequncyMetafield ? this.intervalFrequncyMetafield : '15,30,45,60';
-                },
+                }
             },
             methods: {
                 setFrequency(val) {
@@ -808,15 +691,12 @@
                     if (originalPrice) {
                         var originalPriceEl = document.querySelector(".upscribe-price-item-regular");
                         var discountPrice = originalPrice - this.discountCalculatedValue(originalPrice);
-
                         this.subscriptionAmount = this.getFinalCurrencyRate(originalPrice - discountPrice);
-
                         displayDiscountPrice = this.formatMoney(originalPrice - discountPrice);
                     }
 
                     if (originalComparePrice) {
                         var discountComparePrice = originalComparePrice - this.discountCalculatedValue(originalComparePrice);
-
                         displayDiscountComparePrice = this.formatMoney(originalComparePrice - discountComparePrice);
                     }
 
@@ -829,51 +709,52 @@
                 },
                 formatMoney(cents, format) {
                     if (typeof cents === 'string') {
-                    cents = cents.replace('.', '');
+                        cents = cents.replace('.', '');
                     }
+                    
                     var value = '';
                     var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
                     var formatString = format || this.moneyFormat;
 
                     function formatWithDelimiters(number, precision, thousands, decimal) {
-                    thousands = thousands || ',';
-                    decimal = decimal || '.';
+                        thousands = thousands || ',';
+                        decimal = decimal || '.';
 
-                    if (isNaN(number) || number === null) {
-                        return 0;
-                    }
+                        if (isNaN(number) || number === null) {
+                            return 0;
+                        }
 
-                    number = (number / 100.0).toFixed(precision);
+                        number = (number / 100.0).toFixed(precision);
 
-                    var parts = number.split('.');
-                    var dollarsAmount = parts[0].replace(
-                        /(\d)(?=(\d\d\d)+(?!\d))/g,
-                        '$1' + thousands
-                    );
-                    var centsAmount = parts[1] ? decimal + parts[1] : '';
+                        var parts = number.split('.');
+                        var dollarsAmount = parts[0].replace(
+                            /(\d)(?=(\d\d\d)+(?!\d))/g,
+                            '$1' + thousands
+                        );
+                        var centsAmount = parts[1] ? decimal + parts[1] : '';
 
-                    return dollarsAmount + centsAmount;
+                        return dollarsAmount + centsAmount;
                     }
 
                     switch (formatString.match(placeholderRegex)[1]) {
-                    case 'amount':
-                        value = formatWithDelimiters(cents, 2);
-                        break;
-                    case 'amount_no_decimals':
-                        value = formatWithDelimiters(cents, 0);
-                        break;
-                    case 'amount_with_comma_separator':
-                        value = formatWithDelimiters(cents, 2, '.', ',');
-                        break;
-                    case 'amount_no_decimals_with_comma_separator':
-                        value = formatWithDelimiters(cents, 0, '.', ',');
-                        break;
-                    case 'amount_no_decimals_with_space_separator':
-                        value = formatWithDelimiters(cents, 0, ' ');
-                        break;
-                    case 'amount_with_apostrophe_separator':
-                        value = formatWithDelimiters(cents, 2, "'");
-                        break;
+                        case 'amount':
+                            value = formatWithDelimiters(cents, 2);
+                            break;
+                        case 'amount_no_decimals':
+                            value = formatWithDelimiters(cents, 0);
+                            break;
+                        case 'amount_with_comma_separator':
+                            value = formatWithDelimiters(cents, 2, '.', ',');
+                            break;
+                        case 'amount_no_decimals_with_comma_separator':
+                            value = formatWithDelimiters(cents, 0, '.', ',');
+                            break;
+                        case 'amount_no_decimals_with_space_separator':
+                            value = formatWithDelimiters(cents, 0, ' ');
+                            break;
+                        case 'amount_with_apostrophe_separator':
+                            value = formatWithDelimiters(cents, 2, "'");
+                            break;
                     }
 
                     return formatString.replace(placeholderRegex, value);
@@ -892,7 +773,6 @@
 
     {% endraw %}
 
-    {% comment %} Reset snippet variables{% endcomment %}
     {% assign upscribe_include_vue_cdn_in_snippet = true %}
     {% assign upscribe_component_uid = false %}
     {% assign upscribe_keep_component_in_sync = false %}
