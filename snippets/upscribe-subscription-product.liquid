@@ -23,9 +23,9 @@
     {% endif %}
 
     <script>
-        console.log('upscribe_exclude_vue_cdn_in_snippet', '{{ upscribe_exclude_vue_cdn_in_snippet }}')
-        console.log('upscribe_component_uid', '{{ zp_product_block_id }}', '{{ upscribe_component_uid }}')
-        console.log('{{upscribe_price_display_regular}}', '{{upscribe_price_display_sale}}')
+        console.log('upscribe_exclude_vue_cdn_in_snippet', '{{ upscribe_exclude_vue_cdn_in_snippet }}');
+        console.log('upscribe_component_uid', '{{ zp_product_block_id }}', '{{ upscribe_component_uid }}');
+        console.log('{{upscribe_price_display_regular}}', '{{upscribe_price_display_sale}}');
     </script>
 
     <style>
@@ -452,8 +452,6 @@
 
     {% raw %}
     <script>
-
-        // Option select component
         var VOption = {
             template: `
                 <div class="cu-option__option"
@@ -471,7 +469,7 @@
             `,
             computed: {
                 isActive() {
-                    return this.selectedIndex === this.index
+                    return this.selectedIndex === this.index;
                 }
             },
             filters: {
@@ -502,20 +500,18 @@
                 }
             },
             methods: {
-                // emit selected val
                 clickOption() {
-                    this.$emit('click-option', this.index)
+                    this.$emit('click-option', this.index);
                     {% endraw %}
                   {% if upscribe_keep_component_in_sync %}
-                      // Upscribe Frequency Update
                       window.dispatchEvent(new CustomEvent("upscribeFrequencyIndexUpdate", {
-                          detail: this.index,
+                          detail: this.index
                       }));
                   {% endif %}
                   {% raw %}
                 }
             }
-        }
+        };
 
         var upscribeSubscriptionProduct = new Vue ({
 
@@ -534,7 +530,6 @@
             data: {
                 moneyFormat: '${{amount}}',
 
-                // Initialize vue component with shopify liquid data rendered in state
                 {% endraw %}
                 product: {{ product | json }},
 
@@ -560,7 +555,6 @@
                 howItWorksTitle: '{{ shop.metafields.sf_upscribe.how_it_works_title }}',
                 howItWorksText: '{{ shop.metafields.sf_upscribe.how_it_works_text }}',
 
-                // update on variant changes, this is used for initial setting
                 activeSubsriptionDisplayPrice: '{{ product.selected_or_first_available_variant.price }}',
                 activeSubsriptionDisplayComparePrice: '{{ product.selected_or_first_available_variant.compare_at_price }}',
                 {% raw %}
@@ -577,205 +571,183 @@
                 componentMounted: false
             },
             mounted() {
-                console.log('Mounted Upscribe Subscription Snippet')
+                console.log('Mounted Upscribe Subscription Snippet');
                 var urlParams = new URLSearchParams(window.location.search);
                 if (urlParams.get('variant')) {
-                    this.activeVariantId = urlParams.get('variant')
+                    this.activeVariantId = urlParams.get('variant');
                 }
                 if (this.product.variants.length === 1) {
-                    this.activeVariantId = this.product.variants[0].id
-                    console.log('activeVariantId', this.product.variants[0].id)
+                    this.activeVariantId = this.product.variants[0].id;
+                    console.log('activeVariantId', this.product.variants[0].id);
                 }
 
+                this.selectedFrequencyIndex = 0;
+                this.productPurchaseType = 'onetime';
+                this.infoIsOpen = false;
+                this.subscriptionPrice = null;
 
-                // reset
-                this.selectedFrequencyIndex = 0
-                this.productPurchaseType = 'onetime'
-                this.infoIsOpen = false
-                this.subscriptionPrice = null
-
-                // add listener for variant update, set in theme.js
-                // this listener could be different depeneding on if the theme uses the same base setup
-                var vm = this
+                var vm = this;
                 window.addEventListener("upscribeVariantUpdate", function(event) {
-                    vm.handleVariantUpdateEvent(event)
+                    vm.handleVariantUpdateEvent(event);
                 }, false);
 
 	            {% endraw %}
                 {% if upscribe_keep_component_in_sync %}
                 window.addEventListener("upscribeProductPurchaseTypeUpdate", function(event) {
-                    vm.setProductPurchaseType(event.detail)
+                    vm.setProductPurchaseType(event.detail);
                 }, false);
 
                 window.addEventListener("upscribeFrequencyIndexUpdate", function(event) {
-                    vm.setFrequency(event.detail)
+                    vm.setFrequency(event.detail);
                 }, false);
                 {% endif %}
 	            {% raw %}
 
-                this.componentMounted = true
+                this.componentMounted = true;
             },
             watch: {
-                // when onetime vs subscription is toggled
                 productPurchaseType(newVal) {
 	            {% endraw %}
                   {% if upscribe_keep_component_in_sync %}
-                    // Upscribe Product Purchase Type Update
                     window.dispatchEvent(new CustomEvent("upscribeProductPurchaseTypeUpdate", {
-                        detail: newVal,
+                        detail: newVal
                     }));
                   {% endif %}
                 {% raw %}
 
-
-                    // if one time
                     if (newVal === 'onetime') {
-                        console.log('newVal watcher', {newVal})
-                        // use stored non-discount prices from previous changes
-                        var originalPrice = this.activeSubsriptionDisplayPrice || false
-                        var comparePrice = this.activeSubsriptionDisplayComparePrice || false
+                        console.log('newVal watcher', {newVal});
+                        var originalPrice = this.activeSubsriptionDisplayPrice || false;
+                        var comparePrice = this.activeSubsriptionDisplayComparePrice || false;
 
-                        // put into money format
-                        var formatOriginalPrice = originalPrice ? this.formatMoney(originalPrice) : false
-                        var formatComparePrice = comparePrice ? this.formatMoney(comparePrice) : false
+                        var formatOriginalPrice = originalPrice ? this.formatMoney(originalPrice) : false;
+                        var formatComparePrice = comparePrice ? this.formatMoney(comparePrice) : false;
 
-                        // replace pricing elements with new vals
-                        this.setPricingDisplayEls(formatOriginalPrice,formatComparePrice)
+                        this.setPricingDisplayEls(formatOriginalPrice,formatComparePrice);
                     }
 
-                    // if subscription
                     else {
-                        console.log('is subscription pricing')
-                        // use stored non-discount prices from previous changes
-                        var originalPrice = this.activeSubsriptionDisplayPrice || false
-                        var comparePrice = this.activeSubsriptionDisplayComparePrice || false
+                        console.log('is subscription pricing');
+                        var originalPrice = this.activeSubsriptionDisplayPrice || false;
+                        var comparePrice = this.activeSubsriptionDisplayComparePrice || false;
 
-                        // calculate subscription discount and replace pricing elements with new vals
-                        this.calculateVariantPrices(originalPrice, comparePrice)
+                        this.calculateVariantPrices(originalPrice, comparePrice);
                     }
                 }
             },
             computed: {
                 applicableVariants() {
-                    if (!this.initialApplicableVariants) return false
-                    return this.initialApplicableVariants.split(',')
+                    if (!this.initialApplicableVariants) return false;
+                    return this.initialApplicableVariants.split(',');
                 },
                 activeVariantIsApplicableVariant() {
-                    // all are applicable
-
                     if (!this.activeVariantId) {
-                        this.productPurchaseType = 'onetime'
-                        return false
+                        this.productPurchaseType = 'onetime';
+                        return false;
                     }
 
-                    if (!this.initialApplicableVariants) return true
+                    if (!this.initialApplicableVariants) return true;
 
                     if (this.applicableVariants.includes(this.activeVariantId.toString())) {
-                        return true
+                        return true;
                     } else {
-                        this.productPurchaseType = 'onetime'
-                        return false
+                        this.productPurchaseType = 'onetime';
+                        return false;
                     }
                 },
 
-                // helper for if current state is subscription
                 subscriptionSelected() {
-                    return this.productPurchaseType === 'subscription'
+                    return this.productPurchaseType === 'subscription';
                 },
-                // used for single purchase that will be able to reactivate as a subscription in the future
                 isOnetimeSubscription() {
-                    return this.chargeLimit === 'onetime'
+                    return this.chargeLimit === 'onetime';
                 },
-                // subscription title, used in cart and sent to checkout for replacement
                 subscriptionProductTitleDisplay() {
-                    let display = ''
-                    display += this.subscriptionProductTitle ? this.subscriptionProductTitle : this.product.title
-                    display += this.discountDisplay ? ' - ' + this.discountDisplay + ' off' : ''
-                    return display
+                    let display = '';
+                    display += this.subscriptionProductTitle ? this.subscriptionProductTitle : this.product.title;
+                    display += this.discountDisplay ? ' - ' + this.discountDisplay + ' off' : '';
+                    return display;
                 },
                 activeDiscountType() {
-                    var discountAmount = this.discountAmount
-                    var defaultGlobalDiscountAmount = this.defaultGlobalDiscountAmount
-                    var activeDiscount = discountAmount ? discountAmount : defaultGlobalDiscountAmount
+                    var discountAmount = this.discountAmount;
+                    var defaultGlobalDiscountAmount = this.defaultGlobalDiscountAmount;
+                    var activeDiscount = discountAmount ? discountAmount : defaultGlobalDiscountAmount;
 
-                    return activeDiscount.indexOf('$') > -1 ? '$' : '%'
+                    return activeDiscount.indexOf('$') > -1 ? '$' : '%';
                 },
                 activeDiscountAmount() {
-                    var discountAmount = this.discountAmount
-                    var defaultGlobalDiscountAmount = this.defaultGlobalDiscountAmount
+                    var discountAmount = this.discountAmount;
+                    var defaultGlobalDiscountAmount = this.defaultGlobalDiscountAmount;
 
                     return discountAmount ? discountAmount :
-                        defaultGlobalDiscountAmount ? defaultGlobalDiscountAmount : 0
+                        defaultGlobalDiscountAmount ? defaultGlobalDiscountAmount : 0;
                 },
                 chargeLimit() {
-                    return this.initialChargeLimit ? this.initialChargeLimit : 0
+                    return this.initialChargeLimit ? this.initialChargeLimit : 0;
                 },
-                // build frequency options for select boxes
                 selectFrequencyOptions() {
-                    var intervalFrequency = this.intervalFrequency
-                    var intervalUnit = this.intervalUnit
+                    var intervalFrequency = this.intervalFrequency;
+                    var intervalUnit = this.intervalUnit;
 
-                    if (!intervalFrequency || ! intervalUnit) return false
+                    if (!intervalFrequency || ! intervalUnit) return false;
 
                     return intervalFrequency.split(',').map(function(frequency) {
                         return {
                             value: frequency.trim(),
                             mainText: frequency.trim(),
                             subText: false
-                        }
+                        };
                     })
                 },
-                // plural unit display check
                 finalSubscriptionProperty() {
-                    var selectedFrequency = this.selectedFrequency
-                    var unit = this.intervalUnit
-                    if (!this.subscriptionSelected && !this.isOnetimeSubscription) return false
+                    var selectedFrequency = this.selectedFrequency;
+                    var unit = this.intervalUnit;
+                    if (!this.subscriptionSelected && !this.isOnetimeSubscription) return false;
 
                     if (selectedFrequency > 1) {
-                        return selectedFrequency + ' ' + unit + 's'
+                        return selectedFrequency + ' ' + unit + 's';
                     } else {
-                        return selectedFrequency + ' ' + unit
+                        return selectedFrequency + ' ' + unit;
                     }
                 },
                 selectedFrequency() {
-                    return this.selectFrequencyOptions[this.selectedFrequencyIndex].value
+                    return this.selectFrequencyOptions[this.selectedFrequencyIndex].value;
                 },
                 intervalUnit() {
-                    return this.intervalUnitMetafield ? this.intervalUnitMetafield : 'day'
+                    return this.intervalUnitMetafield ? this.intervalUnitMetafield : 'day';
                 },
                 intervalFrequency() {
-                    return this.intervalFrequncyMetafield ? this.intervalFrequncyMetafield : '15,30,45,60'
+                    return this.intervalFrequncyMetafield ? this.intervalFrequncyMetafield : '15,30,45,60';
                 },
             },
             methods: {
                 setFrequency(val) {
-                    this.selectedFrequencyIndex = val
+                    this.selectedFrequencyIndex = val;
                 },
                 setProductPurchaseType(val) {
-                    if (!val) return
-                    this.productPurchaseType = val
+                    if (!val) return;
+                    this.productPurchaseType = val;
                 },
                 discountCalculatedValue(total) {
-                    var discountType = this.activeDiscountType
+                    var discountType = this.activeDiscountType;
                     var discountAmount = this.activeDiscountAmount.replace('%','').replace('$', '');
 
-                    var calcDiscountAmount = 0
+                    var calcDiscountAmount = 0;
 
-                    if (discountType === '$') { // fixed
-                        calcDiscountAmount = discountAmount
-                    } else if (discountType === '%') { //percentage
-                        calcDiscountAmount = (total * discountAmount) / 100
+                    if (discountType === '$') {
+                        calcDiscountAmount = discountAmount;
+                    } else if (discountType === '%') {
+                        calcDiscountAmount = (total * discountAmount) / 100;
                     } else {
-                        console.log('discount_amount should include % for "percentage" or $ for "fixed"')
+                        console.log('discount_amount should include % for "percentage" or $ for "fixed"');
                     }
-                    return total - calcDiscountAmount
+                    return total - calcDiscountAmount;
                 },
-                // replace pricing values, for compare and regular pricing
                 setPricingDisplayEls(original, compare) {
                     {% endraw %}
-                    console.log('upscribe_regular_price_query_selector: ', '{{upscribe_regular_price_query_selector}}')
+                    console.log('upscribe_regular_price_query_selector: ', '{{upscribe_regular_price_query_selector}}');
 
-                    console.log('upscribe_sale_price_query_selector: ', '{{upscribe_sale_price_query_selector}}')
+                    console.log('upscribe_sale_price_query_selector: ', '{{upscribe_sale_price_query_selector}}');
 
                         {% if upscribe_regular_price_query_selector %}
                             var regularEl = document.querySelector('{{upscribe_regular_price_query_selector}}');
@@ -791,8 +763,8 @@
                     {% raw %}
 
                     if (!regularEl && !saleEl) {
-                        console.log('upscribe_price_display_regular', 'upscribe_price_display_regular', 'are not available')
-                        return
+                        console.log('upscribe_price_display_regular', 'upscribe_price_display_regular', 'are not available');
+                        return;
                     }
 
                     if (compare) {
@@ -805,71 +777,56 @@
                         if (saleEl) saleEl.innerHTML = '';
                     }
                 },
-                // on event triggered from variant change in select boxes
                 handleVariantUpdateEvent(event) {
-                    var variant = event.detail
-                    var originalPrice = variant.price || false
-                    var originalComparePrice = variant.compare_at_price || false
+                    var variant = event.detail;
+                    var originalPrice = variant.price || false;
+                    var originalComparePrice = variant.compare_at_price || false;
 
-                    // console.log({variant})
+                    this.activeVariantId = variant.id;
 
-                    this.activeVariantId = variant.id
+                    this.calculateVariantPrices(originalPrice, originalComparePrice);
+                    this.calculateOriginalVariantPrices(variant);
 
-                    // calculate and set new values
-                    this.calculateVariantPrices(originalPrice, originalComparePrice)
-
-                    // update original price if available
-                    this.calculateOriginalVariantPrices(variant)
-
-                    // store values if subscription isn't currently selected
-                    this.activeSubsriptionDisplayPrice = originalPrice
-                    this.activeSubsriptionDisplayComparePrice = originalPrice
-                    //this.activeSubsriptionDisplayComparePrice = originalComparePrice
-                    //this.activeSubsriptionDisplayComparePrice = originalComparePrice
+                    this.activeSubsriptionDisplayPrice = originalPrice;
+                    this.activeSubsriptionDisplayComparePrice = originalPrice;
                 },
                 getFinalCurrencyRate(amount) {
-                    return parseFloat(amount).toFixed(2)
+                    return parseFloat(amount).toFixed(2);
                 },
                 calculateOriginalVariantPrices(variant) {
-                    var price = variant.price
+                    var price = variant.price;
                     var originalNoDiscountPriceEl = document.querySelector(".upscribe-price-item-original");
 
                     if (originalNoDiscountPriceEl) {
-                        originalNoDiscountPriceEl.innerHTML = price
+                        originalNoDiscountPriceEl.innerHTML = price;
                     }
                 },
                 calculateVariantPrices(originalPrice, originalComparePrice) {
-                    var displayDiscountPrice = false
-                    var displayDiscountComparePrice = false
+                    var displayDiscountPrice = false;
+                    var displayDiscountComparePrice = false;
 
                     if (originalPrice) {
                         var originalPriceEl = document.querySelector(".upscribe-price-item-regular");
-                        var discountPrice = originalPrice - this.discountCalculatedValue(originalPrice)
+                        var discountPrice = originalPrice - this.discountCalculatedValue(originalPrice);
 
-                        // set for passing in cart property to checkout - not formatted
-                        this.subscriptionAmount = this.getFinalCurrencyRate(originalPrice - discountPrice)
+                        this.subscriptionAmount = this.getFinalCurrencyRate(originalPrice - discountPrice);
 
-                        displayDiscountPrice = this.formatMoney(originalPrice - discountPrice)
+                        displayDiscountPrice = this.formatMoney(originalPrice - discountPrice);
                     }
 
                     if (originalComparePrice) {
-                        var discountComparePrice = originalComparePrice - this.discountCalculatedValue(originalComparePrice)
+                        var discountComparePrice = originalComparePrice - this.discountCalculatedValue(originalComparePrice);
 
-                        displayDiscountComparePrice = this.formatMoney(originalComparePrice - discountComparePrice)
+                        displayDiscountComparePrice = this.formatMoney(originalComparePrice - discountComparePrice);
                     }
 
-                    // replace price elements if subscription selected
                     if (this.subscriptionSelected) {
-                        this.setPricingDisplayEls(displayDiscountPrice, displayDiscountComparePrice)
-                    }
-
-                    // if onetime selected, store to use if selected next
-                    else{
-                        this.activeSubsriptionDisplayPrice = displayDiscountPrice
-                        this.activeSubsriptionDisplayComparePrice = displayDiscountComparePrice
+                        this.setPricingDisplayEls(displayDiscountPrice, displayDiscountComparePrice);
+                    } else {
+                        this.activeSubsriptionDisplayPrice = displayDiscountPrice;
+                        this.activeSubsriptionDisplayComparePrice = displayDiscountComparePrice;
                     }
                 },
-                // shopify format money
                 formatMoney(cents, format) {
                     if (typeof cents === 'string') {
                     cents = cents.replace('.', '');
@@ -922,7 +879,6 @@
                     return formatString.replace(placeholderRegex, value);
                 }
             },
-            // remove listener
             destroyed() {
                 window.removeEventListener('upscribeVariantUpdate', this.handleVariantUpdateEvent);
                 window.removeEventListener('upscribeProductPurchaseTypeUpdate', this.setProductPurchaseType);
@@ -930,13 +886,9 @@
             }
         })
 
-
-        // If page is loaded from cache (browser back/forward button), force page reload
     	window.addEventListener('pageshow', function (event) { if (event.persisted || window.performance &&
 		window.performance.navigation.type == 2) { window.location.reload(); } }, false);
-
     </script>
-
 
     {% endraw %}
 
@@ -947,3 +899,4 @@
     {% assign upscribe_regular_price_query_selector = false %}
     {% assign upscribe_sale_price_query_selector = false %}
 {% endif %}
+<!-- End Upscribe -->
