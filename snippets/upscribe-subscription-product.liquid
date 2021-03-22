@@ -322,7 +322,7 @@
                         <span class="checkbox-icon"></span>
                         <span class="cu-productTypeSelect__itemText">${ subscriptionMessage || 'Subscribe & Save' } ${ activeDiscountAmount }</span>
 
-                        <div v-if="selectFrequencyOptions && subscriptionSelected" class="cu-options cu-options--frequency">
+                        <div _v-if="selectFrequencyOptions && subscriptionSelected" class="cu-options cu-options--frequency">
                             <span class="cu-optionsTitle" style="">Frequency (${ intervalUnit })</span>
 
                             <div class="cu-optionsGrid">
@@ -765,7 +765,7 @@
                 window.removeEventListener('upscribeProductPurchaseTypeUpdate', this.setProductPurchaseType);
                 window.removeEventListener('upscribeFrequencyIndexUpdate', this.setFrequency);
             }
-        })
+        });
 
     	window.addEventListener('pageshow', function (event) { if (event.persisted || window.performance &&
 		window.performance.navigation.type == 2) { window.location.reload(); } }, false);
