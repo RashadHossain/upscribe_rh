@@ -256,6 +256,83 @@
         .cu-infoOpener:focus .cu-popup__block {
             display: block;
         }
+
+        /* Upscribe subscription widget specific styling */
+        .cu-upscribe__inner {
+          border: 1px solid #CA583C;
+          overflow: hidden;
+          border-radius: 8px;
+          max-width: 600px;
+        }
+        .cu-upscribe__inner .cu-productTypeSelect > div { width: 100%; }
+        .cu-upscribe__inner .cu-productTypeSelect > div:first-child { border-bottom: 1px solid #CA583C; }
+        .cu-upscribe__inner .cu-infoOpener { display: none !important; }
+        .cu-upscribe__inner label {
+            padding: 15px 30px;
+            font-weight: 500;
+            font-size: 14px;
+            display: block;
+            margin: 0px;
+            width: 100%;
+        }
+        .cu-upscribe__inner label.active { background: #f0e8e1; }
+        .cu-upscribe__inner label .cu-productTypeSelect__itemText { 
+            font-size: 14px; 
+            font-weight: 500;
+        }
+        .cu-upscribe__inner label input[type=radio] {
+            position: absolute;
+            left: -100px;
+        }
+        .cu-upscribe__inner label .checkbox-icon {
+            display: inline-block;
+            height: 18px;
+            width: 18px;
+            background: #F5F0EC;
+            border-radius: 50%;
+            border: 1px solid #999;
+            vertical-align: -4px;
+        }
+        .cu-upscribe__inner label input[type=radio]:checked + .checkbox-icon {
+            background-color: #F5F0EC;
+            border-color: #CA583C;
+            position: relative;
+        }
+        .cu-upscribe__inner label input[type=radio]:checked + .checkbox-icon:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 14px;
+            height: 14px;
+            margin-left: -7px;
+            margin-top: -7px;
+            border-radius: 50%;
+            background: #CA583C;
+        }
+        .cu-upscribe__inner label .bottom-note {
+            font-weight: 500;
+            font-size: 12px;
+        }
+        .cu-upscribe__inner .cu-optionsTitle { display: none; }
+        .cu-upscribe__inner .cu-options--frequency { margin: 12px 0; }
+        .cu-upscribe__inner .cu-option {
+            padding: 10px 14px;
+            margin: 0px 10px 0px 0px;
+            border: 1px solid #CB4E3A;
+            background: #F4EEE9;
+            border-radius: 8px;
+            color: #000;
+        }
+        .cu-upscribe__inner .cu-option.is-active {
+            background: #CB4E3A;
+            color: #F4EEE9;
+        }
+        .cu-upscribe__inner .cu-option__mainText {
+            font-size: 8px;
+            font-weight: 700;
+        }
+        /* End Upscribe subscription widget specific styling */
     </style>
 
     {% comment %} Vue for Upscribe logic include unless specificied not to from snippet include{% endcomment %}
@@ -292,21 +369,50 @@
 
             <div class="cu-productTypeSelect">
                 <div class="cu-productTypeSelect__itemWrap">
-                    <label class="cu-productTypeSelect__itemLabel" for="onetime-{{upscribe_component_uid}}">
+                    <label class="cu-productTypeSelect__itemLabel" for="onetime-{{upscribe_component_uid}}" v-bind:class="{ active: productPurchaseType === 'onetime' }">
                         <input type="radio" id="onetime-{{upscribe_component_uid}}" value="onetime" v-model="productPurchaseType">
+                        <span class="checkbox-icon"></span>
                         <span class="cu-productTypeSelect__itemText">${ oneTimeMessage || 'One-time Order' }</span>
                     </label>
                 </div>
 
                 <div class="cu-productTypeSelect__itemLabel">
-                    <label class="cu-productTypeSelect__itemWrap" for="subscription-{{upscribe_component_uid}}">
+                    <label class="cu-productTypeSelect__itemWrap" v-bind:class="{ active: productPurchaseType === 'subscription' }" for="subscription-{{upscribe_component_uid}}">
                         <input
                             type="radio"
                             id="subscription-{{upscribe_component_uid}}"
                             value="subscription"
                             v-model="productPurchaseType"
                         >
+                        <span class="checkbox-icon"></span>
                         <span class="cu-productTypeSelect__itemText">${ subscriptionMessage || 'Subscribe & Save' } ${ activeDiscountAmount }</span>
+
+                        <div
+                            _v-if="selectFrequencyOptions && subscriptionSelected"
+                            class="cu-options cu-options--frequency"
+                        >
+                            <span class="cu-optionsTitle" style="">Frequency (${ intervalUnit })</span>
+
+                            <div class="cu-optionsGrid">
+                                <v-option
+                                    v-for="(option, index) in selectFrequencyOptions"
+                                    :select-frequency-options="selectFrequencyOptions"
+                                    :key="option.frequency"
+                                    :index="index"
+                                    :option="option"
+                                    :selected-index="selectedFrequencyIndex"
+                                    :interval-unit="intervalUnit"
+                                    class="cu-option"
+                                    v-on:click-option="setFrequency"
+                                ></v-option>
+                            </div>
+                        </div>
+
+                        <div class="bottom-note">
+                            Use daily. It only gets better.
+                            <br/>
+                            + Free Shipping. Cancel anytime.
+                        </div>
                     </label>
                 </div>
                 <div class="cu-infoOpener"
@@ -341,26 +447,6 @@
                     </div>
                 </div>
             </div>
-
-            <div
-                v-if="selectFrequencyOptions && subscriptionSelected"
-                class="cu-options cu-options--frequency"
-            >
-                <span class="cu-optionsTitle" style="">Frequency (${ intervalUnit }s)</span>
-
-                <div class="cu-optionsGrid">
-                    <v-option
-                        v-for="(option, index) in selectFrequencyOptions"
-                        :select-frequency-options="selectFrequencyOptions"
-                        :key="option.frequency"
-                        :index="index"
-                        :option="option"
-                        :selected-index="selectedFrequencyIndex"
-                        class="cu-option"
-                        v-on:click-option="setFrequency"
-                    ></v-option>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -377,15 +463,20 @@
                 >
                     <span class="cu-option__mainText"
                         v-if="option.mainText"
-                    >{{ option.mainText }}</span>
+                    >{{ option.mainText }} {{ intervalUnit | plural }}</span>
                     <span class="cu-option__subText"
                         v-if="option.subText"
-                    >{{ option.subText }}</span>
+                    >{{ option.subText }} {{ intervalUnit | plural }}</span>
                 </div>
             `,
             computed: {
                 isActive() {
                     return this.selectedIndex === this.index
+                }
+            },
+            filters: {
+                plural: function(singular) {
+                    return singular === 'day' ? 'days' : singular;
                 }
             },
             props:{
@@ -405,6 +496,10 @@
                     type: Array,
                     required: true
                 },
+                intervalUnit: {
+                    type: String,
+                    required: true
+                }
             },
             methods: {
                 // emit selected val
