@@ -307,7 +307,7 @@
                     <label class="cu-productTypeSelect__itemLabel" for="onetime-{{upscribe_component_uid}}" v-bind:class="{ active: productPurchaseType === 'onetime' }">
                         <input type="radio" id="onetime-{{upscribe_component_uid}}" value="onetime" v-model="productPurchaseType">
                         <span class="checkbox-icon"></span>
-                        <span class="cu-productTypeSelect__itemText">${ oneTimeMessage || 'One-time Order' }</span>
+                        <span class="cu-productTypeSelect__itemText">One-time Purchase: $36</span>
                     </label>
                 </div>
 
@@ -320,7 +320,7 @@
                             v-model="productPurchaseType"
                         >
                         <span class="checkbox-icon"></span>
-                        <span class="cu-productTypeSelect__itemText">${ subscriptionMessage || 'Subscribe & Save' } ${ activeDiscountAmount }</span>
+                        <span class="cu-productTypeSelect__itemText">Auto-ship (16.67% off): $30</span>
 
                         <div _v-if="selectFrequencyOptions && subscriptionSelected" class="cu-options cu-options--frequency">
                             <span class="cu-optionsTitle" style="">Frequency (${ intervalUnit })</span>
