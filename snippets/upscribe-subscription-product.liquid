@@ -1,7 +1,7 @@
 <!-- Upscribe -->
-{% if product.metafields.sf_upscribe.enable_subscription %}
+{% if subscription_product.metafields.sf_upscribe.enable_subscription %}
     {% unless upscribe_component_uid %}
-        {% assign upscribe_component_uid = product.id %}
+        {% assign upscribe_component_uid = subscription_product.id %}
     {% endunless %}
 
     {% if upscribe_include_vue_cdn_in_snippet != false %}
