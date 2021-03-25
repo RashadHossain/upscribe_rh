@@ -88,7 +88,13 @@
             </td>
 
             <td class="cart-item__meta small--text-left">
-              <a class="cart-item__meta-title h4" href="{{ item.url }}" data-cart-item-href data-cart-item-title>{{ item.product.title }}</a>
+              <a class="cart-item__meta-title h4" href="{{ item.url }}" data-cart-item-href data-cart-item-title>
+                {% if subscription_product_title %}
+                  {{ subscription_product_title }}
+                {% else %}
+                  {{ item.product.title }}
+                {% endif %}
+              </a>
               <p class="cart-item__meta-variant" data-cart-item-variant-title>
                 {% unless item.product.has_only_default_variant %}
                   {% unless item.variant.title == 'Default Title' %}
@@ -143,6 +149,9 @@
               </ul>
 
               <div class="medium-up--hide">
+                {% if line_price_total and subscription_product_amount %}
+                  <div class="upscribe-price">{{ line_price_total | money }}</div>
+                {% endif %}
 
                 <div data-cart-item-price-container>
                   {%- if item.original_price != item.final_price -%}
@@ -185,6 +194,10 @@
             </td>
 
             <td class="cart-item__price-wrapper small--hide text-right">
+              {% if line_price_total and subscription_product_amount %}
+                <div class="upscribe-price">{{ line_price_total | money }}</div>
+              {% endif %}
+
               <div data-cart-item-price-container>
                 {%- if item.original_price != item.final_price -%}
                   <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
@@ -217,6 +230,10 @@
             </td>
 
             <td class="text-right small--hide">
+              {% if line_price_total and subscription_product_amount %}
+                <div class="upscribe-price">{{ line_price_total | times: item.quantity | money }}</div>
+              {% endif %}
+
               <div data-cart-item-line-price-container>
                 {%- if item.original_line_price != item.final_line_price -%}
                   <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>

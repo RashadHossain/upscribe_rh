@@ -308,7 +308,7 @@
                     <label class="cu-productTypeSelect__itemLabel" for="onetime-{{upscribe_component_uid}}" v-bind:class="{ active: productPurchaseType === 'onetime' }">
                         <input type="radio" id="onetime-{{upscribe_component_uid}}" value="onetime" v-model="productPurchaseType">
                         <span class="checkbox-icon"></span>
-                        <span class="cu-productTypeSelect__itemText">One-time Purchase: $36</span>
+                        <span class="cu-productTypeSelect__itemText">One-time Purchase: $${ activeSubsriptionDisplayPrice / 100 }</span>
                     </label>
                 </div>
 
@@ -321,7 +321,7 @@
                             v-model="productPurchaseType"
                         >
                         <span class="checkbox-icon"></span>
-                        <span class="cu-productTypeSelect__itemText">Auto-ship (16.67% off): $30</span>
+                        <span class="cu-productTypeSelect__itemText">Auto-ship (${activeDiscountAmount} off): $${ Math.round(activeSubsriptionDisplayPrice * (100 - discountAmount.replace('%', '')) / 100 / 100) }</span>
 
                         <div _v-if="selectFrequencyOptions && subscriptionSelected" class="cu-options cu-options--frequency">
                             <span class="cu-optionsTitle" style="">Frequency (${ intervalUnit })</span>
@@ -431,24 +431,24 @@
 
                 {% endraw %}
                 product: {{ product | json }},
-                activeVariantId: {{ product.selected_or_first_available_variant.id }},
-                initialApplicableVariants: '{{ product.metafields.sf_upscribe.applicable_variants }}',
-                subscriptionProductTitle: '{{ product.metafields.sf_upscribe.subscription_product_title | format_money }}',
-                intervalFrequncyMetafield: '{{ product.metafields.sf_upscribe.interval_frequency }}',
-                intervalUnitMetafield: '{{ product.metafields.sf_upscribe.interval_unit }}',
+                activeVariantId: {{ subscription_product.selected_or_first_available_variant.id }},
+                initialApplicableVariants: '{{ subscription_product.metafields.sf_upscribe.applicable_variants }}',
+                subscriptionProductTitle: '{{ subscription_product.metafields.sf_upscribe.subscription_product_title | format_money }}',
+                intervalFrequncyMetafield: '{{ subscription_product.metafields.sf_upscribe.interval_frequency }}',
+                intervalUnitMetafield: '{{ subscription_product.metafields.sf_upscribe.interval_unit }}',
                 defaultGlobalDiscountAmount: '{{ shop.metafields.sf_upscribe.default_discount_amount }}',
-                discountAmount: '{{ product.metafields.sf_upscribe.discount_amount }}',
-                initialChargeLimit: '{{ product.metafields.sf_upscribe.charge_limit }}',
-                recurringDiscountAmount: '{{ product.metafields.sf_upscribe.recurring_discount_amount }}',
-                recurringDiscountAfterOrder: '{{ product.metafields.sf_upscribe.recurring_discount_after_order }}',
+                discountAmount: '{{ subscription_product.metafields.sf_upscribe.discount_amount }}',
+                initialChargeLimit: '{{ subscription_product.metafields.sf_upscribe.charge_limit }}',
+                recurringDiscountAmount: '{{ subscription_product.metafields.sf_upscribe.recurring_discount_amount }}',
+                recurringDiscountAfterOrder: '{{ subscription_product.metafields.sf_upscribe.recurring_discount_after_order }}',
 
                 oneTimeMessage: '{{ shop.metafields.sf_upscribe.one_time_message }}',
                 subscriptionMessage: '{{ shop.metafields.sf_upscribe.subscribe_message }}',
                 learnMoreUrl: '{{ shop.metafields.sf_upscribe.learn_more_url }}',
                 howItWorksTitle: '{{ shop.metafields.sf_upscribe.how_it_works_title }}',
                 howItWorksText: '{{ shop.metafields.sf_upscribe.how_it_works_text }}',
-                activeSubsriptionDisplayPrice: '{{ product.selected_or_first_available_variant.price }}',
-                activeSubsriptionDisplayComparePrice: '{{ product.selected_or_first_available_variant.compare_at_price }}',
+                activeSubsriptionDisplayPrice: '{{ subscription_product.selected_or_first_available_variant.price }}',
+                activeSubsriptionDisplayComparePrice: '{{ subscription_product.selected_or_first_available_variant.compare_at_price }}',
                 {% raw %}
 
                 selectedFrequencyIndex: 0,
@@ -460,7 +460,6 @@
                 componentMounted: false
             },
             mounted() {
-                console.log('Mounted Upscribe Subscription Snippet');
                 var urlParams = new URLSearchParams(window.location.search);
                 if (urlParams.get('variant')) {
                     this.activeVariantId = urlParams.get('variant');
