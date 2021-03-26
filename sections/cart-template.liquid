@@ -50,6 +50,11 @@
         {% assign subscription_in_cart = false %}
 
         {% for item in cartItems %}
+
+        {%- assign subscription_product_amount = false -%}
+        {%- assign subscription_product_title = false -%}
+        {%- assign is_subscription = false -%}
+
           <!-- Upscribe hidden properties assign -->
           {%- assign property_size = item.properties | size -%}
 
@@ -125,7 +130,7 @@
               {% endif %}
 
               <ul class="cart-item__properties" data-cart-item-property-list>
-                
+
 {%- comment -%}
 {% for p in itemProperties %}
                   {% assign first_character_in_key = p.first | truncate: 1, '' %}
@@ -302,10 +307,19 @@
           <p class="cart-policies text-small rte">{{ taxes_shipping_checkout }}</p>
           <div class="btn-group">
             <input type="submit" name="update" class="btn btn--secondary supports-no-js supports-js--hide" value="{{ 'cart.general.update' | t }}">
-            <button type="button" name="checkout" class="btn btn--loader">
-              {{ 'cart.general.checkout' | t }}
-              <span class="btn--loader-balls"></span>
-            </button>
+
+            {% if subscription_in_cart %}
+              <button class="btn btn--loader upscribe-checkout-button">
+                {{ 'cart.general.checkout' | t }}
+                <span class="btn--loader-balls"></span>
+              </button>
+            {% else %}
+
+              <button type="submit" name="checkout" class="btn btn--loader ">
+                {{ 'cart.general.checkout' | t }}
+                <span class="btn--loader-balls"></span>
+              </button>
+            {% endif %}
           </div>
           <div class="cart-footer__message-container">
             <div class="cart-footer__message" data-cart-message></div>

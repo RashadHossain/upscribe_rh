@@ -23,7 +23,6 @@
 	</style>
 
 	<script>
-
 	window.onload = function () {
 		window.getQueryString = function(url) {
 			console.log({url})
@@ -182,11 +181,9 @@
 		var qs = getQueryString(window.location.href);
 		var pqs = parseQueryString(qs);
 
-		// Can use this by default or the onclick attribute directly
-		var checkout_button_selectors = '[name="checkout"], [href="/checkout"], form[action="/checkout"] input[type="submit"], .checkout_button, .btn-checkout, .cart_actions--checkout, .cart_actions--checkout';
-
 		// Used for checkout buttons in Online Store
-		$(document).on('click', checkout_button_selectors, function(e) {
+		$(document).on('click', '.upscribe-checkout-button', function(e) {
+			console.log('init upscribe checkout')
 			e.preventDefault();
 			upscribeBuildCheckout()
 		})
